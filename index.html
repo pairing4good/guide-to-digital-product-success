@@ -36,79 +36,7 @@
             min-height: 100vh;
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            padding: 0.5rem 0;
-            background: rgba(255, 255, 255, 0.98);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradient 3s ease infinite;
-        }
-
-        @keyframes gradient {
-            0%, 100% { filter: hue-rotate(0deg); }
-            50% { filter: hue-rotate(30deg); }
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
+        /* Removed Navigation CSS */
 
         /* Side Navigation */
         .side-nav {
@@ -123,23 +51,26 @@
         }
 
         .side-nav-item {
-            width: 12px;
-            height: 12px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(30, 41, 59, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.8);
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
         }
 
         .side-nav-item:hover {
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(99, 102, 241, 0.8);
             transform: scale(1.5);
+            border-color: white;
         }
 
         .side-nav-item.active {
-            background: white;
+            background: var(--primary);
             transform: scale(1.5);
+            border-color: white;
         }
 
         .side-nav-item .tooltip {
@@ -168,20 +99,37 @@
             margin: 0 auto;
             padding: 0 2rem;
             background: white;
-            margin-top: 80px;
+            margin-top: 20px;
             border-radius: 20px 20px 0 0;
             box-shadow: 0 -10px 40px rgba(0,0,0,0.1);
         }
 
         /* Hero Section */
         .hero {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem 6rem;
             text-align: center;
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
             border-radius: 20px;
             margin-bottom: 4rem;
             position: relative;
             overflow: hidden;
+        }
+
+        .hero-header {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            animation: slideInDown 0.8s ease;
+        }
+
+        .hero-header svg {
+            width: 32px;
+            height: 32px;
         }
 
         .hero::before {
@@ -280,9 +228,15 @@
         /* Guidelines Grid */
         .guidelines-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin: 4rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .guidelines-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .guideline-card {
@@ -391,7 +345,7 @@
         .process-flow {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: stretch;
             flex-wrap: wrap;
             gap: 1rem;
             margin: 2rem 0;
@@ -407,6 +361,10 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             position: relative;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 120px;
         }
 
         .process-step:hover {
@@ -414,14 +372,22 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
-        .process-step:not(:last-child)::after {
+        .process-step.with-arrow:not(:last-child)::after {
             content: '→';
             position: absolute;
-            right: -25px;
+            right: -28px;
             top: 50%;
             transform: translateY(-50%);
             font-size: 1.5rem;
             color: var(--primary);
+            z-index: 1;
+        }
+
+        @media (max-width: 1200px) {
+            .process-step.with-arrow:not(:last-child)::after {
+                right: -20px;
+                font-size: 1.2rem;
+            }
         }
 
         /* Lists */
@@ -607,10 +573,6 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
             .side-nav {
                 display: none;
             }
@@ -623,7 +585,7 @@
                 font-size: 1.2rem;
             }
             
-            .process-step:not(:last-child)::after {
+            .process-step.with-arrow:not(:last-child)::after {
                 display: none;
             }
         }
@@ -659,20 +621,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">🚀 Startup Success Guide</div>
-            <ul class="nav-links">
-                <li><a href="#intro" class="nav-link">Introduction</a></li>
-                <li><a href="#control" class="nav-link">Stay in Control</a></li>
-                <li><a href="#learn" class="nav-link">Learn Fast</a></li>
-                <li><a href="#ship" class="nav-link">Ship Safe</a></li>
-                <li><a href="#scale" class="nav-link">Scale Smart</a></li>
-                <li><a href="#tools" class="nav-link">Tools</a></li>
-            </ul>
-        </div>
-    </nav>
+
 
     <!-- Side Navigation -->
     <div class="side-nav">
@@ -700,6 +649,15 @@
     <div class="container">
         <!-- Hero Section -->
         <section id="intro" class="hero">
+            <div class="hero-header">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                </svg>
+                Startup Success Guide
+            </div>
             <h1>Build Fast AND Stable</h1>
             <p class="subtitle">The Modern Founder's Guide to Digital Product Success</p>
             
@@ -734,7 +692,13 @@
         <!-- Guideline 1: Stay in Control -->
         <section id="control" class="section">
             <h2>
-                <span class="section-icon">🎯</span>
+                <span class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                </span>
                 Guideline 1: Stay in Control
             </h2>
             
@@ -753,19 +717,46 @@
                 <span class="diagram-title">What You Should Own</span>
                 <div class="process-flow">
                     <div class="process-step">
-                        <strong>☁️ Cloud Hosting</strong>
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z"></path>
+                                <circle cx="16.5" cy="7.5" r=".5"></circle>
+                            </svg>
+                            Cloud Hosting
+                        </strong>
                         <p>AWS, Google Cloud</p>
                     </div>
                     <div class="process-step">
-                        <strong>🌐 Domains</strong>
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            Domains
+                        </strong>
                         <p>DNS Management</p>
                     </div>
                     <div class="process-step">
-                        <strong>📦 Code Repos</strong>
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <path d="M16 22h2a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v3"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <path d="M4.04 11.71a5.84 5.84 0 1 0 8.2 8.29"></path>
+                                <path d="M13.83 16A5.83 5.83 0 0 0 8 10.17V16h5.83Z"></path>
+                            </svg>
+                            Code Repos
+                        </strong>
                         <p>GitHub, GitLab</p>
                     </div>
                     <div class="process-step">
-                        <strong>🔑 API Keys</strong>
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            API Keys
+                        </strong>
                         <p>Access Credentials</p>
                     </div>
                 </div>
@@ -790,7 +781,12 @@
         <!-- Guideline 2: Learn Fast -->
         <section id="learn" class="section">
             <h2>
-                <span class="section-icon">🔍</span>
+                <span class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </span>
                 Guideline 2: Learn Fast
             </h2>
 
@@ -806,20 +802,54 @@
             <div class="diagram">
                 <span class="diagram-title">From Customer Insight to Code</span>
                 <div class="process-flow">
-                    <div class="process-step">
-                        <strong>💼 Business Model</strong>
+                    <div class="process-step with-arrow">
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                            Business Model
+                        </strong>
+                    </div>
+                    <div class="process-step with-arrow">
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                            Customer Journey
+                        </strong>
+                    </div>
+                    <div class="process-step with-arrow">
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Story Map
+                        </strong>
+                    </div>
+                    <div class="process-step with-arrow">
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            Development
+                        </strong>
                     </div>
                     <div class="process-step">
-                        <strong>🗺️ Customer Journey</strong>
-                    </div>
-                    <div class="process-step">
-                        <strong>📋 Story Map</strong>
-                    </div>
-                    <div class="process-step">
-                        <strong>🎯 Development</strong>
-                    </div>
-                    <div class="process-step">
-                        <strong>📊 Outcomes</strong>
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                            </svg>
+                            Outcomes
+                        </strong>
                     </div>
                 </div>
             </div>
@@ -860,7 +890,15 @@
         <!-- Guideline 3: Ship Safe -->
         <section id="ship" class="section">
             <h2>
-                <span class="section-icon">🚢</span>
+                <span class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+                        <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path>
+                        <path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path>
+                        <path d="M12 10v4"></path>
+                        <path d="M12 2v3"></path>
+                    </svg>
+                </span>
                 Guideline 3: Ship Safe
             </h2>
 
@@ -873,23 +911,54 @@
                 <span class="diagram-title">Safe Development Workflow</span>
                 <div class="process-flow">
                     <div class="process-step">
-                        <strong>🌿 Feature Branch</strong>
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <line x1="6" y1="3" x2="6" y2="15"></line>
+                                <circle cx="18" cy="6" r="3"></circle>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <path d="M18 9a9 9 0 0 1-9 9"></path>
+                            </svg>
+                            Feature Branch
+                        </strong>
                         <p>Isolated Development</p>
                     </div>
                     <div class="process-step">
-                        <strong>💾 Frequent Commits</strong>
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                <polyline points="7 3 7 8 15 8"></polyline>
+                            </svg>
+                            Frequent Commits
+                        </strong>
                         <p>Save Progress</p>
                     </div>
                     <div class="process-step">
-                        <strong>👀 Pull Request</strong>
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            Pull Request
+                        </strong>
                         <p>Code Review</p>
                     </div>
                     <div class="process-step">
-                        <strong>✅ Automated Tests</strong>
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Automated Tests
+                        </strong>
                         <p>Quality Check</p>
                     </div>
                     <div class="process-step">
-                        <strong>🚀 Deploy</strong>
+                        <strong>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                            Deploy
+                        </strong>
                         <p>Ship to Users</p>
                     </div>
                 </div>
@@ -912,22 +981,41 @@
             <h3>DORA Metrics: Measuring Performance</h3>
             <div class="metrics-grid">
                 <div class="metric-card pulse">
-                    <span class="metric-value">📈</span>
+                    <span class="metric-value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </span>
                     <strong>Deployment Frequency</strong>
                     <p>How often you ship</p>
                 </div>
                 <div class="metric-card pulse">
-                    <span class="metric-value">⚡</span>
+                    <span class="metric-value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </span>
                     <strong>Lead Time</strong>
                     <p>Idea to production</p>
                 </div>
                 <div class="metric-card pulse">
-                    <span class="metric-value">🛡️</span>
+                    <span class="metric-value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </span>
                     <strong>Change Failure Rate</strong>
                     <p>Quality measure</p>
                 </div>
                 <div class="metric-card pulse">
-                    <span class="metric-value">🔧</span>
+                    <span class="metric-value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </span>
                     <strong>Recovery Time</strong>
                     <p>Fix speed</p>
                 </div>
@@ -941,7 +1029,11 @@
         <!-- Guideline 4: Scale Smart -->
         <section id="scale" class="section">
             <h2>
-                <span class="section-icon">📈</span>
+                <span class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </span>
                 Guideline 4: Scale Smart
             </h2>
 
@@ -954,13 +1046,21 @@
                 <span class="diagram-title">Cost Scaling Model</span>
                 <div style="text-align: center; padding: 2rem;">
                     <div style="display: inline-block; margin: 0 2rem;">
-                        <div style="font-size: 3rem;">📉</div>
+                        <div style="font-size: 3rem; color: var(--danger);">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
                         <p><strong>Traditional Model</strong></p>
                         <p>High upfront costs</p>
                         <p>Idle capacity waste</p>
                     </div>
                     <div style="display: inline-block; margin: 0 2rem;">
-                        <div style="font-size: 3rem;">📊</div>
+                        <div style="font-size: 3rem; color: var(--success);">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 16 6 12 17 8 8 2 12"></polyline>
+                            </svg>
+                        </div>
                         <p><strong>Serverless Model</strong></p>
                         <p>Near-zero start costs</p>
                         <p>Pay only for usage</p>
@@ -983,19 +1083,40 @@
             <h3>Security Investment Benefits</h3>
             <div class="metrics-grid">
                 <div class="metric-card">
-                    <span class="metric-value">🏢</span>
+                    <span class="metric-value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </span>
                     <span class="metric-label">Enterprise Ready</span>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-value">⚖️</span>
+                    <span class="metric-value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="22 9 12 2 2 9"></polyline>
+                        </svg>
+                    </span>
                     <span class="metric-label">Compliance Ready</span>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-value">💰</span>
+                    <span class="metric-value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </span>
                     <span class="metric-label">Premium Pricing</span>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-value">🎯</span>
+                    <span class="metric-value">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </span>
                     <span class="metric-label">Quality Investors</span>
                 </div>
             </div>
@@ -1020,7 +1141,11 @@
         <!-- Tools Section -->
         <section id="tools" class="section">
             <h2>
-                <span class="section-icon">🛠️</span>
+                <span class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                    </svg>
+                </span>
                 Recommended Tools & Platforms
             </h2>
 
@@ -1028,7 +1153,11 @@
 
             <div class="platform-grid">
                 <div class="platform-card">
-                    <span class="platform-logo">⚡</span>
+                    <span class="platform-logo">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </span>
                     <div class="platform-name">AWS Amplify</div>
                     <p><strong>Your Foundation for Control & Scale</strong></p>
                     <ul>
@@ -1041,7 +1170,13 @@
                 </div>
 
                 <div class="platform-card">
-                    <span class="platform-logo">📊</span>
+                    <span class="platform-logo">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </span>
                     <div class="platform-name">Statsig</div>
                     <p><strong>Your Engine for Learning Fast</strong></p>
                     <ul>
@@ -1054,7 +1189,11 @@
                 </div>
 
                 <div class="platform-card">
-                    <span class="platform-logo">🐙</span>
+                    <span class="platform-logo">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </span>
                     <div class="platform-name">GitHub</div>
                     <p><strong>Your Foundation for Safe Shipping</strong></p>
                     <ul>
@@ -1067,7 +1206,12 @@
                 </div>
 
                 <div class="platform-card">
-                    <span class="platform-logo">🤖</span>
+                    <span class="platform-logo">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9"></path>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
+                    </span>
                     <div class="platform-name">GitHub Copilot</div>
                     <p><strong>AI-Powered Development</strong></p>
                     <ul>
@@ -1108,16 +1252,7 @@
         // Update active navigation on scroll
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
             const sideNavItems = document.querySelectorAll('.side-nav-item');
-            const navbar = document.getElementById('navbar');
-            
-            // Add scrolled class to navbar
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
             
             let current = '';
             
@@ -1126,13 +1261,6 @@
                 const sectionHeight = section.clientHeight;
                 if (window.scrollY >= sectionTop - 200) {
                     current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
                 }
             });
             
