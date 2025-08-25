@@ -449,6 +449,64 @@
             align-items: center;
             gap: 1rem;
             letter-spacing: -0.02em;
+            position: relative;
+        }
+
+        .heading-link {
+            opacity: 0;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            margin-left: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2:hover .heading-link {
+            opacity: 0.6;
+        }
+
+        .heading-link:hover {
+            opacity: 1 !important;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
+            transform: scale(1.1);
+        }
+
+        .heading-link:active {
+            transform: scale(0.95);
+        }
+
+        .heading-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Copied link feedback */
+        .heading-link.copied::after {
+            content: 'Copied!';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            animation: fadeInOut 2s ease;
+            pointer-events: none;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateX(-50%) translateY(5px); }
+            20% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            80% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            100% { opacity: 0; transform: translateX(-50%) translateY(-5px); }
         }
 
         .section-icon {
@@ -875,6 +933,12 @@
                     <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
                 </svg>
                 Startup Success Guide
+                <a href="#intro" class="heading-link" title="Copy link to this section" style="font-size: 1rem;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                </a>
             </div>
             <h1>Build Fast and Stable</h1>
             <p class="subtitle">The Modern Founder's Guide to Digital Product Success</p>
@@ -918,6 +982,12 @@
                     </svg>
                 </span>
                 Guideline 1: Stay in Control
+                <a href="#control" class="heading-link" title="Copy link to this section">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                </a>
             </h2>
             
             <div class="key-insight">
@@ -1060,6 +1130,12 @@
                     </svg>
                 </span>
                 Guideline 2: Learn Fast
+                <a href="#learn" class="heading-link" title="Copy link to this section">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                </a>
             </h2>
 
             <div class="key-insight">
@@ -1172,6 +1248,12 @@
                     </svg>
                 </span>
                 Guideline 3: Ship Safe
+                <a href="#ship" class="heading-link" title="Copy link to this section">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                </a>
             </h2>
 
             <div class="key-insight">
@@ -1307,6 +1389,12 @@
                     </svg>
                 </span>
                 Guideline 4: Scale Smart
+                <a href="#scale" class="heading-link" title="Copy link to this section">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                </a>
             </h2>
 
             <div class="key-insight">
@@ -1450,6 +1538,12 @@
                     </svg>
                 </span>
                 Recommended Tools & Platforms
+                <a href="#tools" class="heading-link" title="Copy link to this section">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                </a>
             </h2>
 
             <p style="font-size: 1.2rem; margin-bottom: 2rem;">The principles outlined in this guide require the right technical foundation. These platforms are specifically designed to help startup founders implement these guidelines without requiring deep technical expertise.</p>
@@ -1549,6 +1643,26 @@
     </footer>
 
     <script>
+        // Heading link functionality
+        document.querySelectorAll('.heading-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const url = window.location.origin + window.location.pathname + link.getAttribute('href');
+                
+                // Copy to clipboard
+                navigator.clipboard.writeText(url).then(() => {
+                    // Visual feedback
+                    link.classList.add('copied');
+                    setTimeout(() => {
+                        link.classList.remove('copied');
+                    }, 2000);
+                });
+                
+                // Update URL without scrolling
+                history.pushState(null, null, link.getAttribute('href'));
+            });
+        });
+
         // Mobile menu functionality
         const hamburgerBtn = document.getElementById('hamburger-btn');
         const mobileMenu = document.getElementById('mobile-menu');
