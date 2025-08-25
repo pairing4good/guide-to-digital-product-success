@@ -933,49 +933,103 @@
 
             <div class="diagram">
                 <span class="diagram-title">What You Should Own</span>
-                <div class="process-flow">
-                    <div class="process-step">
-                        <strong>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                                <path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z"></path>
-                                <circle cx="16.5" cy="7.5" r=".5"></circle>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; padding: 2rem;">
+                    <div class="process-step" style="min-height: auto; padding: 1.5rem;">
+                        <strong style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
                             </svg>
-                            Cloud Hosting
+                            Core Infrastructure & Development
                         </strong>
-                        <p>AWS, Google Cloud</p>
+                        <div style="text-align: left; font-size: 0.9rem; color: var(--text); line-height: 1.6;">
+                            <div style="margin-bottom: 0.5rem;">• <strong>Cloud Hosting:</strong> AWS, Google Cloud, Azure</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>Domains & DNS:</strong> Route53, Cloudflare</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>Code Repositories:</strong> GitHub, GitLab</div>
+                            <div>• <strong>Databases:</strong> PostgreSQL, MongoDB</div>
+                        </div>
                     </div>
-                    <div class="process-step">
-                        <strong>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    
+                    <div class="process-step" style="min-height: auto; padding: 1.5rem;">
+                        <strong style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                             </svg>
-                            Domains
+                            Communication & Collaboration
                         </strong>
-                        <p>DNS Management</p>
+                        <div style="text-align: left; font-size: 0.9rem; color: var(--text); line-height: 1.6;">
+                            <div style="margin-bottom: 0.5rem;">• <strong>Team Chat:</strong> Slack, Discord, Teams</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>Email:</strong> Google Workspace, Office 365</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>Video Calls:</strong> Zoom, Google Meet</div>
+                            <div>• <strong>Documentation:</strong> Notion, Confluence</div>
+                        </div>
                     </div>
-                    <div class="process-step">
-                        <strong>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                                <path d="M16 22h2a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v3"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <path d="M4.04 11.71a5.84 5.84 0 1 0 8.2 8.29"></path>
-                                <path d="M13.83 16A5.83 5.83 0 0 0 8 10.17V16h5.83Z"></path>
+                    
+                    <div class="process-step" style="min-height: auto; padding: 1.5rem;">
+                        <strong style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
                             </svg>
-                            Code Repos
+                            Development & Operations
                         </strong>
-                        <p>GitHub, GitLab</p>
+                        <div style="text-align: left; font-size: 0.9rem; color: var(--text); line-height: 1.6;">
+                            <div style="margin-bottom: 0.5rem;">• <strong>CI/CD:</strong> GitHub Actions, Jenkins</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>Monitoring:</strong> Datadog, New Relic</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>Error Tracking:</strong> Sentry, Rollbar</div>
+                            <div>• <strong>Analytics:</strong> Google Analytics, Mixpanel</div>
+                        </div>
                     </div>
-                    <div class="process-step">
-                        <strong>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    
+                    <div class="process-step" style="min-height: auto; padding: 1.5rem;">
+                        <strong style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                            Business Operations
+                        </strong>
+                        <div style="text-align: left; font-size: 0.9rem; color: var(--text); line-height: 1.6;">
+                            <div style="margin-bottom: 0.5rem;">• <strong>Payments:</strong> Stripe, PayPal</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>CRM:</strong> HubSpot, Salesforce</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>Support:</strong> Zendesk, Intercom</div>
+                            <div>• <strong>Project Mgmt:</strong> Jira, Asana, Linear</div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step" style="min-height: auto; padding: 1.5rem;">
+                        <strong style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect>
                                 <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                             </svg>
-                            API Keys
+                            Security & Access Management
                         </strong>
-                        <p>Access Credentials</p>
+                        <div style="text-align: left; font-size: 0.9rem; color: var(--text); line-height: 1.6;">
+                            <div style="margin-bottom: 0.5rem;">• <strong>Password Mgmt:</strong> 1Password, Bitwarden</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>2FA/SSO:</strong> Auth0, Okta</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>API Keys:</strong> Vault, AWS Secrets</div>
+                            <div>• <strong>SSL Certs:</strong> Let's Encrypt, DigiCert</div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step" style="min-height: auto; padding: 1.5rem;">
+                        <strong style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            Design & Content
+                        </strong>
+                        <div style="text-align: left; font-size: 0.9rem; color: var(--text); line-height: 1.6;">
+                            <div style="margin-bottom: 0.5rem;">• <strong>Design Tools:</strong> Figma, Sketch, Adobe</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>Stock Assets:</strong> Unsplash, Shutterstock</div>
+                            <div style="margin-bottom: 0.5rem;">• <strong>Brand Assets:</strong> Logo files, guidelines</div>
+                            <div>• <strong>Marketing:</strong> Mailchimp, Buffer</div>
+                        </div>
                     </div>
                 </div>
             </div>
