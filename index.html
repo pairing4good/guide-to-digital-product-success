@@ -428,7 +428,7 @@
 
         /* Section Styles */
         .section {
-            padding: 4rem 0;
+            padding: 3rem 0;
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.6s ease;
@@ -1245,7 +1245,7 @@
                 <li>Traceability Demonstration: Connect work to customer value</li>
             </ul>
 
-            <div class="warning-box">
+            <div class="warning-box" style="margin-bottom: 2rem;">
                 <strong>Critical Warning:</strong> Delegating product ownership or reviewing work asynchronously is a recipe for disaster. Teams will optimize for what feels like progress rather than what delivers customer value.
             </div>
         </section>
@@ -1349,51 +1349,42 @@
             </ul>
 
             <h3>Measure What Actually Matters</h3>
-            <p>Stop tracking vanity metrics. Install DORA metrics monitoring this month to answer the only question that matters: "Are we getting better at shipping value?" Set up alerts when deployment frequency drops below twice per week, when lead time exceeds 48 hours, when failure rate climbs above 15%, or when recovery takes more than 2 hours. These four numbers predict your engineering success better than any other metrics.</p>
-            <div class="metrics-grid">
-                <div class="metric-card pulse">
-                    <span class="metric-value">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                    </span>
-                    <strong>Deployment Frequency</strong>
-                    <p>How often you ship</p>
-                </div>
-                <div class="metric-card pulse">
-                    <span class="metric-value">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                        </svg>
-                    </span>
-                    <strong>Lead Time</strong>
-                    <p>Idea to production</p>
-                </div>
-                <div class="metric-card pulse">
-                    <span class="metric-value">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </span>
-                    <strong>Change Failure Rate</strong>
-                    <p>Quality measure</p>
-                </div>
-                <div class="metric-card pulse">
-                    <span class="metric-value">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                            <polyline points="17 6 23 6 23 12"></polyline>
-                        </svg>
-                    </span>
-                    <strong>Recovery Time</strong>
-                    <p>Fix speed</p>
-                </div>
-            </div>
+            <p>Most startups drown in vanity metrics—numbers that look good in a pitch deck but don’t actually predict success. Instead, focus on a handful of metrics that give you an honest view of whether you’re building something that works and whether your team can deliver it reliably.</p>
+            
+            <p>You need three categories of metrics to start with:</p>
+            <ol>
+              <li><strong>Business Health Metrics</strong> – tell you if your startup model is viable.</li>
+              <li><strong>Customer Experience Metrics</strong> – tell you if people are adopting and sticking with your product.</li>
+              <li><strong>Engineering Performance Metrics (DORA)</strong> – tell you if your team can deliver fast and with quality.</li>
+            </ol>
+
+            <p>Track these consistently. Business metrics show if you’re building the right thing. Customer metrics show if people care. Engineering metrics show if you’re building it the right way. Set up alerts so when any metric drifts out of range, you catch it early—weeks matter, months kill.</p>
+
+            <strong style="color: var(--primary); display: block; margin: 1.5rem 0 1rem;">Business Health Metrics:</strong>
+            <ul>
+                <li><strong>Customer Acquisition Cost (CAC):</strong> How much you spend to get each new customer—if it exceeds 6-month payback, rethink your model</li>
+                <li><strong>Lifetime Value (LTV):</strong> How much revenue each customer generates over time—must be 3x CAC minimum for sustainability</li>
+                <li><strong>Monthly Recurring Revenue (MRR):</strong> Predictable revenue stream indicator—track week-over-week growth rate</li>
+            </ul>
+
+            <strong style="color: var(--primary); display: block; margin: 1.5rem 0 1rem;">Essential Startup Metrics:</strong>
+            <ul>
+                <li><strong>Activation Rate:</strong> What percentage of new users actually start using your core features—below 40% means fix your onboarding</li>
+                <li><strong>Churn Rate:</strong> How many customers stop using your product monthly—above 10% monthly is a red flag</li>
+                <li><strong>Net Promoter Score (NPS):</strong> How likely customers are to recommend you. A falling NPS often predicts churn before it shows up in revenue.</li>
+            </ul>
+
+            <strong style="color: var(--primary); display: block; margin: 1.5rem 0 1rem;">DORA Engineering Metrics:</strong>
+            <p style="margin-bottom: 1rem;">These four metrics predict your engineering team's ability to deliver value consistently. Elite teams excel at all four—they ship frequently without breaking things. Track these to ensure you're not sacrificing quality for speed:</p>
+            <ul>
+                <li><strong>Deployment Frequency:</strong> How often you ship code to users—aim for multiple times per week minimum</li>
+                <li><strong>Lead Time:</strong> How quickly you go from idea to live feature—target under 48 hours for small changes</li>
+                <li><strong>Change Failure Rate:</strong> What percentage of releases cause problems—keep below 15%</li>
+                <li><strong>Recovery Time:</strong> How fast you fix things when they break—should be under 2 hours</li>
+            </ul>
 
             <div class="success-box">
-                <strong>Benchmark:</strong> Elite performers deploy 208x more frequently and have 106x faster lead times while maintaining 7x lower change failure rates.
+                <strong>Benchmark:</strong> Elite performers deploy 208x more frequently and have 106x faster lead times while maintaining 7x lower change failure rates. You don't need to be elite immediately, but you should be improving every quarter.
             </div>
         </section>
 
