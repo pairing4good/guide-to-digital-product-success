@@ -36,6 +36,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -46,6 +47,7 @@
       min-height: 100vh;
       font-weight: 400;
       letter-spacing: -0.011em;
+      overflow-x: hidden;
     }
 
     /* Removed Navigation CSS */
@@ -877,6 +879,19 @@
         margin-bottom: 1rem;
         display: block;
         text-align: center;
+      }
+
+      .process-step[style*="min-width: 280px"] {
+        min-width: auto !important;
+        width: 100% !important;
+        flex: 1 1 100% !important;
+        margin-bottom: 1rem;
+      }
+
+      div[style*="min-width: 280px"] {
+        min-width: auto !important;
+        width: 100% !important;
+        flex: 1 1 100% !important;
       }
     }
 
