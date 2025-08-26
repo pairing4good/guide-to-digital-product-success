@@ -584,6 +584,7 @@
       padding: 0 1rem;
       color: var(--primary);
       font-weight: 600;
+      border-radius: 20px;
     }
 
     /* Process Flow */
@@ -883,6 +884,7 @@
         width: max-content;
         background: white;
         padding: 0 1rem;
+        border-radius: 20px;
       }
 
       .diagram {
@@ -892,6 +894,11 @@
         border-bottom: 2px solid var(--border) !important;
         padding: 1rem 0 !important;
       }
+    }
+
+    /* Traditional/Serverless Model title styling */
+    div[style*="background: white"][style*="padding: 0 1rem"] {
+      border-radius: 20px !important;
     }
 
     /* Animations */
