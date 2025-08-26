@@ -474,7 +474,7 @@
 
     .heading-link {
       opacity: 0;
-      color: var(--primary);
+      color: white;
       text-decoration: none;
       font-size: 1.2rem;
       padding: 0.5rem;
@@ -484,20 +484,24 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid transparent;
     }
 
     h2:hover .heading-link {
-      opacity: 0.6;
+      opacity: 0.7;
     }
 
     .heading-link:hover {
       opacity: 1 !important;
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
-      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px) scale(1.05);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
     .heading-link:active {
-      transform: scale(0.95);
+      transform: translateY(0) scale(0.98);
     }
 
     .heading-link svg {
@@ -899,6 +903,605 @@
     /* Traditional/Serverless Model title styling */
     div[style*="background: white"][style*="padding: 0 1rem"] {
       border-radius: 20px !important;
+    }
+
+    /* Traceability Section Styling */
+
+    .traceability-view {
+      margin-top: 2rem;
+    }
+
+    .traceability-view.hidden {
+      display: none;
+    }
+
+    /* Tools to Headings View */
+    .traceability-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .tool-section {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .tool-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .tool-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .tool-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .tool-info h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .tool-info p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 1rem;
+    }
+
+    .tool-mappings {
+      padding: 2rem;
+    }
+
+    .mapping-item {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(34, 211, 238, 0.05) 100%);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--primary);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .mapping-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(99, 102, 241, 0.15);
+    }
+
+    .guideline-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .guideline-badge.control {
+      background: linear-gradient(135deg, #ef4444 0%, #f59e0b 100%);
+      color: white;
+    }
+
+    .guideline-badge.learn {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+      color: white;
+    }
+
+    .guideline-badge.ship {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+    }
+
+    .guideline-badge.scale {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      color: white;
+    }
+
+    .heading-title {
+      display: block;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .mapping-description {
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Headings to Tools View */
+    .headings-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .guideline-section {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .guideline-header {
+      padding: 2rem;
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+    }
+
+    .guideline-header.control {
+      background: linear-gradient(135deg, #ef4444 0%, #f59e0b 100%);
+    }
+
+    .guideline-header.learn {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    }
+
+    .guideline-header.ship {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+
+    .guideline-header.scale {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    }
+
+    .guideline-icon {
+      font-size: 2rem;
+    }
+
+    .heading-items {
+      padding: 2rem;
+    }
+
+    .heading-item {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .heading-item:hover {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(34, 211, 238, 0.05) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .heading-item h4 {
+      margin: 0 0 1rem 0;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .tool-tags {
+      margin-bottom: 1rem;
+    }
+
+    .tool-tag {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-right: 0.5rem;
+    }
+
+    .tool-tag.aws-amplify {
+      background: linear-gradient(135deg, #FF9900 0%, #FF7A00 100%);
+      color: white;
+    }
+
+    .tool-tag.statsig {
+      background: linear-gradient(135deg, #5E5CE6 0%, #4C51BF 100%);
+      color: white;
+    }
+
+    .tool-tag.github {
+      background: linear-gradient(135deg, #24292e 0%, #1a1e22 100%);
+      color: white;
+    }
+
+    .tool-tag.github-copilot {
+      background: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%);
+      color: white;
+    }
+
+    .tool-tag:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Matrix View */
+    .matrix-container {
+      overflow-x: auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .traceability-matrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .traceability-matrix th {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 1rem;
+      font-weight: 600;
+      text-align: left;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .matrix-corner {
+      background: var(--dark) !important;
+      min-width: 280px;
+      max-width: 280px;
+    }
+
+    .tool-column {
+      text-align: center;
+      min-width: 200px;
+      max-width: 250px;
+      padding: 1.5rem 1rem;
+      vertical-align: top;
+    }
+
+    .tool-header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      text-align: center;
+    }
+
+    .tool-icon-header {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .tool-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .tool-description {
+      font-size: 0.75rem;
+      line-height: 1.4;
+      opacity: 0.9;
+      max-width: 200px;
+    }
+
+    .tool-tagline {
+      font-size: 0.8rem;
+      font-weight: 600;
+      opacity: 0.8;
+      font-style: italic;
+    }
+
+    .tool-column.aws-amplify {
+      background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%) !important;
+    }
+
+    .tool-column.statsig {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    }
+
+    .tool-column.github {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+    }
+
+    .tool-column.github-copilot {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+    }
+
+    .guideline-separator {
+      background: #f1f5f9 !important;
+      padding: 0 !important;
+      font-weight: 700;
+      color: var(--primary);
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .guideline-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .guideline-link:hover {
+      color: var(--primary);
+      transform: scale(1.05);
+    }
+
+    .guideline-link svg {
+      flex-shrink: 0;
+    }
+
+
+    .heading-cell {
+      background: white;
+      padding: 0.25rem 1rem;
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+      min-width: 280px;
+      max-width: 280px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .matrix-cell {
+      text-align: center;
+      padding: 0.25rem;
+      border-bottom: 1px solid var(--border);
+      border-left: 1px solid #f1f5f9;
+      border-right: 1px solid #f1f5f9;
+      background: white;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .matrix-cell.supported {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
+      color: var(--success);
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .matrix-cell:hover {
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    .matrix-cell.supported:hover {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(34, 211, 238, 0.2) 100%);
+      transform: scale(1.1);
+    }
+
+
+
+    /* Mobile Tool Tabs */
+    .mobile-tool-tabs {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      /* Prevent horizontal scrolling on mobile */
+      html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+      }
+
+      .mobile-tool-tabs {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        background: #f8fafc;
+        border-radius: 12px;
+        overflow-x: auto;
+      }
+
+      .tool-tab {
+        flex: 1;
+        min-width: 80px;
+        padding: 0.75rem 0.5rem;
+        background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+
+      .tool-tab[data-tool="aws-amplify"].active {
+        background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+        border-color: #FF6B35;
+      }
+
+      .tool-tab[data-tool="statsig"].active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-color: #667eea;
+      }
+
+      .tool-tab[data-tool="github"].active {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        border-color: #4facfe;
+      }
+
+      .tool-tab[data-tool="github-copilot"].active {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        border-color: #f093fb;
+      }
+
+      .tool-tab-icon {
+        margin-bottom: 0.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tool-tab-icon svg {
+        stroke: #94a3b8;
+        fill: #94a3b8;
+        opacity: 1;
+        transition: all 0.3s ease;
+      }
+
+      .tool-tab.active .tool-tab-icon svg {
+        stroke: white;
+        fill: white;
+        opacity: 1;
+      }
+
+      .tool-tab-name {
+        font-weight: 600;
+        color: #94a3b8;
+        transition: all 0.3s ease;
+      }
+
+      .tool-tab.active .tool-tab-name {
+        color: white;
+      }
+
+      .tool-tab:active {
+        transform: scale(0.95);
+      }
+
+      /* Hide all tool columns and cells by default on mobile */
+      .tool-column,
+      .matrix-cell {
+        display: none !important;
+      }
+
+      /* Show the active tool column */
+      .mobile-active-aws-amplify .tool-column.aws-amplify,
+      .mobile-active-statsig .tool-column.statsig,
+      .mobile-active-github .tool-column.github,
+      .mobile-active-github-copilot .tool-column.github-copilot {
+        display: table-cell !important;
+      }
+
+      /* Show matrix cells for active tool */
+      .mobile-active-aws-amplify .matrix-cell[data-tool="aws-amplify"],
+      .mobile-active-statsig .matrix-cell[data-tool="statsig"],
+      .mobile-active-github .matrix-cell[data-tool="github"],
+      .mobile-active-github-copilot .matrix-cell[data-tool="github-copilot"] {
+        display: table-cell !important;
+      }
+
+    /* Mobile Responsive for Traceability */
+      .matrix-container {
+        font-size: 0.8rem;
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      .traceability-matrix {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+      }
+
+      .container, .section {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      h2 {
+        font-size: 1.8rem !important;
+      }
+
+      h3 {
+        font-size: 1.3rem !important;
+      }
+
+      div[style*="font-size: 2rem"] strong {
+        font-size: 1.5rem !important;
+      }
+
+      h1 {
+        font-size: 1.9rem !important;
+      }
+
+      .subtitle {
+        font-size: 0.9rem !important;
+      }
+
+      .mobile-nav-container {
+        padding: 0.5rem 2rem !important;
+      }
+
+
+      .heading-cell {
+        position: static;
+        min-width: 180px;
+        max-width: 180px;
+        box-shadow: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .matrix-corner {
+        min-width: 180px;
+        max-width: 180px;
+      }
+
+      .tool-column {
+        min-width: 150px;
+        max-width: 180px;
+        padding: 1rem 0.5rem;
+      }
+
+      .tool-description {
+        font-size: 0.7rem;
+        max-width: 140px;
+      }
+
+      .tool-name {
+        font-size: 1rem;
+      }
+
+
+      .guideline-link {
+        gap: 0.25rem;
+      }
+
+      .guideline-link svg {
+        width: 16px;
+        height: 16px;
+      }
     }
 
     /* Animations */
@@ -1751,109 +2354,288 @@
         </a>
       </h2>
 
-      <p style="font-size: 1.2rem; margin-bottom: 2rem;">The principles outlined in this guide require the right
-        technical foundation. These four platforms are specifically designed to help startup founders implement these
-        guidelines without requiring deep technical expertise.</p>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem;"><strong>Start with these 4 tools.</strong> By limiting your stack to just these platforms, you'll reduce hiring complexity, minimize maintenance overhead, and eliminate integration headaches. Each tool directly supports multiple guidelines, maximizing your ROI while keeping your team focused on building product, not managing infrastructure.</p>
 
-      <div class="platform-grid">
-        <div class="platform-card">
-          <span class="platform-logo">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
+      <div class="key-insight">
+        <strong>Strategic Simplicity:</strong> Four tools handle 13 critical implementation areas across all startup guidelines. This intentional minimalism reduces technical debt, accelerates hiring, and lets you ship faster with fewer moving parts.
+      </div>
+
+
+      <!-- Mobile Tool Tabs -->
+      <div class="mobile-tool-tabs">
+        <button class="tool-tab active" data-tool="aws-amplify">
+          <div class="tool-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-          </span>
-          <div class="platform-name">AWS Amplify</div>
-          <p style="margin-bottom: 1rem; color: var(--text); font-size: 0.95rem; line-height: 1.6;">Amazon's serverless
-            platform designed for startups, providing everything from hosting to AI integration with a visual console
-            that non-technical founders can actually use.</p>
-          <p><strong>Your Foundation for Control & Scale</strong></p>
-          <ul>
-            <li>Visual console for non-technical founders</li>
-            <li>Automatic Infrastructure as Code</li>
-            <li>Pay-as-you-grow serverless model</li>
-            <li>Built-in security & compliance</li>
-            <li>~$60-80/month for medium apps</li>
-          </ul>
-        </div>
-
-        <div class="platform-card">
-          <span class="platform-logo">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5E5CE6" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
+          </div>
+          <div class="tool-tab-name">AWS Amplify</div>
+        </button>
+        <button class="tool-tab" data-tool="statsig">
+          <div class="tool-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="20" x2="18" y2="10"></line>
               <line x1="12" y1="20" x2="12" y2="4"></line>
               <line x1="6" y1="20" x2="6" y2="14"></line>
             </svg>
-          </span>
-          <div class="platform-name">Statsig</div>
-          <p style="margin-bottom: 1rem; color: var(--text); font-size: 0.95rem; line-height: 1.6;">Feature management
-            and experimentation platform built specifically for startups, enabling safe feature rollouts and data-driven
-            decisions without complex setup.</p>
-          <p><strong>Your Engine for Learning Fast</strong></p>
-          <ul>
-            <li>Startup-focused analytics out of the box</li>
-            <li>Feature flags for safe shipping</li>
-            <li>A/B testing & experimentation</li>
-            <li>Real-time monitoring & alerts</li>
-            <li>Generous free tier for startups</li>
-          </ul>
-        </div>
-
-        <div class="platform-card">
-          <span class="platform-logo">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="#24292e" stroke="none">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </div>
+          <div class="tool-tab-name">Statsig</div>
+        </button>
+        <button class="tool-tab" data-tool="github">
+          <div class="tool-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
             </svg>
-          </span>
-          <div class="platform-name">GitHub</div>
-          <p style="margin-bottom: 1rem; color: var(--text); font-size: 0.95rem; line-height: 1.6;">The world's leading
-            development platform where your code lives, enabling version control, collaboration, and automated workflows
-            that make shipping safe and efficient.</p>
-          <p><strong>Your Foundation for Safe Shipping</strong></p>
-          <ul>
-            <li>Complete code version control</li>
-            <li>Pull request & review system</li>
-            <li>GitHub Actions automation</li>
-            <li>Seamless tool integration</li>
-            <li>Free for small teams</li>
-          </ul>
-        </div>
-
-        <div class="platform-card">
-          <span class="platform-logo">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#copilot-gradient)" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <defs>
-                <linearGradient id="copilot-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:#2563EB;stop-opacity:1" />
-                </linearGradient>
-              </defs>
+          </div>
+          <div class="tool-tab-name">GitHub</div>
+        </button>
+        <button class="tool-tab" data-tool="github-copilot">
+          <div class="tool-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-              <circle cx="16.5" cy="6.5" r="2" fill="url(#copilot-gradient)" stroke="none"></circle>
+              <circle cx="16.5" cy="6.5" r="2" fill="white" stroke="none"></circle>
             </svg>
-          </span>
-          <div class="platform-name">GitHub Copilot</div>
-          <p style="margin-bottom: 1rem; color: var(--text); font-size: 0.95rem; line-height: 1.6;">AI pair programming
-            partner that dramatically accelerates development by suggesting code, catching bugs, and handling repetitive
-            tasks while your team focuses on innovation.</p>
-          <p><strong>AI-Powered Development</strong></p>
-          <ul>
-            <li>24/7 pair programming partner</li>
-            <li>AI-assisted code review</li>
-            <li>Automated documentation</li>
-            <li>Parallel development agents</li>
-            <li>Massive productivity boost</li>
-          </ul>
+          </div>
+          <div class="tool-tab-name">Copilot</div>
+        </button>
+      </div>
+
+      <!-- Matrix View -->
+      <div class="traceability-view" id="matrix-view">
+        <div class="matrix-container">
+          <table class="traceability-matrix">
+            <thead>
+              <tr>
+                <th class="matrix-corner">Implementation Areas</th>
+                <th class="tool-column aws-amplify">
+                  <div class="tool-header-content">
+                    <div class="tool-icon-header">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                      </svg>
+                    </div>
+                    <div class="tool-name">AWS Amplify</div>
+                    <div class="tool-description">Amazon's serverless platform designed for startups, providing everything from hosting to AI integration with a visual console that non-technical founders can actually use.</div>
+                    <div class="tool-tagline">Foundation for Control & Scale</div>
+                  </div>
+                </th>
+                <th class="tool-column statsig">
+                  <div class="tool-header-content">
+                    <div class="tool-icon-header">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                      </svg>
+                    </div>
+                    <div class="tool-name">Statsig</div>
+                    <div class="tool-description">Feature management and experimentation platform built specifically for startups, enabling safe feature rollouts and data-driven decisions without complex setup.</div>
+                    <div class="tool-tagline">Engine for Learning Fast</div>
+                  </div>
+                </th>
+                <th class="tool-column github">
+                  <div class="tool-header-content">
+                    <div class="tool-icon-header">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="none">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                      </svg>
+                    </div>
+                    <div class="tool-name">GitHub</div>
+                    <div class="tool-description">The world's leading development platform where your code lives, enabling version control, collaboration, and automated workflows that make shipping safe and efficient.</div>
+                    <div class="tool-tagline">Foundation for Safe Shipping</div>
+                  </div>
+                </th>
+                <th class="tool-column github-copilot">
+                  <div class="tool-header-content">
+                    <div class="tool-icon-header">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <defs>
+                          <linearGradient id="copilot-header-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:white;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:white;stop-opacity:0.8" />
+                          </linearGradient>
+                        </defs>
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke="url(#copilot-header-gradient)"></path>
+                        <circle cx="16.5" cy="6.5" r="2" fill="white" stroke="none"></circle>
+                      </svg>
+                    </div>
+                    <div class="tool-name">GitHub Copilot</div>
+                    <div class="tool-description">AI pair programming partner that dramatically accelerates development by suggesting code, catching bugs, and handling repetitive tasks while your team focuses on innovation.</div>
+                    <div class="tool-tagline">AI-Powered Development</div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="guideline-row control">
+                <td colspan="5" class="guideline-separator">
+                  <a href="#control" class="guideline-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <circle cx="12" cy="12" r="6"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                    <strong>Stay in Control</strong>
+                  </a>
+                </td>
+              </tr>
+              <tr data-heading="own-infrastructure" data-guideline="control">
+                <td class="heading-cell">
+                  Own Your Digital Infrastructure
+                </td>
+                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="own-infrastructure">✓</td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr data-heading="automate-setup" data-guideline="control">
+                <td class="heading-cell">
+                  Automate Your Infrastructure Setup
+                </td>
+                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="automate-setup">✓</td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr data-heading="build-compliance" data-guideline="control">
+                <td class="heading-cell">
+                  Build Compliance Into Your Foundation
+                </td>
+                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="build-compliance">✓</td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr class="guideline-row learn">
+                <td colspan="5" class="guideline-separator">
+                  <a href="#learn" class="guideline-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <strong>Learn Fast</strong>
+                  </a>
+                </td>
+              </tr>
+              <tr data-heading="map-customer-value" data-guideline="learn">
+                <td class="heading-cell">
+                  Map Every Feature to Customer Value
+                </td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell supported" data-tool="statsig" data-heading="map-customer-value">✓</td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr data-heading="track-metrics" data-guideline="learn">
+                <td class="heading-cell">
+                  Track Metrics That Drive Decisions
+                </td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell supported" data-tool="statsig" data-heading="track-metrics">✓</td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr data-heading="demo-features" data-guideline="learn">
+                <td class="heading-cell">
+                  Demo Real Features Every Friday
+                </td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell supported" data-tool="github" data-heading="demo-features">✓</td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr class="guideline-row ship">
+                <td colspan="5" class="guideline-separator">
+                  <a href="#ship" class="guideline-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+                      <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path>
+                      <path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path>
+                      <path d="M12 10v4"></path>
+                      <path d="M12 2v3"></path>
+                    </svg>
+                    <strong>Ship Safe</strong>
+                  </a>
+                </td>
+              </tr>
+              <tr data-heading="safe-workflows" data-guideline="ship">
+                <td class="heading-cell">
+                  Implement Safe Development Workflows
+                </td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell supported" data-tool="github" data-heading="safe-workflows">✓</td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr data-heading="feature-flags" data-guideline="ship">
+                <td class="heading-cell">
+                  Deploy Features Behind Feature Flags
+                </td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell supported" data-tool="statsig" data-heading="feature-flags">✓</td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr data-heading="measure-matters" data-guideline="ship">
+                <td class="heading-cell">
+                  Measure What Actually Matters
+                </td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell supported" data-tool="statsig" data-heading="measure-matters">✓</td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr class="guideline-row scale">
+                <td colspan="5" class="guideline-separator">
+                  <a href="#scale" class="guideline-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    <strong>Scale Smart</strong>
+                  </a>
+                </td>
+              </tr>
+              <tr data-heading="serverless-architecture" data-guideline="scale">
+                <td class="heading-cell">
+                  Choose Serverless Architecture
+                </td>
+                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="serverless-architecture">✓</td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr data-heading="web-only" data-guideline="scale">
+                <td class="heading-cell">
+                  Web-Only Until Customers Demand Mobile
+                </td>
+                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="web-only">✓</td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr data-heading="secure-product" data-guideline="scale">
+                <td class="heading-cell">
+                  Secure Your Product Now, Not Later
+                </td>
+                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="secure-product">✓</td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+              </tr>
+              <tr data-heading="leverage-ai" data-guideline="scale">
+                <td class="heading-cell">
+                  Leverage AI to Double Your Output
+                </td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell"></td>
+                <td class="matrix-cell supported" data-tool="github-copilot" data-heading="leverage-ai">✓</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
-      <div class="success-box">
-        <strong>Cost Comparison:</strong> This integrated approach typically costs 80% less than enterprise alternatives
-        while providing superior founder control and development velocity.
-      </div>
     </section>
 
     <!-- CTA Section -->
@@ -2019,6 +2801,166 @@
           e.target.style.transform = 'translateY(0) scale(1)';
         });
       });
+
+      // Traceability Matrix Interactive Functionality
+      const initTraceability = () => {
+        // Interactive highlights
+        setupInteractiveHighlights();
+        // Mobile tab functionality
+        setupMobileTabs();
+      };
+
+      const setupMobileTabs = () => {
+        const matrixContainer = document.querySelector('.matrix-container');
+        
+        // Initialize first tool as active on mobile
+        if (window.innerWidth <= 768) {
+          matrixContainer?.classList.add('mobile-active-aws-amplify');
+        }
+
+        // Tab click handlers
+        document.querySelectorAll('.tool-tab').forEach(tab => {
+          tab.addEventListener('click', () => {
+            const selectedTool = tab.getAttribute('data-tool');
+            
+            // Update active tab
+            document.querySelectorAll('.tool-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // Update mobile active class for showing columns
+            if (window.innerWidth <= 768) {
+              matrixContainer?.classList.remove('mobile-active-aws-amplify', 'mobile-active-statsig', 'mobile-active-github', 'mobile-active-github-copilot');
+              matrixContainer?.classList.add(`mobile-active-${selectedTool}`);
+            }
+          });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 768) {
+            // Desktop: remove mobile classes
+            matrixContainer?.classList.remove('mobile-active-aws-amplify', 'mobile-active-statsig', 'mobile-active-github', 'mobile-active-github-copilot');
+          } else {
+            // Mobile: add appropriate class
+            const activeTab = document.querySelector('.tool-tab.active');
+            if (activeTab) {
+              const selectedTool = activeTab.getAttribute('data-tool');
+              matrixContainer?.classList.remove('mobile-active-aws-amplify', 'mobile-active-statsig', 'mobile-active-github', 'mobile-active-github-copilot');
+              matrixContainer?.classList.add(`mobile-active-${selectedTool}`);
+            }
+          }
+        });
+      };
+
+      const setupInteractiveHighlights = () => {
+        // Matrix cell clicks - show detailed information
+        document.querySelectorAll('.matrix-cell.supported').forEach(cell => {
+          cell.addEventListener('click', () => {
+            const tool = cell.getAttribute('data-tool');
+            const heading = cell.getAttribute('data-heading');
+            showDetailedMapping(tool, heading);
+          });
+        });
+
+        // Hover effects for matrix
+        document.querySelectorAll('.matrix-cell.supported').forEach(cell => {
+          cell.addEventListener('mouseenter', () => {
+            const tool = cell.getAttribute('data-tool');
+            const heading = cell.getAttribute('data-heading');
+            
+            // Highlight related elements
+            document.querySelectorAll(`[data-tool="${tool}"]`).forEach(el => {
+              el.style.background = 'rgba(99, 102, 241, 0.1)';
+              el.style.transform = 'scale(1.02)';
+            });
+            
+            document.querySelectorAll(`[data-heading="${heading}"]`).forEach(el => {
+              el.style.background = 'rgba(34, 211, 238, 0.1)';
+            });
+          });
+          
+          cell.addEventListener('mouseleave', () => {
+            // Reset highlights
+            document.querySelectorAll('[data-tool], [data-heading]').forEach(el => {
+              el.style.background = '';
+              el.style.transform = '';
+            });
+          });
+        });
+      };
+
+
+      const showDetailedMapping = (tool, heading) => {
+        // Find the specific mapping details
+        const mappingData = {
+          'aws-amplify': {
+            'own-infrastructure': 'Amplify Console provides direct infrastructure ownership with IAM controls and visual management',
+            'automate-setup': 'Built-in Infrastructure as Code with automated CI/CD pipeline setup',
+            'build-compliance': 'AWS security best practices and compliance certifications built into the platform',
+            'serverless-architecture': 'Native serverless deployment with automatic scaling and pay-per-use pricing',
+            'web-only': 'Responsive web hosting with global CDN for optimal mobile performance',
+            'secure-product': 'Built-in authentication, authorization, and continuous security scanning'
+          },
+          'statsig': {
+            'map-customer-value': 'Feature gates with detailed user segmentation and impact measurement',
+            'track-metrics': 'Real-time analytics dashboard with startup-focused KPIs and actionable insights',
+            'feature-flags': 'Advanced feature flag management with gradual rollouts and A/B testing',
+            'measure-matters': 'Statistical significance testing and experimentation framework'
+          },
+          'github': {
+            'demo-features': 'Pull requests and staging environments for consistent weekly demo preparation',
+            'safe-workflows': 'Branch protection rules, code reviews, and automated testing workflows'
+          },
+          'github-copilot': {
+            'leverage-ai': 'AI pair programming with intelligent code completion, bug detection, and productivity acceleration'
+          }
+        };
+
+        const details = mappingData[tool]?.[heading];
+        if (details) {
+          // Create a temporary tooltip or modal-like display
+          const tooltip = document.createElement('div');
+          tooltip.className = 'mapping-tooltip';
+          tooltip.innerHTML = `
+            <div class="tooltip-content">
+              <h4>${tool.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())} → ${heading.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</h4>
+              <p>${details}</p>
+            </div>
+          `;
+          tooltip.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            max-width: 500px;
+            border: 2px solid var(--primary);
+            animation: fadeIn 0.3s ease;
+          `;
+
+          document.body.appendChild(tooltip);
+
+          // Remove tooltip after 4 seconds or on click
+          const removeTooltip = () => {
+            tooltip.remove();
+            document.removeEventListener('click', removeTooltip);
+          };
+          
+          setTimeout(removeTooltip, 4000);
+          document.addEventListener('click', removeTooltip);
+        }
+      };
+
+      // Initialize traceability when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTraceability);
+      } else {
+        initTraceability();
+      }
     });
   </script>
 </body>
