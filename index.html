@@ -875,24 +875,16 @@
       .diagram-title {
         position: relative;
         top: 0;
-        transform: none;
+        left: 50%;
+        transform: translateX(-50%);
         margin-bottom: 1rem;
         display: block;
         text-align: center;
+        width: max-content;
+        background: white;
+        padding: 0 1rem;
       }
 
-      .process-step[style*="min-width: 280px"] {
-        min-width: auto !important;
-        width: 100% !important;
-        flex: 1 1 100% !important;
-        margin-bottom: 1rem;
-      }
-
-      div[style*="min-width: 280px"] {
-        min-width: auto !important;
-        width: 100% !important;
-        flex: 1 1 100% !important;
-      }
     }
 
     /* Animations */
