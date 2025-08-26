@@ -1437,12 +1437,15 @@
         display: table-cell !important;
       }
 
-      /* Show matrix cells for active tool */
-      .mobile-active-aws-amplify .matrix-cell[data-tool="aws-amplify"],
-      .mobile-active-statsig .matrix-cell[data-tool="statsig"],
-      .mobile-active-github .matrix-cell[data-tool="github"],
-      .mobile-active-github-copilot .matrix-cell[data-tool="github-copilot"] {
+      /* Show matrix cells for active tool by column position */
+      .mobile-active-aws-amplify tr td.matrix-cell:nth-child(2),
+      .mobile-active-statsig tr td.matrix-cell:nth-child(3),
+      .mobile-active-github tr td.matrix-cell:nth-child(4),
+      .mobile-active-github-copilot tr td.matrix-cell:nth-child(5) {
         display: table-cell !important;
+        border-left: 1px solid #f1f5f9 !important;
+        border-right: 1px solid #f1f5f9 !important;
+        border-bottom: 1px solid var(--border) !important;
       }
 
     /* Mobile Responsive for Traceability */
@@ -1483,6 +1486,18 @@
         width: 50% !important;
         min-width: 50% !important;
         max-width: 50% !important;
+      }
+
+      /* Ensure all visible matrix cells have borders */
+      tr td.matrix-cell:last-child {
+        border-left: 1px solid #f1f5f9 !important;
+        border-right: 1px solid #f1f5f9 !important;
+        border-bottom: 1px solid var(--border) !important;
+      }
+
+      /* Make checkmarks smaller on mobile */
+      .matrix-cell.supported {
+        font-size: 1rem !important;
       }
 
       .container, .section {
