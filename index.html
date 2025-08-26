@@ -477,8 +477,8 @@
     }
 
     .heading-link {
-      opacity: 0;
-      color: white;
+      opacity: 0.3;
+      color: var(--primary);
       text-decoration: none;
       font-size: 1.2rem;
       padding: 0.5rem;
@@ -488,8 +488,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255, 255, 255, 0.1);
+      background: transparent;
       border: 2px solid transparent;
+      position: relative;
+      z-index: 10;
     }
 
     h2:hover .heading-link {
@@ -498,10 +500,10 @@
 
     .heading-link:hover {
       opacity: 1 !important;
-      background: rgba(255, 255, 255, 0.2);
+      background: transparent;
       transform: translateY(-2px) scale(1.05);
-      border-color: rgba(255, 255, 255, 0.3);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border-color: transparent;
+      box-shadow: none;
     }
 
     .heading-link:active {
@@ -1749,6 +1751,13 @@
           </svg>
         </span>
         Guideline 1: Stay in Control
+        <a href="#control" class="heading-link" title="Copy link to this section">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+        </a>
       </h2>
 
       <div class="key-insight">
@@ -1926,6 +1935,13 @@
           </svg>
         </span>
         Guideline 2: Learn Fast
+        <a href="#learn" class="heading-link" title="Copy link to this section">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+        </a>
       </h2>
 
       <div class="key-insight">
@@ -2090,6 +2106,13 @@
           </svg>
         </span>
         Guideline 3: Ship Safe
+        <a href="#ship" class="heading-link" title="Copy link to this section">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+        </a>
       </h2>
 
       <div class="key-insight">
@@ -2245,6 +2268,13 @@
           </svg>
         </span>
         Guideline 4: Scale Smart
+        <a href="#scale" class="heading-link" title="Copy link to this section">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+        </a>
       </h2>
 
       <div class="key-insight">
@@ -2402,6 +2432,13 @@
           </svg>
         </span>
         Recommended Tools & Platforms
+        <a href="#tools" class="heading-link" title="Copy link to this section">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+        </a>
       </h2>
 
       <p style="font-size: 1.2rem; margin-bottom: 2rem;"><strong>Start with these 4 tools.</strong> By limiting your stack to just these platforms, you'll reduce hiring complexity, minimize maintenance overhead, and eliminate integration headaches. Each tool directly supports multiple guidelines, maximizing your ROI while keeping your team focused on building product, not managing infrastructure.</p>
