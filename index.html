@@ -1918,9 +1918,10 @@
     });
 
     // Intersection Observer for section animations
+    const isMobile = window.innerWidth <= 768;
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: isMobile ? 0.05 : 0.1,
+      rootMargin: isMobile ? '0px 0px -10px 0px' : '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -1933,6 +1934,31 @@
 
     document.querySelectorAll('.section').forEach(section => {
       observer.observe(section);
+    });
+
+    // Mobile fallback - ensure sections are visible on mobile
+    if (isMobile) {
+      setTimeout(() => {
+        document.querySelectorAll('.section').forEach(section => {
+          if (!section.classList.contains('visible')) {
+            section.classList.add('visible');
+          }
+        });
+      }, 1000);
+    }
+
+    // Handle window resize for mobile orientation changes
+    window.addEventListener('resize', () => {
+      const newIsMobile = window.innerWidth <= 768;
+      if (newIsMobile) {
+        setTimeout(() => {
+          document.querySelectorAll('.section').forEach(section => {
+            if (!section.classList.contains('visible')) {
+              section.classList.add('visible');
+            }
+          });
+        }, 500);
+      }
     });
 
     // Add some dynamic elements
