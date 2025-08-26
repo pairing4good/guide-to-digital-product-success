@@ -1165,7 +1165,9 @@
     }
 
     .matrix-corner {
-      background: var(--dark) !important;
+      background: linear-gradient(135deg, #64748b 0%, #475569 100%) !important;
+      color: white;
+      text-align: center !important;
       min-width: 280px;
       max-width: 280px;
     }
@@ -1178,37 +1180,64 @@
       vertical-align: top;
     }
 
-    .tool-header-content {
+    .tool-header-content, .implementation-header-content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.75rem;
       text-align: center;
+      height: 280px;
+      justify-content: flex-start;
+      gap: 0;
+      padding: 8px 12px;
+      box-sizing: border-box;
     }
 
-    .tool-icon-header {
-      width: 40px;
-      height: 40px;
+    .tool-icon-header, .implementation-icon-header {
+      width: 40px !important;
+      height: 40px !important;
+      min-width: 40px !important;
+      min-height: 40px !important;
+      max-width: 40px !important;
+      max-height: 40px !important;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       backdrop-filter: blur(10px);
+      margin-bottom: 12px;
+      margin-top: 8px;
+      flex-shrink: 0;
+      box-sizing: border-box;
     }
 
-    .tool-name {
+    .tool-icon-header svg, .implementation-icon-header svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .tool-name, .implementation-name {
       font-size: 1.1rem;
       font-weight: 700;
       line-height: 1.2;
-      margin-bottom: 0.5rem;
+      margin-bottom: 8px;
+      height: 28px;
+      display: flex;
+      align-items: center;
     }
 
-    .tool-description {
+    .tool-description, .implementation-description {
       font-size: 0.75rem;
       line-height: 1.4;
       opacity: 0.9;
-      max-width: 200px;
+      max-width: 160px;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .tool-tagline {
@@ -1431,6 +1460,31 @@
         table-layout: fixed !important;
       }
 
+      .matrix-corner {
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        text-align: center !important;
+      }
+
+      .tool-column {
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+      }
+
+      .heading-cell {
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+      }
+
+      .matrix-cell {
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+      }
+
       .container, .section {
         width: 100% !important;
         max-width: 100vw !important;
@@ -1450,8 +1504,19 @@
         font-size: 1.5rem !important;
       }
 
+      .hero-header {
+        font-size: 1rem !important;
+        white-space: nowrap !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        flex-wrap: nowrap !important;
+      }
+
       h1 {
-        font-size: 1.9rem !important;
+        font-size: 1.4rem !important;
       }
 
       .subtitle {
@@ -2406,7 +2471,20 @@
           <table class="traceability-matrix">
             <thead>
               <tr>
-                <th class="matrix-corner">Implementation Areas</th>
+                <th class="matrix-corner">
+                  <div class="implementation-header-content">
+                    <div class="implementation-icon-header">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"></path>
+                        <path d="M21 11h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"></path>
+                        <path d="M9 7V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3"></path>
+                        <line x1="9" y1="7" x2="15" y2="7"></line>
+                      </svg>
+                    </div>
+                    <div class="implementation-name">Implementation Areas</div>
+                    <div class="implementation-description">Core practices that span multiple guidelines, showing which tools support each implementation area across your startup journey</div>
+                  </div>
+                </th>
                 <th class="tool-column aws-amplify">
                   <div class="tool-header-content">
                     <div class="tool-icon-header">
