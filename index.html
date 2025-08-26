@@ -728,6 +728,181 @@
       margin: 2rem 0;
     }
 
+    .guideline-savings-box {
+      background: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #15803d 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 3rem auto 0 auto;
+      box-shadow: 0 10px 40px rgba(22, 163, 74, 0.3);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+      font-size: 1rem;
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+      max-width: 766px;
+      width: 100%;
+    }
+
+    .guideline-savings-box.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .guideline-savings-box::before {
+      content: '$';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotateZ(15deg) rotateY(20deg) rotateX(10deg);
+      font-family: 'Arial Black', 'Helvetica Black', 'Impact', 'Franklin Gothic Heavy', sans-serif;
+      font-size: 400px;
+      font-weight: 900;
+      color: white;
+      opacity: 0.08;
+      line-height: 1;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: 0;
+      text-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.1),
+        2px 2px 0px rgba(255, 255, 255, 0.08),
+        4px 4px 0px rgba(255, 255, 255, 0.06),
+        6px 6px 0px rgba(255, 255, 255, 0.04),
+        8px 8px 0px rgba(255, 255, 255, 0.03),
+        10px 10px 0px rgba(255, 255, 255, 0.02),
+        12px 12px 20px rgba(0, 0, 0, 0.2);
+      filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.15));
+      perspective: 1000px;
+      -webkit-text-stroke: 2px rgba(255, 255, 255, 0.05);
+    }
+
+    .savings-header {
+      margin-bottom: 2rem;
+      font-family: 'Inter', 'SF Pro Display', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      text-align: center;
+      letter-spacing: -0.025em;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+      padding-bottom: 1rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .savings-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .savings-item {
+      list-style: none;
+    }
+    
+    .savings-item::before {
+      content: none !important;
+      display: none !important;
+    }
+
+    .savings-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .savings-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+    }
+
+    .savings-item:last-child {
+      border-bottom: none;
+    }
+
+    .savings-description {
+      flex: 1;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-right: 1rem;
+    }
+
+    .savings-amount {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #a3e635;
+      text-align: right;
+      flex-shrink: 0;
+      min-width: 120px;
+    }
+
+    .savings-total {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .savings-total-amount {
+      font-size: 1.3rem;
+      color: #a3e635;
+    }
+
+    @media (max-width: 768px) {
+      .guideline-savings-box {
+        padding: 1.5rem;
+        margin: 2rem auto 0 auto;
+        max-width: 100%;
+      }
+      
+      .guideline-savings-box::before {
+        font-size: 240px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotateZ(12deg) rotateY(15deg) rotateX(8deg);
+        text-shadow: 
+          0 0 10px rgba(255, 255, 255, 0.08),
+          1px 1px 0px rgba(255, 255, 255, 0.06),
+          2px 2px 0px rgba(255, 255, 255, 0.04),
+          3px 3px 0px rgba(255, 255, 255, 0.03),
+          4px 4px 0px rgba(255, 255, 255, 0.02),
+          6px 6px 10px rgba(0, 0, 0, 0.15);
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.04);
+      }
+      
+      .savings-header {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+      }
+      
+      .savings-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: stretch;
+      }
+      
+      .savings-amount {
+        text-align: left;
+        min-width: auto;
+      }
+    }
+
+
     /* Platform Cards */
     .platform-grid {
       display: grid;
@@ -1916,12 +2091,37 @@
         data, enable audit logs, use secure authentication, and document your security policies. Starting with
         compliance-ready infrastructure costs almost nothing extra today but saves hundreds of thousands of dollars and
         months of work when that Fortune 500 company wants to become your customer.</p>
+      
       <ul>
         <li>Enables faster enterprise sales cycles</li>
         <li>Reduces legal and regulatory risks</li>
         <li>Commands premium pricing from security-conscious customers</li>
         <li>Attracts higher-quality investors and partners</li>
       </ul>
+
+      <div class="guideline-savings-box">
+        <div class="savings-header">
+          Stay in Control - Cost Savings
+        </div>
+        <ul class="savings-list">
+          <li class="savings-item">
+            <div class="savings-description">Avoid vendor lock-in and emergency migrations when contractors leave</div>
+            <div class="savings-amount">$25K - $100K</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Prevent compliance retrofitting costs for SOC 2, GDPR, and enterprise sales</div>
+            <div class="savings-amount">$75K - $200K</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Eliminate emergency infrastructure recovery and knowledge transfer fees</div>
+            <div class="savings-amount">$15K - $50K</div>
+          </li>
+        </ul>
+        <div class="savings-total">
+          <span>Total Potential Savings:</span>
+          <span class="savings-total-amount">$115K - $350K</span>
+        </div>
+      </div>
     </section>
 
     <!-- Guideline 2: Learn Fast -->
@@ -2087,6 +2287,34 @@
       <div class="warning-box" style="margin-bottom: 2rem;">
         <strong>Critical Warning:</strong> Delegating product ownership or reviewing work asynchronously is a recipe for
         disaster. Teams will optimize for what feels like progress rather than what delivers customer value.
+      </div>
+
+      <div class="guideline-savings-box">
+        <div class="savings-header">
+          Learn Fast - Cost Savings
+        </div>
+        <ul class="savings-list">
+          <li class="savings-item">
+            <div class="savings-description">Eliminate wasted development on features customers don't want</div>
+            <div class="savings-amount">$50K - $200K</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Reduce time to product-market fit by 2.5x through customer feedback loops</div>
+            <div class="savings-amount">$30K - $150K</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Stop ineffective marketing spend by tracking actual customer acquisition costs</div>
+            <div class="savings-amount">$20K - $100K</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Avoid hiring wrong team members through data-driven performance tracking</div>
+            <div class="savings-amount">$15K - $75K</div>
+          </li>
+        </ul>
+        <div class="savings-total">
+          <span>Total Potential Savings:</span>
+          <span class="savings-total-amount">$115K - $525K</span>
+        </div>
       </div>
     </section>
 
@@ -2256,6 +2484,34 @@
         <strong>Tip:</strong> Set up alerts so when any metric drifts out of range, you catch it early—weeks matter,
         months kill.
       </div>
+
+      <div class="guideline-savings-box">
+        <div class="savings-header">
+          Ship Safe - Cost Savings
+        </div>
+        <ul class="savings-list">
+          <li class="savings-item">
+            <div class="savings-description">Prevent emergency hotfixes and midnight deployments through safe workflows</div>
+            <div class="savings-amount">$25K - $100K</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Reduce customer churn from buggy releases by 70% with feature flags</div>
+            <div class="savings-amount">$40K - $200K</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Eliminate wasted engineering time on rollbacks and bug fixes</div>
+            <div class="savings-amount">$30K - $120K</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Avoid reputation damage and PR crises from public outages</div>
+            <div class="savings-amount">Priceless</div>
+          </li>
+        </ul>
+        <div class="savings-total">
+          <span>Total Potential Savings:</span>
+          <span class="savings-total-amount">$95K - $420K</span>
+        </div>
+      </div>
     </section>
 
     <!-- Guideline 4: Scale Smart -->
@@ -2288,6 +2544,7 @@
         servers that sit idle 95% of the time. Serverless isn't just about cost—it's about focusing on your product
         instead of managing infrastructure. Companies using serverless spend 70% less on infrastructure and 90% less
         time on DevOps.</p>
+      
       <div class="diagram">
         <span class="diagram-title">Cost Scaling Model Comparison</span>
         <div
@@ -2361,6 +2618,7 @@
       <p>Delete your mobile app plans right now. Build a responsive web app that works great on phones instead. You'll
         iterate 10x faster, ship updates instantly without app store approval, and save $100K+ in development costs.
         Only build native apps when customers are literally begging for them and willing to pay.</p>
+      
       <ul>
         <li>Single codebase to maintain and update</li>
         <li>Instant deployment without app store approval</li>
@@ -2408,6 +2666,7 @@
         tackles, give an AI agent a parallel story. Even if the AI only succeeds 50% of the time, you've just increased
         your development speed by 50% for the cost of a coffee subscription. This isn't the future—it's what winning
         startups are doing today.</p>
+      
       <ul>
         <li><strong>AI Code Reviews:</strong> Catch bugs and security issues automatically</li>
         <li><strong>AI Coding Assistance:</strong> Speed up development with intelligent suggestions</li>
@@ -2417,6 +2676,34 @@
       <div class="success-box">
         <strong>Parallel Sprint Strategy:</strong> Implement AI agents that take on a story for every story a human
         developer tackles. Even with a 50% success rate, you're effectively doubling your development throughput.
+      </div>
+
+      <div class="guideline-savings-box">
+        <div class="savings-header">
+          Scale Smart - Cost Savings
+        </div>
+        <ul class="savings-list">
+          <li class="savings-item">
+            <div class="savings-description">Save 70% on infrastructure costs with serverless architecture</div>
+            <div class="savings-amount">$6K - $60K/year</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Avoid mobile app development costs with responsive web-first approach</div>
+            <div class="savings-amount">$100K - $300K</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Prevent security breaches and compliance violations</div>
+            <div class="savings-amount">$50K - $500K</div>
+          </li>
+          <li class="savings-item">
+            <div class="savings-description">Double development speed with AI tools for $10/month per developer</div>
+            <div class="savings-amount">$25K - $150K/year</div>
+          </li>
+        </ul>
+        <div class="savings-total">
+          <span>Total Potential Savings:</span>
+          <span class="savings-total-amount">$181K - $1M+</span>
+        </div>
       </div>
     </section>
 
@@ -2850,6 +3137,11 @@
     document.querySelectorAll('.section').forEach(section => {
       observer.observe(section);
     });
+    
+    // Observe guideline-savings-box elements
+    document.querySelectorAll('.guideline-savings-box').forEach(box => {
+      observer.observe(box);
+    });
 
     // Mobile fallback - ensure sections are visible on mobile
     if (isMobile) {
@@ -2857,6 +3149,11 @@
         document.querySelectorAll('.section').forEach(section => {
           if (!section.classList.contains('visible')) {
             section.classList.add('visible');
+          }
+        });
+        document.querySelectorAll('.guideline-savings-box').forEach(box => {
+          if (!box.classList.contains('visible')) {
+            box.classList.add('visible');
           }
         });
       }, 1000);
@@ -2870,6 +3167,11 @@
           document.querySelectorAll('.section').forEach(section => {
             if (!section.classList.contains('visible')) {
               section.classList.add('visible');
+            }
+          });
+          document.querySelectorAll('.guideline-savings-box').forEach(box => {
+            if (!box.classList.contains('visible')) {
+              box.classList.add('visible');
             }
           });
         }, 500);
