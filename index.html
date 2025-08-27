@@ -411,6 +411,10 @@
         padding: 0.75rem 0.25rem;
       }
 
+      .hero-stat-separator {
+        display: none;
+      }
+
       .hero-stat-number {
         font-size: 1.2rem;
       }
@@ -804,15 +808,30 @@
 
     .hero-stat {
       text-align: center;
-      padding: 1rem 0.5rem;
+      padding: 1.5rem 1rem;
       background: rgba(255, 255, 255, 0.95);
       border-radius: 12px;
       backdrop-filter: blur(10px);
       position: relative;
       z-index: 2;
       color: var(--primary);
-      min-width: 120px;
+      min-width: 152px;
       flex: 0 0 auto;
+    }
+
+    .hero-stat-separator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      opacity: 0.8;
+    }
+
+    /* Hide separators when stats start stacking */
+    @media (max-width: 580px) {
+      .hero-stat-separator {
+        display: none;
+      }
     }
 
     .hero-stat-number {
@@ -2491,23 +2510,35 @@
       <div class="hero-cta">
         <div class="hero-cta-content">
           <div class="hero-cta-headline">
-            These Proven Startup Strategies Can Unlock Up to $150K+ in Savings Each Month
+            These Proven Startup Strategies Can Unlock Savings - Up to $170K/mo
           </div>
           <div class="hero-cta-subheader">
             Discover the 4 game-changing strategies that transform costly mistakes into competitive advantages. This comprehensive guide shares the exact playbook that successful startups use to build fast, stable, and profitable systems.
           </div>
           <div class="hero-stats">
             <div class="hero-stat">
-              <span class="hero-stat-number">$2.2M+</span>
-              <span class="hero-stat-label">Potential Savings</span>
-            </div>
-            <div class="hero-stat">
               <span class="hero-stat-number">25 min</span>
               <span class="hero-stat-label">Reading Time</span>
+            </div>
+            <div class="hero-stat-separator">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14"></path>
+                <path d="m5 12 14 0"></path>
+              </svg>
             </div>
             <div class="hero-stat">
               <span class="hero-stat-number">4</span>
               <span class="hero-stat-label">Essential Guidelines</span>
+            </div>
+            <div class="hero-stat-separator">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M5 18h14"></path>
+              </svg>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">$2M+</span>
+              <span class="hero-stat-label">Potential Savings</span>
             </div>
           </div>
           <div class="hero-cta-action">
