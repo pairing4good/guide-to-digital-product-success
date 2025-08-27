@@ -154,6 +154,32 @@
       padding-left: 2rem;
     }
 
+    /* Mobile Guideline Indicator */
+    .mobile-guideline-indicator {
+      display: none;
+      width: 100%;
+      background: rgba(99, 102, 241, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 0;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+    }
+
+    .mobile-guideline-indicator.visible {
+      max-height: 50px;
+      opacity: 1;
+      padding: 0.5rem 1.5rem;
+    }
+
+    .guideline-indicator-text {
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
     @media (max-width: 768px) {
       #mobile-nav {
         display: block;
@@ -165,6 +191,18 @@
 
       .container {
         margin-top: 70px;
+      }
+
+      .mobile-guideline-indicator {
+        display: block;
+      }
+
+      .hero {
+        margin-bottom: 0;
+      }
+
+      .section {
+        padding: 1rem 0;
       }
     }
 
@@ -1853,6 +1891,11 @@
       <a href="#scale" class="mobile-menu-item">Scale Smart</a>
       <a href="#tools" class="mobile-menu-item">Recommended Stack</a>
     </div>
+    
+    <!-- Mobile Guideline Indicator - inside mobile nav -->
+    <div id="mobile-guideline-indicator" class="mobile-guideline-indicator">
+      <div class="guideline-indicator-text"></div>
+    </div>
   </nav>
 
   <!-- Side Navigation -->
@@ -3098,6 +3141,48 @@
     window.addEventListener('scroll', () => {
       const sections = document.querySelectorAll('section');
       const sideNavItems = document.querySelectorAll('.side-nav-item');
+      
+      // Mobile guideline indicator logic
+      const mobileIndicator = document.getElementById('mobile-guideline-indicator');
+      const indicatorText = document.querySelector('.guideline-indicator-text');
+      
+      if (window.innerWidth <= 768 && mobileIndicator) {
+        const guidelines = [
+          { id: 'control', name: 'Stay in Control' },
+          { id: 'learn', name: 'Learn Fast' },
+          { id: 'ship', name: 'Ship Safe' },
+          { id: 'scale', name: 'Scale Smart' },
+          { id: 'tools', name: 'Recommended Stack' }
+        ];
+        
+        let currentGuideline = null;
+        
+        // Check each guideline section
+        for (let i = 0; i < guidelines.length; i++) {
+          const section = document.getElementById(guidelines[i].id);
+          const header = section ? section.querySelector('h2') : null;
+          
+          if (section && header) {
+            const headerRect = header.getBoundingClientRect();
+            const sectionRect = section.getBoundingClientRect();
+            
+            // Check if this section's header has scrolled past the mobile nav
+            // AND we're still within this section
+            if (headerRect.bottom < 70 && sectionRect.top <= 70 && sectionRect.bottom > 70) {
+              currentGuideline = guidelines[i].name;
+              break;
+            }
+          }
+        }
+        
+        // Show indicator if we found a current guideline
+        if (currentGuideline) {
+          indicatorText.textContent = currentGuideline;
+          mobileIndicator.classList.add('visible');
+        } else {
+          mobileIndicator.classList.remove('visible');
+        }
+      }
 
       let current = '';
 
