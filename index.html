@@ -341,6 +341,17 @@
         font-size: 1.1rem;
       }
 
+      .guideline-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+      }
+
+      .guideline-stat {
+        justify-content: center;
+        font-size: 0.75rem;
+      }
+
     }
 
     /* Side Navigation */
@@ -610,6 +621,57 @@
 
     .guideline-card h3 {
       margin: 0;
+    }
+
+    .guideline-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e2e8f0;
+      gap: 1rem;
+    }
+
+    .guideline-stat {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .guideline-stat.read-time {
+      color: #6366f1;
+    }
+
+    .guideline-stat.savings {
+      color: #059669;
+    }
+
+    .stat-icon {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .stat-icon.read-time {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+    }
+
+    .stat-icon.savings {
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      color: white;
+    }
+
+    .guideline-card.full-width {
+      grid-column: 1 / -1;
     }
 
     .guideline-number {
@@ -2132,21 +2194,126 @@
           <span class="guideline-number">1</span>
           <h3>Stay in Control</h3>
           <p>Maintain ownership and understanding of your digital infrastructure</p>
+          <div class="guideline-meta">
+            <div class="guideline-stat read-time">
+              <div class="stat-icon read-time">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12,6 12,12 16,14"></polyline>
+                </svg>
+              </div>
+              8 min read
+            </div>
+            <div class="guideline-stat savings">
+              <div class="stat-icon savings">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              Save up to ~$330K
+            </div>
+          </div>
         </div>
         <div class="guideline-card" onclick="scrollToSection('learn')">
           <span class="guideline-number">2</span>
           <h3>Learn Fast</h3>
           <p>Build systems that help you understand customers quickly</p>
+          <div class="guideline-meta">
+            <div class="guideline-stat read-time">
+              <div class="stat-icon read-time">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12,6 12,12 16,14"></polyline>
+                </svg>
+              </div>
+              12 min read
+            </div>
+            <div class="guideline-stat savings">
+              <div class="stat-icon savings">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              Save up to ~$450K
+            </div>
+          </div>
         </div>
         <div class="guideline-card" onclick="scrollToSection('ship')">
           <span class="guideline-number">3</span>
           <h3>Ship Safe</h3>
           <p>Deploy frequently while minimizing risk</p>
+          <div class="guideline-meta">
+            <div class="guideline-stat read-time">
+              <div class="stat-icon read-time">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12,6 12,12 16,14"></polyline>
+                </svg>
+              </div>
+              10 min read
+            </div>
+            <div class="guideline-stat savings">
+              <div class="stat-icon savings">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              Save up to ~$420K
+            </div>
+          </div>
         </div>
         <div class="guideline-card" onclick="scrollToSection('scale')">
           <span class="guideline-number">4</span>
           <h3>Scale Smart</h3>
           <p>Choose tools that grow with your business</p>
+          <div class="guideline-meta">
+            <div class="guideline-stat read-time">
+              <div class="stat-icon read-time">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12,6 12,12 16,14"></polyline>
+                </svg>
+              </div>
+              15 min read
+            </div>
+            <div class="guideline-stat savings">
+              <div class="stat-icon savings">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              Save up to ~$1M+
+            </div>
+          </div>
+        </div>
+        <div class="guideline-card full-width" onclick="scrollToSection('tools')">
+          <span class="guideline-number">5</span>
+          <h3>Recommended Stack</h3>
+          <p>Start with these 4 proven technologies that work together seamlessly</p>
+          <div class="guideline-meta">
+            <div class="guideline-stat read-time">
+              <div class="stat-icon read-time">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12,6 12,12 16,14"></polyline>
+                </svg>
+              </div>
+              8 min read
+            </div>
+            <div class="guideline-stat savings">
+              <div class="stat-icon savings">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              Save up to ~$2.2M+
+            </div>
+          </div>
         </div>
       </div>
     </section>
