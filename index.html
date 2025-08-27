@@ -945,6 +945,17 @@
       }
     }
 
+    @media (max-width: 402px) {
+      
+      .tool-tab {
+        min-width: unset !important;
+      }
+
+      .mobile-tool-tabs {
+        gap: 0.2rem !important;
+      }
+    }
+
 
     /* Platform Cards */
     .platform-grid {
@@ -1802,7 +1813,7 @@
         padding: 1rem 0.5rem;
       }
 
-      .tool-description {
+      .tool-description, .implementation-description  {
         font-size: 0.7rem;
         max-width: 140px;
       }
@@ -2793,7 +2804,7 @@
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
           </div>
-          <div class="tool-tab-name">AWS Amplify</div>
+          <div class="tool-tab-name">Amplify</div>
         </button>
         <button class="tool-tab" data-tool="statsig">
           <div class="tool-tab-icon">
@@ -2840,8 +2851,8 @@
                         <line x1="9" y1="7" x2="15" y2="7"></line>
                       </svg>
                     </div>
-                    <div class="implementation-name">Recomendations</div>
-                    <div class="implementation-description">Startup Success Guide core recomendations within each guideline</div>
+                    <div class="implementation-name">Recomendation</div>
+                    <div class="implementation-description">Core recomendations within each guideline</div>
                   </div>
                 </th>
                 <th class="tool-column aws-amplify">
@@ -2851,8 +2862,8 @@
                         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                       </svg>
                     </div>
-                    <div class="tool-name">AWS Amplify</div>
-                    <div class="tool-description">Build, design, and host serverless, cloud applications</div>
+                    <div class="tool-name">Amplify</div>
+                    <div class="tool-description">Build, design, and host serverless, AWS applications</div>
                   </div>
                 </th>
                 <th class="tool-column statsig">
