@@ -80,6 +80,12 @@
       font-weight: 600;
       font-size: 1.1rem;
       color: var(--primary);
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    .mobile-logo:hover {
+      opacity: 0.8;
     }
 
     .mobile-logo svg {
@@ -2448,7 +2454,7 @@
   <!-- Mobile Navigation -->
   <nav id="mobile-nav">
     <div class="mobile-nav-container">
-      <div class="mobile-logo">
+      <div class="mobile-logo" onclick="scrollToTop()">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
           <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
@@ -3941,6 +3947,10 @@
     // Smooth scrolling for navigation
     function scrollToSection(sectionId) {
       document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Update active navigation on scroll
