@@ -2486,6 +2486,64 @@
     /* Mobile Tool Tabs */
     .mobile-tool-tabs {
       display: none;
+      position: relative;
+    }
+    
+    /* Mobile Tool Tabs Hint */
+    .mobile-tabs-hint {
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      opacity: 1;
+      animation: hintFadeIn 0.5s ease, hintFadeOut 1s ease 3s forwards;
+      z-index: 100;
+    }
+    
+    
+    /* Pulse animation for inactive tabs */
+    .tool-tab:not(.active) {
+      animation: tabPulse 3s ease-in-out infinite;
+      box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+      border: 2px solid transparent;
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(135deg, var(--primary), var(--secondary)) border-box;
+    }
+    
+    .tool-tab:not(.active):hover {
+      animation: none;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+    }
+    
+    /* Stop animation after first interaction */
+    .mobile-tool-tabs.interacted .tool-tab:not(.active) {
+      animation: none;
+    }
+    
+    @keyframes tabPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+      }
+    }
+    
+    @keyframes hintFadeIn {
+      from { opacity: 0; transform: translateX(-50%) translateY(-5px); }
+      to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    
+    @keyframes hintFadeOut {
+      to { opacity: 0; transform: translateX(-50%) translateY(-5px); }
     }
 
     @media (max-width: 768px) {
@@ -4038,6 +4096,7 @@
 
       <!-- Mobile Tool Tabs -->
       <div class="mobile-tool-tabs">
+        <div class="mobile-tabs-hint">Tap to switch tools</div>
         <button class="tool-tab active" data-tool="aws-amplify">
           <div class="tool-tab-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
@@ -4583,6 +4642,17 @@
         document.querySelectorAll('.tool-tab').forEach(tab => {
           tab.addEventListener('click', () => {
             const selectedTool = tab.getAttribute('data-tool');
+
+            // Mark as interacted to stop animations and remove hint
+            const tabContainer = document.querySelector('.mobile-tool-tabs');
+            if (!tabContainer.classList.contains('interacted')) {
+              tabContainer.classList.add('interacted');
+              const hint = tabContainer.querySelector('.mobile-tabs-hint');
+              if (hint) {
+                hint.style.animation = 'hintFadeOut 0.3s ease forwards';
+                setTimeout(() => hint.remove(), 300);
+              }
+            }
 
             // Update active tab
             document.querySelectorAll('.tool-tab').forEach(t => t.classList.remove('active'));
