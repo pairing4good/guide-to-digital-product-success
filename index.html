@@ -927,19 +927,20 @@
 
     .slideshow-content {
       flex: 1;
-      padding: 1rem 1.5rem 2rem 1.5rem;
+      padding: 1rem;
       display: flex;
       align-items: flex-start;
       justify-content: center;
       font-size: 1.2rem;
       line-height: 1.6;
-      overflow-y: auto;
+      overflow: hidden;
       z-index: 0;
     }
 
-    /* Add small top margin to all slides */
+    /* Individual slide scaling */
     .slideshow-content .slide {
-      margin-top: 1rem;
+      transform-origin: top center;
+      max-width: none;
     }
 
     .slideshow-content>* {
@@ -4707,8 +4708,41 @@
       headerElement.appendChild(titleDiv);
       headerElement.appendChild(navDiv);
 
-      document.getElementById('slideshow-content').innerHTML = '';
-      document.getElementById('slideshow-content').appendChild(slide.cloneNode(true));
+      const slideContent = document.getElementById('slideshow-content');
+      slideContent.innerHTML = '';
+      const clonedSlide = slide.cloneNode(true);
+      slideContent.appendChild(clonedSlide);
+      
+      // Hide slide during scaling calculation
+      clonedSlide.style.visibility = 'hidden';
+      
+      // Scale each slide individually to fit
+      setTimeout(() => {
+        const containerRect = slideContent.getBoundingClientRect();
+        const availableHeight = containerRect.height - 64; // Account for padding + bottom margin
+        const availableWidth = containerRect.width - 32;
+        
+        // Reset any existing transforms
+        clonedSlide.style.transform = 'none';
+        clonedSlide.style.width = 'auto';
+        
+        // Get content dimensions
+        const slideRect = clonedSlide.getBoundingClientRect();
+        
+        // Calculate scale needed for both dimensions
+        const scaleHeight = availableHeight / slideRect.height;
+        const scaleWidth = availableWidth / slideRect.width;
+        const scale = Math.min(scaleHeight, scaleWidth, 1) * 0.95; // 5% buffer
+        
+        // Apply scaling
+        if (scale < 1) {
+          clonedSlide.style.transform = `scale(${scale})`;
+          clonedSlide.style.width = `${100 / scale}%`;
+        }
+        
+        // Show slide at correct size
+        clonedSlide.style.visibility = 'visible';
+      }, 100);
     }
 
     function nextSlide() {
