@@ -2063,10 +2063,10 @@
     }
 
     .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      display: flex;
+      flex-direction: column;
       gap: 2rem;
-      align-items: start;
+      align-items: stretch;
     }
 
     .testimonial-card {
@@ -2326,7 +2326,6 @@
       }
 
       .testimonials-grid {
-        grid-template-columns: 1fr;
         gap: 1.5rem;
       }
 
@@ -2382,7 +2381,6 @@
 
     @media (max-width: 580px) {
       .testimonials-grid {
-        grid-template-columns: 1fr;
         min-width: 0;
       }
 
