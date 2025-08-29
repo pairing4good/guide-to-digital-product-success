@@ -2014,6 +2014,384 @@
       font-weight: 600;
     }
 
+    /* Testimonials Section */
+    .testimonials-section {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      padding: 4rem 0;
+      position: relative;
+      overflow: hidden;
+      display: none; /* uncomment to enable testimonials section */
+    }
+
+    .testimonials-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 30%, rgba(34, 211, 238, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .testimonials-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonials-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .testimonials-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .testimonial-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-header {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-company-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .testimonial-company-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .testimonial-company-link {
+      font-size: 0.85rem;
+      color: var(--primary);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+    }
+
+    .testimonial-company-link:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .testimonial-footer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .testimonial-footer .testimonial-name::before {
+      content: "—";
+      color: var(--primary);
+      font-weight: 600;
+      margin-right: 0.75rem;
+    }
+
+    .testimonial-quote {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 2rem;
+      margin-left: 3rem;
+      font-style: italic;
+      position: relative;
+    }
+
+    .testimonial-quote::before {
+      content: '"';
+      font-size: 4rem;
+      color: var(--primary);
+      position: absolute;
+      top: -1rem;
+      left: -2.5rem;
+      font-family: Georgia, serif;
+      opacity: 0.3;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .testimonial-author-reordered {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .testimonial-company-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      align-self: flex-start;
+    }
+
+    .testimonial-founder-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      align-self: flex-end;
+    }
+
+    .testimonial-avatar-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+      height: calc(1.1rem + 0.25rem + 0.9rem + 0.25rem + 0.9rem); /* name + gap + title + gap + company = ~3.5rem */
+    }
+
+    .testimonial-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+      border: 3px solid white;
+    }
+
+    .testimonial-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial-avatar-placeholder {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+      border: 3px solid white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .company-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--logo-bg, white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+      border: 3px solid white;
+    }
+
+    /* Predefined logo background options - easily expandable */
+    .logo-bg-white { --logo-bg: white; }
+    .logo-bg-dark { --logo-bg: #1e293b; }
+    .logo-bg-primary { --logo-bg: #6366f1; }
+    .logo-bg-secondary { --logo-bg: #22d3ee; }
+    .logo-bg-light-gray { --logo-bg: #f8fafc; }
+    .logo-bg-medium-gray { --logo-bg: #e2e8f0; }
+    .logo-bg-success { --logo-bg: #10b981; }
+    .logo-bg-warning { --logo-bg: #f59e0b; }
+    .logo-bg-gradient-primary { --logo-bg: linear-gradient(135deg, #6366f1, #8b5cf6); }
+    .logo-bg-gradient-secondary { --logo-bg: linear-gradient(135deg, #22d3ee, #3b82f6); }
+    .logo-bg-custom { --logo-bg: var(--custom-color, white); }
+
+    .company-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
+    }
+
+    .testimonial-info {
+      flex: 1;
+    }
+
+    .testimonial-company-info {
+      text-align: left;
+    }
+
+    .testimonial-founder-info {
+      text-align: right;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .testimonial-title {
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .testimonial-company {
+      font-size: 1.1rem;
+      color: var(--dark);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .testimonials-section {
+        padding: 3rem 0;
+      }
+
+      .testimonials-container {
+        padding: 0 1.5rem;
+      }
+
+      .testimonials-title {
+        font-size: 2rem;
+      }
+
+      .testimonials-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .testimonial-card {
+        padding: 1.5rem;
+      }
+
+      .testimonial-quote {
+        font-size: 1rem;
+      }
+
+      .testimonial-avatar {
+        width: 65px;
+        height: 65px;
+      }
+
+      .company-logo {
+        width: 65px;
+        height: 65px;
+      }
+
+      .testimonial-avatar-group {
+        gap: 0.5rem;
+        height: calc(1rem + 0.25rem + 0.8rem + 0.25rem + 0.8rem); /* Smaller mobile text sizes = ~3.1rem */
+      }
+
+      .testimonial-avatar-placeholder {
+        width: 65px;
+        height: 65px;
+        font-size: 1.2rem;
+      }
+
+      .testimonial-author-reordered {
+        gap: 1rem;
+      }
+
+      .testimonial-company-section {
+        align-self: flex-start;
+      }
+
+      .testimonial-founder-section {
+        align-self: flex-end;
+      }
+
+      .testimonial-header {
+        justify-content: flex-start;
+      }
+
+      .testimonial-footer {
+        justify-content: flex-end;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        min-width: 0;
+      }
+
+      .testimonial-card {
+        margin: 0;
+        max-width: 100%;
+      }
+    }
+
     /* Footer */
     footer {
       text-align: center;
@@ -4455,6 +4833,177 @@
     </div>
   </div>
 
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="testimonials-container">
+      <h2 class="testimonials-title">Trusted by Forward-Thinking Founders</h2>
+      <p class="testimonials-subtitle">See how these proven strategies have accelerated startup success</p>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-header">
+              <div class="testimonial-company-header">
+                <div class="company-logo logo-bg-dark">
+                  <img src="https://images.squarespace-cdn.com/content/v1/61ddf7cb7f28032633f8dcef/31ffb96f-a19c-409a-90a0-ac5834cced96/KM_STACKED_LOGO_WHITE-02.png?format=300w" alt="Knight Moves Logo" />
+                </div>
+                <div class="testimonial-company-info">
+                  <div class="testimonial-company">Knight Moves</div>
+                  <a href="https://knightmoves.org" class="testimonial-company-link" target="_blank">knightmoves.org</a>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-quote">
+              "David transformed our entire approach to product development. His guidance helped us launch 6 months ahead of schedule while implementing enterprise-grade solutions that typically cost startups hundreds of thousands. He has an incredible talent for finding cost-effective alternatives that don't compromise on quality or scalability. The systems he recommended not only accelerated our launch but positioned us for sustainable growth from day one."
+            </div>
+            <div class="testimonial-footer">
+              <div class="testimonial-founder-info">
+                <div class="testimonial-name">Linc Kroeer</div>
+                <div class="testimonial-title">Founder & CEO</div>
+              </div>
+              <div class="testimonial-avatar">
+                <img src="https://media.licdn.com/dms/image/v2/C5603AQHqImm8RP5rIQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1656018258239?e=1759363200&v=beta&t=na08hzSyYCsQEjQ3_2DS1R7BYeLpb4Vu6pzM6H6-knQ" alt="Linc Kroeer" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Additional testimonials to showcase the expandable system 
+             
+             LOGO BACKGROUND CONFIGURATION GUIDE:
+             Just add one of these classes to the "company-logo" div:
+             
+             - logo-bg-white (default white background)
+             - logo-bg-dark (dark slate background)
+             - logo-bg-primary (indigo brand color)
+             - logo-bg-secondary (cyan accent color)
+             - logo-bg-light-gray (light gray)
+             - logo-bg-medium-gray (medium gray)
+             - logo-bg-success (green)
+             - logo-bg-warning (amber/orange)
+             - logo-bg-gradient-primary (indigo to purple gradient)
+             - logo-bg-gradient-secondary (cyan to blue gradient)
+             - logo-bg-custom (custom color using --custom-color property)
+             
+             Examples:
+             <div class="company-logo logo-bg-primary">
+             <div class="company-logo logo-bg-gradient-secondary">
+             <div class="company-logo logo-bg-custom" style="--custom-color: #ff6b6b;">
+        -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-header">
+              <div class="testimonial-company-header">
+                <div class="company-logo logo-bg-primary">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='50' cy='30' r='8'/%3E%3Cpath d='M50 45c-8 0-15 7-15 15v25h30V60c0-8-7-15-15-15z'/%3E%3C/g%3E%3C/svg%3E" alt="VelocityPay Logo" />
+                </div>
+                <div class="testimonial-company-info">
+                  <div class="testimonial-company">VelocityPay</div>
+                  <a href="https://velocitypay.io" class="testimonial-company-link" target="_blank">velocitypay.io</a>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-quote">
+              "Working with David was a game-changer for our fintech startup. He helped us navigate complex compliance requirements while building a scalable architecture that reduced our infrastructure costs by 40%. His deep understanding of both technical excellence and business constraints meant we could move fast without breaking things. The monitoring systems he recommended caught critical issues before they impacted customers."
+            </div>
+            <div class="testimonial-footer">
+              <div class="testimonial-founder-info">
+                <div class="testimonial-name">Sarah Chen</div>
+                <div class="testimonial-title">Co-founder & CTO</div>
+              </div>
+              <div class="testimonial-avatar-placeholder">
+                SC
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-header">
+              <div class="testimonial-company-header">
+                <div class="company-logo logo-bg-gradient-secondary">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Cpath d='M20 40h60v30H20z'/%3E%3Cpath d='M30 25h40v10H30z'/%3E%3Ccircle cx='35' cy='50' r='3'/%3E%3Ccircle cx='50' cy='50' r='3'/%3E%3Ccircle cx='65' cy='50' r='3'/%3E%3C/g%3E%3C/svg%3E" alt="StreamlineAI Logo" />
+                </div>
+                <div class="testimonial-company-info">
+                  <div class="testimonial-company">StreamlineAI</div>
+                  <a href="https://streamlineai.com" class="testimonial-company-link" target="_blank">streamlineai.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-quote">
+              "David's guidance transformed our development process from chaos to precision. He introduced us to feature flagging and A/B testing frameworks that allowed us to deploy confidently and iterate rapidly. The cost savings from his AWS optimization recommendations alone paid for his consulting fee three times over. Our team velocity increased 60% within the first quarter."
+            </div>
+            <div class="testimonial-footer">
+              <div class="testimonial-founder-info">
+                <div class="testimonial-name">Michael Rodriguez</div>
+                <div class="testimonial-title">Founder & CEO</div>
+              </div>
+              <div class="testimonial-avatar-placeholder">
+                MR
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-header">
+              <div class="testimonial-company-header">
+                <div class="company-logo logo-bg-success">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Crect x='25' y='35' width='50' height='30' rx='5'/%3E%3Cpath d='M30 50h40M35 45h30M35 55h25'/%3E%3C/g%3E%3C/svg%3E" alt="MarketForge Logo" />
+                </div>
+                <div class="testimonial-company-info">
+                  <div class="testimonial-company">MarketForge</div>
+                  <a href="https://marketforge.co" class="testimonial-company-link" target="_blank">marketforge.co</a>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-quote">
+              "As a non-technical founder, I was overwhelmed by the technology decisions facing our e-commerce platform. David didn't just solve our immediate scaling problems—he educated our entire team on best practices and helped us build internal capabilities. His recommendation to implement proper observability saved us from a major outage that could have cost us our biggest client. Invaluable partnership."
+            </div>
+            <div class="testimonial-footer">
+              <div class="testimonial-founder-info">
+                <div class="testimonial-name">Jennifer Walsh</div>
+                <div class="testimonial-title">Founder</div>
+              </div>
+              <div class="testimonial-avatar-placeholder">
+                JW
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-header">
+              <div class="testimonial-company-header">
+                <div class="company-logo logo-bg-warning">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Cpath d='M50 15c-12 0-22 10-22 22s10 22 22 22 22-10 22-22-10-22-22-22zm-8 22c0-4.5 3.5-8 8-8s8 3.5 8 8-3.5 8-8 8-8-3.5-8-8z'/%3E%3Cpath d='M35 65c0-8 7-15 15-15s15 7 15 15v20H35V65z'/%3E%3C/g%3E%3C/svg%3E" alt="PulseHealth Logo" />
+                </div>
+                <div class="testimonial-company-info">
+                  <div class="testimonial-company">PulseHealth</div>
+                  <a href="https://pulsehealth.app" class="testimonial-company-link" target="_blank">pulsehealth.app</a>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-quote">
+              "David's expertise in DevOps and infrastructure automation was exactly what our healthtech startup needed. He helped us achieve SOC 2 compliance months ahead of schedule while implementing security practices that actually enhanced our development speed rather than slowing it down. The CI/CD pipeline he designed eliminated deployment anxiety and reduced our time-to-market by 35%. A true technical leader."
+            </div>
+            <div class="testimonial-footer">
+              <div class="testimonial-founder-info">
+                <div class="testimonial-name">Dr. Alex Thompson</div>
+                <div class="testimonial-title">Co-founder & Chief Medical Officer</div>
+              </div>
+              <div class="testimonial-avatar-placeholder">
+                AT
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
