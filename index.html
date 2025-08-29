@@ -139,7 +139,7 @@
     }
 
     .mobile-menu.active {
-      max-height: 400px;
+      max-height: 500px;
     }
 
     .mobile-menu-item {
@@ -2023,6 +2023,10 @@
       display: none; /* uncomment to enable testimonials section */
     }
 
+    .testimonial-visibility {
+      display: none;
+    }
+
     .testimonials-section::before {
       content: '';
       position: absolute;
@@ -3327,6 +3331,8 @@
       <a href="#ship" class="mobile-menu-item">Ship Safe</a>
       <a href="#scale" class="mobile-menu-item">Scale Smart</a>
       <a href="#tools" class="mobile-menu-item">Recommended Stack</a>
+      <a href="#contact" class="mobile-menu-item">Contact</a>
+      <a href="#testimonials" class="mobile-menu-item testimonial-visibility">Testimonials</a>
     </div>
 
     <!-- Mobile Guideline Indicator - inside mobile nav -->
@@ -3354,6 +3360,12 @@
     </div>
     <div class="side-nav-item" data-section="tools">
       <span class="tooltip">Recommended Stack</span>
+    </div>
+    <div class="side-nav-item" data-section="contact">
+      <span class="tooltip">Contact</span>
+    </div>
+    <div class="side-nav-item testimonial-visibility" data-section="testimonials">
+      <span class="tooltip">Testimonials</span>
     </div>
   </div>
 
@@ -4832,7 +4844,7 @@
   </div>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials-section">
+  <section id="testimonials" class="testimonials-section testimonial-visibility">
     <div class="testimonials-container">
       <h2 class="testimonials-title">Trusted by Forward-Thinking Founders</h2>
       <p class="testimonials-subtitle">See how these proven strategies have accelerated startup success</p>
