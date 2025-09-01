@@ -139,11 +139,16 @@
     }
 
     .mobile-menu.active {
-      max-height: 70vh; /* Use viewport height for better responsiveness */
-      overflow-y: auto; /* Enable scrolling when content exceeds height */
-      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-      scrollbar-width: thin; /* Thin scrollbar on Firefox */
-      scrollbar-color: rgba(99, 102, 241, 0.3) transparent; /* Custom scrollbar colors */
+      max-height: 70vh;
+      /* Use viewport height for better responsiveness */
+      overflow-y: auto;
+      /* Enable scrolling when content exceeds height */
+      -webkit-overflow-scrolling: touch;
+      /* Smooth scrolling on iOS */
+      scrollbar-width: thin;
+      /* Thin scrollbar on Firefox */
+      scrollbar-color: rgba(99, 102, 241, 0.3) transparent;
+      /* Custom scrollbar colors */
     }
 
     /* Custom scrollbar styling for webkit browsers */
@@ -167,11 +172,13 @@
     /* Landscape mobile optimization */
     @media screen and (max-height: 500px) and (orientation: landscape) {
       .mobile-menu.active {
-        max-height: 60vh; /* Reduce height in landscape for better content visibility */
+        max-height: 60vh;
+        /* Reduce height in landscape for better content visibility */
       }
-      
+
       .mobile-menu-item {
-        padding: 0.75rem 1.5rem; /* Slightly reduce padding in landscape to fit more items */
+        padding: 0.75rem 1.5rem;
+        /* Slightly reduce padding in landscape to fit more items */
       }
     }
 
@@ -1119,7 +1126,7 @@
       width: 350px;
       height: 100vh;
       background: white;
-      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
       transition: right 0.3s ease;
       z-index: 10001;
       display: flex;
@@ -1210,7 +1217,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       z-index: 10000;
       display: none;
     }
@@ -1840,7 +1847,7 @@
         margin-bottom: 0 !important;
         padding: 1.5rem 0.5rem 0.5rem 0.5rem !important;
       }
-      
+
       .mobile-tabs-hint::after {
         content: '' !important;
         position: absolute !important;
@@ -2053,7 +2060,8 @@
       padding: 4rem 0;
       position: relative;
       overflow: hidden;
-      display: none; /* uncomment to enable testimonials section */
+      display: none;
+      /* uncomment to enable testimonials section */
     }
 
     .testimonial-visibility {
@@ -2068,7 +2076,7 @@
       right: 0;
       bottom: 0;
       background: radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 70% 30%, rgba(34, 211, 238, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 70% 30%, rgba(34, 211, 238, 0.08) 0%, transparent 50%);
       pointer-events: none;
     }
 
@@ -2236,7 +2244,8 @@
       align-items: center;
       gap: 0.75rem;
       flex-shrink: 0;
-      height: calc(1.1rem + 0.25rem + 0.9rem + 0.25rem + 0.9rem); /* name + gap + title + gap + company = ~3.5rem */
+      height: calc(1.1rem + 0.25rem + 0.9rem + 0.25rem + 0.9rem);
+      /* name + gap + title + gap + company = ~3.5rem */
     }
 
     .testimonial-avatar {
@@ -2291,17 +2300,49 @@
     }
 
     /* Predefined logo background options - easily expandable */
-    .logo-bg-white { --logo-bg: white; }
-    .logo-bg-dark { --logo-bg: #1e293b; }
-    .logo-bg-primary { --logo-bg: #6366f1; }
-    .logo-bg-secondary { --logo-bg: #22d3ee; }
-    .logo-bg-light-gray { --logo-bg: #f8fafc; }
-    .logo-bg-medium-gray { --logo-bg: #e2e8f0; }
-    .logo-bg-success { --logo-bg: #10b981; }
-    .logo-bg-warning { --logo-bg: #f59e0b; }
-    .logo-bg-gradient-primary { --logo-bg: linear-gradient(135deg, #6366f1, #8b5cf6); }
-    .logo-bg-gradient-secondary { --logo-bg: linear-gradient(135deg, #22d3ee, #3b82f6); }
-    .logo-bg-custom { --logo-bg: var(--custom-color, white); }
+    .logo-bg-white {
+      --logo-bg: white;
+    }
+
+    .logo-bg-dark {
+      --logo-bg: #1e293b;
+    }
+
+    .logo-bg-primary {
+      --logo-bg: #6366f1;
+    }
+
+    .logo-bg-secondary {
+      --logo-bg: #22d3ee;
+    }
+
+    .logo-bg-light-gray {
+      --logo-bg: #f8fafc;
+    }
+
+    .logo-bg-medium-gray {
+      --logo-bg: #e2e8f0;
+    }
+
+    .logo-bg-success {
+      --logo-bg: #10b981;
+    }
+
+    .logo-bg-warning {
+      --logo-bg: #f59e0b;
+    }
+
+    .logo-bg-gradient-primary {
+      --logo-bg: linear-gradient(135deg, #6366f1, #8b5cf6);
+    }
+
+    .logo-bg-gradient-secondary {
+      --logo-bg: linear-gradient(135deg, #22d3ee, #3b82f6);
+    }
+
+    .logo-bg-custom {
+      --logo-bg: var(--custom-color, white);
+    }
 
     .company-logo img {
       width: 100%;
@@ -2386,7 +2427,8 @@
 
       .testimonial-avatar-group {
         gap: 0.5rem;
-        height: calc(1rem + 0.25rem + 0.8rem + 0.25rem + 0.8rem); /* Smaller mobile text sizes = ~3.1rem */
+        height: calc(1rem + 0.25rem + 0.8rem + 0.25rem + 0.8rem);
+        /* Smaller mobile text sizes = ~3.1rem */
       }
 
       .testimonial-avatar-placeholder {
@@ -2915,7 +2957,7 @@
       display: none;
       position: relative;
     }
-    
+
     /* Mobile Tool Tabs Hint */
     .mobile-tabs-hint {
       position: absolute;
@@ -2931,7 +2973,7 @@
       opacity: 0;
       z-index: 100;
     }
-    
+
     .mobile-tabs-hint::after {
       content: '';
       position: absolute;
@@ -2945,7 +2987,7 @@
       border-top: 10px solid var(--primary);
       z-index: 101;
     }
-    
+
     /* Arrow above mobile tool tabs */
     .mobile-tabs-arrow {
       position: absolute;
@@ -2957,54 +2999,70 @@
       opacity: 0;
       z-index: 99;
     }
-    
+
     @keyframes arrowBounce {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateX(-50%) translateY(0px);
       }
+
       50% {
         transform: translateX(-50%) translateY(15px);
       }
     }
-    
-    
+
+
     /* Pulse animation for inactive tabs */
     .tool-tab:not(.active) {
       animation: tabPulse 3s ease-in-out infinite;
       box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
       border: 2px solid transparent;
       background: linear-gradient(white, white) padding-box,
-                  linear-gradient(135deg, var(--primary), var(--secondary)) border-box;
+        linear-gradient(135deg, var(--primary), var(--secondary)) border-box;
     }
-    
+
     .tool-tab:not(.active):hover {
       animation: none;
       box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
     }
-    
+
     /* Stop animation after first interaction */
     .mobile-tool-tabs.interacted .tool-tab:not(.active) {
       animation: none;
     }
-    
+
     @keyframes tabPulse {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: scale(1);
         box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
       }
+
       50% {
         transform: scale(1.05);
         box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
       }
     }
-    
+
     @keyframes hintFadeIn {
-      from { opacity: 0; transform: translateX(-50%) translateY(-5px); }
-      to { opacity: 1; transform: translateX(-50%) translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
     }
-    
+
     @keyframes hintFadeOut {
-      to { opacity: 0; transform: translateX(-50%) translateY(-5px); }
+      to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-5px);
+      }
     }
 
     @media (max-width: 768px) {
@@ -3403,1515 +3461,1559 @@
   </div>
 
   <!-- Main Container -->
-  <div class="container">
-    <!-- Hero Section -->
-    <section id="intro" class="hero">
-      <div class="hero-header slide-header">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-          <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
-          </path>
-          <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-          <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-        </svg>
-        Startup Success Guide
-      </div>
-      <h1>Build Fast and Stable</h1>
-      <p class="subtitle">The Modern Founder's Guide to Digital Product Success</p>
+  <main class="container">
+    <article>
+      <!-- Hero Section -->
+      <section id="intro" class="hero">
+        <div class="hero-header slide-header">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+            </path>
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+          </svg>
+          Startup Success Guide
+        </div>
+        <h1>Build Fast and Stable</h1>
+        <p class="subtitle">The Modern Founder's Guide to Digital Product Success</p>
 
-      <div class="hero-cta slide">
-        <div class="hero-cta-content">
-          <div class="hero-cta-headline">
-            These Proven Startup Strategies Can Unlock Savings - Up to $170K/mo
-          </div>
-          <div class="hero-cta-subheader">
-            Discover the 4 game-changing strategies that transform costly mistakes into competitive advantages. This
-            comprehensive guide shares the exact playbook that successful startups use to build fast, stable, and
-            profitable systems.
-          </div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <span class="hero-stat-number">25 min</span>
-              <span class="hero-stat-label">Reading Time</span>
+        <div class="hero-cta slide">
+          <div class="hero-cta-content">
+            <div class="hero-cta-headline">
+              These Proven Startup Strategies Can Unlock Savings - Up to $170K/mo
             </div>
-            <div class="hero-stat-separator">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"
+            <div class="hero-cta-subheader">
+              Discover the 4 game-changing strategies that transform costly mistakes into competitive advantages. This
+              comprehensive guide shares the exact playbook that successful startups use to build fast, stable, and
+              profitable systems.
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="hero-stat-number">25 min</span>
+                <span class="hero-stat-label">Reading Time</span>
+              </div>
+              <div class="hero-stat-separator">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 5v14"></path>
+                  <path d="m5 12 14 0"></path>
+                </svg>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-number">4</span>
+                <span class="hero-stat-label">Essential Guidelines</span>
+              </div>
+              <div class="hero-stat-separator">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M5 18h14"></path>
+                </svg>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-number">$2M+</span>
+                <span class="hero-stat-label">Potential Savings</span>
+              </div>
+            </div>
+            <div class="hero-cta-action">
+              <strong>Ready to discover these proven strategies?</strong> Each guideline below reveals specific savings
+              opportunities and the exact technologies that successful startups rely on.
+              <div style="margin-top: 0.8rem; font-size: 0.9rem; opacity: 0.9;">
+                Want personalized guidance along the way? <a
+                  href="mailto:pairing4good@gmail.com?subject=Ready%20to%20Build%20Your%20Startup%20the%20Right%20Way"
+                  style="color: rgba(255,255,255,0.9); text-decoration: underline;">I'd love to help you implement these
+                  strategies.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="guidelines-grid slide">
+          <div class="guideline-card" onclick="scrollToSection('control')">
+            <span class="guideline-number">1</span>
+            <h3>Stay in Control</h3>
+            <p>Maintain ownership and understanding of your digital infrastructure</p>
+            <div class="guideline-meta">
+              <div class="guideline-stat read-time">
+                <div class="stat-icon read-time">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12,6 12,12 16,14"></polyline>
+                  </svg>
+                </div>
+                4 min read
+              </div>
+              <div class="guideline-stat savings">
+                <div class="stat-icon savings">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                Save up to ~$330K
+              </div>
+            </div>
+          </div>
+          <div class="guideline-card" onclick="scrollToSection('learn')">
+            <span class="guideline-number">2</span>
+            <h3>Learn Fast</h3>
+            <p>Build systems that help you understand customers quickly</p>
+            <div class="guideline-meta">
+              <div class="guideline-stat read-time">
+                <div class="stat-icon read-time">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12,6 12,12 16,14"></polyline>
+                  </svg>
+                </div>
+                5 min read
+              </div>
+              <div class="guideline-stat savings">
+                <div class="stat-icon savings">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                Save up to ~$450K
+              </div>
+            </div>
+          </div>
+          <div class="guideline-card" onclick="scrollToSection('ship')">
+            <span class="guideline-number">3</span>
+            <h3>Ship Safe</h3>
+            <p>Deploy frequently while minimizing risk</p>
+            <div class="guideline-meta">
+              <div class="guideline-stat read-time">
+                <div class="stat-icon read-time">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12,6 12,12 16,14"></polyline>
+                  </svg>
+                </div>
+                6 min read
+              </div>
+              <div class="guideline-stat savings">
+                <div class="stat-icon savings">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                Save up to ~$420K
+              </div>
+            </div>
+          </div>
+          <div class="guideline-card" onclick="scrollToSection('scale')">
+            <span class="guideline-number">4</span>
+            <h3>Scale Smart</h3>
+            <p>Choose tools that grow with your business</p>
+            <div class="guideline-meta">
+              <div class="guideline-stat read-time">
+                <div class="stat-icon read-time">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12,6 12,12 16,14"></polyline>
+                  </svg>
+                </div>
+                7 min read
+              </div>
+              <div class="guideline-stat savings">
+                <div class="stat-icon savings">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                Save up to ~$1M+
+              </div>
+            </div>
+          </div>
+          <div class="guideline-card full-width" onclick="scrollToSection('tools')">
+            <span class="guideline-number">5</span>
+            <h3>Recommended Stack</h3>
+            <p>Start with these 4 proven technologies that seamlessly accelerate your implementation and cut costs.</p>
+            <div class="guideline-meta">
+              <div class="guideline-stat read-time">
+                <div class="stat-icon read-time">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12,6 12,12 16,14"></polyline>
+                  </svg>
+                </div>
+                3 min read
+              </div>
+              <div class="guideline-stat savings">
+                <div class="stat-icon savings">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                Unlocks Savings!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Guideline 1: Stay in Control -->
+      <section id="control" class="section">
+        <span class="slide">
+          <h2>
+            <span class="section-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 5v14"></path>
-                <path d="m5 12 14 0"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
               </svg>
-            </div>
-            <div class="hero-stat">
-              <span class="hero-stat-number">4</span>
-              <span class="hero-stat-label">Essential Guidelines</span>
-            </div>
-            <div class="hero-stat-separator">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"
+            </span>
+            Guideline 1: Stay in Control
+            <a href="#control" class="heading-link" title="Copy link to this section">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M5 18h14"></path>
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
               </svg>
-            </div>
-            <div class="hero-stat">
-              <span class="hero-stat-number">$2M+</span>
-              <span class="hero-stat-label">Potential Savings</span>
-            </div>
-          </div>
-          <div class="hero-cta-action">
-            <strong>Ready to discover these proven strategies?</strong> Each guideline below reveals specific savings
-            opportunities and the exact technologies that successful startups rely on.
-            <div style="margin-top: 0.8rem; font-size: 0.9rem; opacity: 0.9;">
-              Want personalized guidance along the way? <a
-                href="mailto:pairing4good@gmail.com?subject=Ready%20to%20Build%20Your%20Startup%20the%20Right%20Way"
-                style="color: rgba(255,255,255,0.9); text-decoration: underline;">I'd love to help you implement these
-                strategies.</a>
-            </div>
-          </div>
-        </div>
-      </div>
+            </a>
+          </h2>
 
-      <div class="guidelines-grid slide">
-        <div class="guideline-card" onclick="scrollToSection('control')">
-          <span class="guideline-number">1</span>
-          <h3>Stay in Control</h3>
-          <p>Maintain ownership and understanding of your digital infrastructure</p>
-          <div class="guideline-meta">
-            <div class="guideline-stat read-time">
-              <div class="stat-icon read-time">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12,6 12,12 16,14"></polyline>
-                </svg>
-              </div>
-              4 min read
-            </div>
-            <div class="guideline-stat savings">
-              <div class="stat-icon savings">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23"></line>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
-              </div>
-              Save up to ~$330K
-            </div>
-          </div>
-        </div>
-        <div class="guideline-card" onclick="scrollToSection('learn')">
-          <span class="guideline-number">2</span>
-          <h3>Learn Fast</h3>
-          <p>Build systems that help you understand customers quickly</p>
-          <div class="guideline-meta">
-            <div class="guideline-stat read-time">
-              <div class="stat-icon read-time">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12,6 12,12 16,14"></polyline>
-                </svg>
-              </div>
-              5 min read
-            </div>
-            <div class="guideline-stat savings">
-              <div class="stat-icon savings">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23"></line>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
-              </div>
-              Save up to ~$450K
-            </div>
-          </div>
-        </div>
-        <div class="guideline-card" onclick="scrollToSection('ship')">
-          <span class="guideline-number">3</span>
-          <h3>Ship Safe</h3>
-          <p>Deploy frequently while minimizing risk</p>
-          <div class="guideline-meta">
-            <div class="guideline-stat read-time">
-              <div class="stat-icon read-time">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12,6 12,12 16,14"></polyline>
-                </svg>
-              </div>
-              6 min read
-            </div>
-            <div class="guideline-stat savings">
-              <div class="stat-icon savings">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23"></line>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
-              </div>
-              Save up to ~$420K
-            </div>
-          </div>
-        </div>
-        <div class="guideline-card" onclick="scrollToSection('scale')">
-          <span class="guideline-number">4</span>
-          <h3>Scale Smart</h3>
-          <p>Choose tools that grow with your business</p>
-          <div class="guideline-meta">
-            <div class="guideline-stat read-time">
-              <div class="stat-icon read-time">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12,6 12,12 16,14"></polyline>
-                </svg>
-              </div>
-              7 min read
-            </div>
-            <div class="guideline-stat savings">
-              <div class="stat-icon savings">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23"></line>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
-              </div>
-              Save up to ~$1M+
-            </div>
-          </div>
-        </div>
-        <div class="guideline-card full-width" onclick="scrollToSection('tools')">
-          <span class="guideline-number">5</span>
-          <h3>Recommended Stack</h3>
-          <p>Start with these 4 proven technologies that seamlessly accelerate your implementation and cut costs.</p>
-          <div class="guideline-meta">
-            <div class="guideline-stat read-time">
-              <div class="stat-icon read-time">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12,6 12,12 16,14"></polyline>
-                </svg>
-              </div>
-              3 min read
-            </div>
-            <div class="guideline-stat savings">
-              <div class="stat-icon savings">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23"></line>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
-              </div>
-              Unlocks Savings!
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Guideline 1: Stay in Control -->
-    <section id="control" class="section">
-      <span class="slide">
-        <h2>
-          <span class="section-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <circle cx="12" cy="12" r="6"></circle>
-              <circle cx="12" cy="12" r="2"></circle>
-            </svg>
-          </span>
-          Guideline 1: Stay in Control
-          <a href="#control" class="heading-link" title="Copy link to this section">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-            </svg>
-          </a>
-        </h2>
-
-        <div class="key-insight">
-          <strong>Core Principle:</strong> Maintain direct ownership and control of all critical digital infrastructure
-          to
-          protect your business from disruption.
-        </div>
-
-        <div class="warning-box">
-          <strong>Startup Risk:</strong> 40% of startups experience critical disruptions when key technical team members
-          leave without proper knowledge transfer.
-        </div>
-      </span>
-      <span class="slide">
-
-        <h3>Own Your Digital Infrastructure</h3>
-        <p>Take direct control of every critical system today. Create accounts in your name, not your developer's. Use a
-          password manager to securely store all credentials. Set up admin access for yourself first, then grant limited
-          permissions to team members. This prevents the nightmare scenario where a departing employee holds your
-          business
-          hostage.</p>
-
-        <div class="success-box">
-          <strong>Remember:</strong> You wouldn't let an employee own your bank account, so why would you let them own
-          your servers?
-        </div>
-      </span>
-      <div class="diagram slide">
-        <span class="diagram-title">What You Should Own</span>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; padding: 2rem;">
-          <div class="process-step"
-            style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
-            <strong
-              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                <line x1="6" y1="18" x2="6.01" y2="18"></line>
-              </svg>
-              Core Infrastructure & Development
-            </strong>
-            Cloud Hosting, Domains & DNS, Code Repositories, Databases
+          <div class="key-insight">
+            <strong>Core Principle:</strong> Maintain direct ownership and control of all critical digital
+            infrastructure
+            to
+            protect your business from disruption.
           </div>
 
-          <div class="process-step"
-            style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
-            <strong
-              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-              </svg>
-              Communication & Collaboration
-            </strong>
-            Team Chat, Email, Video Calls, Documentation
+          <div class="warning-box">
+            <strong>Startup Risk:</strong> 40% of startups experience critical disruptions when key technical team
+            members
+            leave without proper knowledge transfer.
           </div>
+        </span>
+        <span class="slide">
 
-          <div class="process-step"
-            style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
-            <strong
-              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-              Development & Operations
-            </strong>
-            CI/CD, Monitoring, Error Tracking, Analytics
+          <h3>Own Your Digital Infrastructure</h3>
+          <p>Take direct control of every critical system today. Create accounts in your name, not your developer's. Use
+            a
+            password manager to securely store all credentials. Set up admin access for yourself first, then grant
+            limited
+            permissions to team members. This prevents the nightmare scenario where a departing employee holds your
+            business
+            hostage.</p>
+
+          <div class="success-box">
+            <strong>Remember:</strong> You wouldn't let an employee own your bank account, so why would you let them own
+            your servers?
           </div>
-
-          <div class="process-step"
-            style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
-            <strong
-              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
-              Business Operations
-            </strong>
-            Payments, CRM, Support, Project Management
-          </div>
-
-          <div class="process-step"
-            style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
-            <strong
-              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-              Security & Access Management
-            </strong>
-            Password Mgmt, 2FA/SSO, API Keys, SSL Certs
-          </div>
-
-          <div class="process-step"
-            style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
-            <strong
-              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21 15 16 10 5 21"></polyline>
-              </svg>
-              Design & Content
-            </strong>
-            Design Tools, Stock & Brand Assets, Marketing
-          </div>
-        </div>
-      </div>
-      <span class="slide">
-
-        <h3>Automate Your Infrastructure Setup</h3>
-        <p>Start using Infrastructure as Code this week—automatically. Platforms like AWS Amplify handle it for you,
-          defining your infrastructure in version-controlled files behind the scenes. This means when disaster strikes
-          or
-          you need to scale, you can recreate everything with one command instead of scrambling to remember how things
-          were configured. Your future self will thank you when you're not rebuilding from memory at 2 AM.</p>
-
-        <div class="success-box">
-          <strong>Business Impact:</strong> Companies using Infrastructure as Code recover from disasters 50% faster and
-          have 80% fewer deployment-related issues.
-        </div>
-      </span>
-      <span class="slide">
-        <h3>Build Compliance Into Your Foundation</h3>
-        <p>Don't wait until your first enterprise deal to think about compliance. Tools like AWS Amplify build in
-          compliance
-          by convention, and a built-in AWS dashboard lets you configure rules and manage compliance across your
-          resources—all without manual setup. Implement SOC 2 basics now: encrypt all data, enable audit logs, use
-          secure
-          authentication, and document your security policies. Starting with compliance-ready infrastructure costs
-          almost
-          nothing today but saves hundreds of thousands of dollars and months of work when that Fortune 500 company
-          wants
-          to become your customer.</p>
-
-        <ul>
-          <li>Enables faster enterprise sales cycles</li>
-          <li>Reduces legal and regulatory risks</li>
-          <li>Commands premium pricing from security-conscious customers</li>
-          <li>Attracts higher-quality investors and partners</li>
-        </ul>
-      </span>
-      <div class="guideline-savings-box slide">
-        <div class="savings-header">
-          Stay in Control - Cost Savings
-        </div>
-        <ul class="savings-list">
-          <li class="savings-item">
-            <div class="savings-description">Prevent downtime and lost productivity from mismanaged accounts or missing
-              credentials</div>
-            <div class="savings-amount">$20K - $80K</div>
-          </li>
-          <li class="savings-item">
-            <div class="savings-description">Eliminate emergency infrastructure recovery and knowledge transfer fees
-            </div>
-            <div class="savings-amount">$15K - $50K</div>
-          </li>
-          <li class="savings-item">
-            <div class="savings-description">Prevent compliance retrofitting costs for SOC 2, GDPR, and enterprise sales
-            </div>
-            <div class="savings-amount">$75K - $200K</div>
-          </li>
-        </ul>
-        <div class="savings-total">
-          <span>Total Potential Savings:</span>
-          <span class="savings-total-amount">$110K - $330K</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Guideline 2: Learn Fast -->
-    <section id="learn" class="section">
-      <span class="slide">
-
-        <h2>
-          <span class="section-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.35-4.35"></path>
-            </svg>
-          </span>
-          Guideline 2: Learn Fast
-          <a href="#learn" class="heading-link" title="Copy link to this section">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-            </svg>
-          </a>
-        </h2>
-
-        <div class="key-insight">
-          <strong>Core Principle:</strong> Build systems that help you understand your customers quickly and make
-          data-driven decisions about what to build next.
-        </div>
-
-        <div class="success-box">
-          <strong>Success Pattern:</strong> Startups with founders who personally conduct customer interviews AND
-          actively
-          participate in backlog refinement achieve product-market fit 2.5x faster.
-        </div>
-      </span>
-      <span class="slide">
-
-        <h3>Map Every Feature to Customer Value</h3>
-        <p>Create a visual story map this week that connects every piece of work to real customer problems. Before
-          anyone
-          writes a line of code, they should be able to answer: "Which customer asked for this?" and "How will we
-          measure
-          if it works?" Post this map where everyone can see it. Update it after every customer conversation. This
-          single
-          practice will eliminate 80% of wasted development effort.</p>
-        <div class="diagram">
-          <span class="diagram-title">From Customer Insight to Code</span>
-          <div class="process-flow" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-            <div class="process-step with-arrow" style="order: 1; flex: 1 1 150px;">
-              <strong>
+        </span>
+        <div class="diagram slide">
+          <span class="diagram-title">What You Should Own</span>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; padding: 2rem;">
+            <div class="process-step"
+              style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
+              <strong
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
                 </svg>
-                Business Model
+                Core Infrastructure & Development
               </strong>
+              Cloud Hosting, Domains & DNS, Code Repositories, Databases
             </div>
-            <div class="process-step with-arrow" style="order: 2; flex: 1 1 150px;">
-              <strong>
+
+            <div class="process-step"
+              style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
+              <strong
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
-                Customer Journey
+                Communication & Collaboration
               </strong>
+              Team Chat, Email, Video Calls, Documentation
             </div>
-            <div class="process-step with-arrow" style="order: 3; flex: 1 1 150px;">
-              <strong>
+
+            <div class="process-step"
+              style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
+              <strong
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-                Story Map
-              </strong>
-            </div>
-            <div class="process-step with-arrow" style="order: 4; flex: 1 1 150px;">
-              <strong>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                  stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="16 18 22 12 16 6"></polyline>
                   <polyline points="8 6 2 12 8 18"></polyline>
                 </svg>
-                Development
+                Development & Operations
               </strong>
+              CI/CD, Monitoring, Error Tracking, Analytics
             </div>
-            <div class="process-step" style="order: 5; flex: 1 1 150px;">
-              <strong>
+
+            <div class="process-step"
+              style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
+              <strong
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                  <line x1="18" y1="20" x2="18" y2="10"></line>
-                  <line x1="12" y1="20" x2="12" y2="4"></line>
-                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                 </svg>
-                Outcomes
+                Business Operations
               </strong>
+              Payments, CRM, Support, Project Management
             </div>
-          </div>
-          <style>
-            @media (max-width: 768px) {
-              .diagram .process-flow {
-                flex-direction: column !important;
-                align-items: stretch !important;
-              }
 
-              .diagram .process-flow .process-step {
-                flex: 1 1 auto !important;
-                width: 100% !important;
-              }
-
-              .diagram .process-flow .process-step.with-arrow::after {
-                display: none;
-              }
-            }
-          </style>
-        </div>
-      </span>
-      <span class="slide">
-        <h3>Track Metrics That Drive Decisions</h3>
-        <p>Stop flying blind. Set up a simple dashboard this week to track the metrics that actually inform your
-          decisions. The goal isn't to track everything; it's to track the right actions that show whether your product
-          is
-          delivering value and your business is working. Log critical customer steps and product events directly into
-          tools like Statsig so you can measure engagement, adoption, and impact. Check these numbers every Monday
-          morning
-          to decide what to build next, what to stop building, and where to focus your limited resources. This is how
-          you
-          implement the Build-Measure-Learn cycle—build features, measure their impact through data, learn what works,
-          then build the next iteration based on evidence, not assumptions.</p>
-
-        <strong style="color: var(--primary); display: block; margin: 1.5rem 0 1rem;">Why Data-Driven Decisions
-          Matter:</strong>
-        <ul>
-          <li><strong>Spot Problems Early:</strong> Identify issues weeks before they become crises—like declining
-            activation rates signaling product confusion</li>
-          <li><strong>Kill Bad Ideas Fast:</strong> Stop wasting months on features nobody uses by tracking actual
-            engagement within days of launch</li>
-          <li><strong>Prove Traction to Investors:</strong> Show concrete growth metrics, not just promises—investors
-            fund
-            data, not dreams</li>
-          <li><strong>Focus Your Team:</strong> End debates about what to build next by letting customer behavior data
-            make the decision</li>
-          <li><strong>Optimize Your Spending:</strong> Know exactly which marketing channels bring profitable customers,
-            not just traffic</li>
-          <li><strong>Accelerate Learning Cycles:</strong> Complete Build-Measure-Learn loops in days instead of months
-            by
-            tracking the right metrics immediately</li>
-        </ul>
-
-        <div class="success-box">
-          <strong>Implementation Tip:</strong> Start measuring today, even if the data isn't perfect. Rough metrics you
-          check at least weekly beat perfect metrics you never look at. Set up automated weekly reports that force you
-          to
-          confront
-          reality, whether you like what you see or not.
-        </div>
-      </span>
-      <span class="slide">
-        <h3>Demo Real Features Every Friday</h3>
-        <p>Schedule a standing 30-minute demo every Friday at 3 PM. No exceptions. Show only features that are live in
-          production—not mockups, not "almost done" work. Invite customers when possible. This simple ritual creates
-          urgency, prevents scope creep, and ensures your team ships something meaningful every single week. Teams that
-          demo weekly ship 10x more features that customers actually use.</p>
-        <ul>
-          <li><strong>Customer-Facing Demos:</strong> Show real deployed features</li>
-          <li><strong>Experiment Results Review:</strong> Present data from build-measure-learn cycles</li>
-          <li><strong>Customer Feedback Integration:</strong> Share recent insights</li>
-          <li><strong>Traceability Demonstration:</strong> Connect work to customer value</li>
-        </ul>
-
-        <div class="warning-box" style="margin-bottom: 2rem;">
-          <strong>Critical Warning:</strong> Delegating product ownership or reviewing work asynchronously is a recipe
-          for
-          disaster. Teams will optimize for what feels like progress rather than what delivers customer value.
-        </div>
-      </span>
-      <div class="guideline-savings-box slide">
-        <div class="savings-header">
-          Learn Fast - Cost Savings
-        </div>
-        <ul class="savings-list">
-          <li class="savings-item">
-            <div class="savings-description">Eliminate wasted development on features customers don't want</div>
-            <div class="savings-amount">$50K - $200K</div>
-          </li>
-          <li class="savings-item">
-            <div class="savings-description">Stop ineffective marketing spend by tracking actual customer acquisition
-              costs</div>
-            <div class="savings-amount">$20K - $100K</div>
-          </li>
-          <li class="savings-item">
-            <div class="savings-description">Reduce time to product-market fit by 2.5x through customer feedback loops
-            </div>
-            <div class="savings-amount">$30K - $150K</div>
-          </li>
-        </ul>
-        <div class="savings-total">
-          <span>Total Potential Savings:</span>
-          <span class="savings-total-amount">$100K - $450K</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Guideline 3: Ship Safe -->
-    <section id="ship" class="section">
-      <span class="slide">
-
-        <h2>
-          <span class="section-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1">
-              </path>
-              <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path>
-              <path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path>
-              <path d="M12 10v4"></path>
-              <path d="M12 2v3"></path>
-            </svg>
-          </span>
-          Guideline 3: Ship Safe
-          <a href="#ship" class="heading-link" title="Copy link to this section">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-            </svg>
-          </a>
-        </h2>
-
-        <div class="key-insight">
-          <strong>Core Principle:</strong> Deploy new features frequently while minimizing the risk of breaking things
-          for
-          your existing customers.
-        </div>
-      </span>
-      <span class="slide">
-
-        <h3>Implement Safe Development Workflows</h3>
-        <p>Set up these five practices by next Monday: create feature branches for all new work, commit code every hour
-          (not every week), require pull request code reviews before merging, and run automated tests on every commit.
-          These
-          aren't bureaucratic overhead—they're your safety net that lets you move
-          fast without breaking things. Teams using these practices ship 200% more often with 70% fewer bugs.</p>
-        <div class="diagram">
-          <span class="diagram-title">Safe Development Workflow</span>
-          <div class="process-flow">
-            <div class="process-step">
-              <strong>
+            <div class="process-step"
+              style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
+              <strong
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                  <line x1="6" y1="3" x2="6" y2="15"></line>
-                  <circle cx="18" cy="6" r="3"></circle>
-                  <circle cx="6" cy="18" r="3"></circle>
-                  <path d="M18 9a9 9 0 0 1-9 9"></path>
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                 </svg>
-                Feature Branch
+                Security & Access Management
               </strong>
-              <p>Isolated Development</p>
+              Password Mgmt, 2FA/SSO, API Keys, SSL Certs
             </div>
-            <div class="process-step">
-              <strong>
+
+            <div class="process-step"
+              style="min-height: auto; padding: 1.5rem; flex: 0 1 calc(33.333% - 1rem); min-width: 280px;">
+              <strong
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--primary);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                  <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-                  <polyline points="17 21 17 13 7 13 7 21"></polyline>
-                  <polyline points="7 3 7 8 15 8"></polyline>
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
                 </svg>
-                Frequent Commits
+                Design & Content
               </strong>
-              <p>Save Progress</p>
-            </div>
-            <div class="process-step">
-              <strong>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-                Pull Request
-              </strong>
-              <p>Code Review</p>
-            </div>
-            <div class="process-step">
-              <strong>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                Automated Tests
-              </strong>
-              <p>Quality Check</p>
-            </div>
-
-            <div class="process-step">
-              <strong>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  style="display: inline-block; vertical-align: middle; color: var(--primary);">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-                Deploy
-              </strong>
-              <p>Ship to Users</p>
+              Design Tools, Stock & Brand Assets, Marketing
             </div>
           </div>
         </div>
-      </span>
-      <span class="slide">
+        <span class="slide">
 
-        <h3>Deploy Features Behind Feature Flags</h3>
-        <p>Never deploy another feature directly to all users. Start using feature flags this sprint—tools like
-          Statsig take 30 minutes to set up. Release every new feature to 5% of users first, watch the
-          metrics for 24 hours, then gradually expand. When something breaks (and it will), you'll disable it with one
-          click instead of rushing a hotfix at midnight. This alone will cut your stress levels by 90%.</p>
+          <h3>Automate Your Infrastructure Setup</h3>
+          <p>Start using Infrastructure as Code this week—automatically. Platforms like AWS Amplify handle it for you,
+            defining your infrastructure in version-controlled files behind the scenes. This means when disaster strikes
+            or
+            you need to scale, you can recreate everything with one command instead of scrambling to remember how things
+            were configured. Your future self will thank you when you're not rebuilding from memory at 2 AM.</p>
 
-        <div class="success-box">
-          <strong>Risk Mitigation:</strong> Feature flags reduce deployment risk by 90% and enable instant rollback
-          without emergency code deployments.
-        </div>
-
-        <ul>
-          <li>Test with real users gradually (5% → 25% → 100%)</li>
-          <li>Instantly disable problematic features</li>
-          <li>A/B test different features with customer segments</li>
-          <li>Separate code deployment from feature releases</li>
-        </ul>
-      </span>
-      <span class="slide">
-
-        <h3>Measure What Actually Matters</h3>
-        <p>Most startups drown in vanity metrics—numbers that look good in a pitch deck but don’t predict success. Focus
-          on metrics that show whether your product works, delivers real value to customers, and whether your team can
-          deliver reliably. By combining product usage from tools like Statsig, development and deployment data from
-          tools
-          like GitHub, and financial or survey data from other systems, you can create one unified founder dashboard
-          that
-          gives a real-time view of business health, customer engagement, and engineering performance.</p>
-      </span>
-      <div class="metrics-grid">
-        <div class="metrics-card slide">
-          <div class="metrics-card-header">
-            <div class="metrics-icon business-health">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
-            </div>
-            <div>
-              <h4>Business Health Metrics</h4>
-              <p>Show if you're building the right thing. These three metrics tell you if your startup model is viable.
-              </p>
-            </div>
+          <div class="success-box">
+            <strong>Business Impact:</strong> Companies using Infrastructure as Code recover from disasters 50% faster
+            and
+            have 80% fewer deployment-related issues.
           </div>
-          <div class="metrics-list">
-            <div class="metric-item">
-              <strong>Customer Acquisition Cost (CAC)</strong>
-              <p>How much you spend to get each new customer—if it exceeds 6-month payback, rethink your model</p>
-            </div>
-            <div class="metric-item">
-              <strong>Lifetime Value (LTV)</strong>
-              <p>How much revenue each customer generates over time—must be 3x CAC minimum for sustainability</p>
-            </div>
-            <div class="metric-item">
-              <strong>Monthly Recurring Revenue (MRR)</strong>
-              <p>Predictable revenue stream indicator—track week-over-week growth rate</p>
-            </div>
-          </div>
-        </div>
+        </span>
+        <span class="slide">
+          <h3>Build Compliance Into Your Foundation</h3>
+          <p>Don't wait until your first enterprise deal to think about compliance. Tools like AWS Amplify build in
+            compliance
+            by convention, and a built-in AWS dashboard lets you configure rules and manage compliance across your
+            resources—all without manual setup. Implement SOC 2 basics now: encrypt all data, enable audit logs, use
+            secure
+            authentication, and document your security policies. Starting with compliance-ready infrastructure costs
+            almost
+            nothing today but saves hundreds of thousands of dollars and months of work when that Fortune 500 company
+            wants
+            to become your customer.</p>
 
-        <div class="metrics-card slide">
-          <div class="metrics-card-header">
-            <div class="metrics-icon customer-engagement">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <div>
-              <h4>Essential Startup Metrics</h4>
-              <p>Customer metrics show if people care. These three metrics tell you if people are adopting and sticking
-                with your product.</p>
-            </div>
-          </div>
-          <div class="metrics-list">
-            <div class="metric-item">
-              <strong>Activation Rate</strong>
-              <p>What percentage of new users actually start using your core features—below 40% means fix your
-                onboarding</p>
-            </div>
-            <div class="metric-item">
-              <strong>Churn Rate</strong>
-              <p>How many customers stop using your product monthly—above 10% monthly is a red flag</p>
-            </div>
-            <div class="metric-item">
-              <strong>Net Promoter Score (NPS)</strong>
-              <p>How likely customers are to recommend you. A falling NPS often predicts churn before it shows up in
-                revenue.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="metrics-card slide">
-          <div class="metrics-card-header">
-            <div class="metrics-icon engineering-velocity">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <div>
-              <h4>DORA Engineering Metrics</h4>
-              <p>Engineering metrics show if you're building it the right way. These four metrics predict your
-                engineering team's ability to deliver value consistently.</p>
-            </div>
-          </div>
-          <div class="metrics-list">
-            <div class="metric-item">
-              <strong>Deployment Frequency</strong>
-              <p>How often you ship code to users—aim for multiple times per week minimum</p>
-            </div>
-            <div class="metric-item">
-              <strong>Lead Time</strong>
-              <p>How quickly you go from idea to live feature—target under 48 hours for small changes</p>
-            </div>
-            <div class="metric-item">
-              <strong>Change Failure Rate</strong>
-              <p>What percentage of releases cause problems—keep below 15%</p>
-            </div>
-            <div class="metric-item">
-              <strong>Recovery Time</strong>
-              <p>How fast you fix things when they break—should be under 2 hours</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <span class="slide">
-
-        <div class="success-box">
-          <strong>Tip:</strong> Set up alerts so when any metric drifts out of range, you catch it early—weeks matter,
-          months kill.
-        </div>
-        <div class="guideline-savings-box">
+          <ul>
+            <li>Enables faster enterprise sales cycles</li>
+            <li>Reduces legal and regulatory risks</li>
+            <li>Commands premium pricing from security-conscious customers</li>
+            <li>Attracts higher-quality investors and partners</li>
+          </ul>
+        </span>
+        <div class="guideline-savings-box slide">
           <div class="savings-header">
-            Ship Safe - Cost Savings
+            Stay in Control - Cost Savings
           </div>
           <ul class="savings-list">
             <li class="savings-item">
-              <div class="savings-description">Prevent emergency hotfixes and midnight deployments through safe
-                workflows
+              <div class="savings-description">Prevent downtime and lost productivity from mismanaged accounts or
+                missing
+                credentials</div>
+              <div class="savings-amount">$20K - $80K</div>
+            </li>
+            <li class="savings-item">
+              <div class="savings-description">Eliminate emergency infrastructure recovery and knowledge transfer fees
               </div>
-              <div class="savings-amount">$25K - $100K</div>
+              <div class="savings-amount">$15K - $50K</div>
             </li>
             <li class="savings-item">
-              <div class="savings-description">Reduce customer churn from buggy releases by 70% with feature flags</div>
-              <div class="savings-amount">$40K - $200K</div>
-            </li>
-            <li class="savings-item">
-              <div class="savings-description">Eliminate wasted engineering time on rollbacks and bug fixes</div>
-              <div class="savings-amount">$30K - $120K</div>
-            </li>
-            <li class="savings-item">
-              <div class="savings-description">Avoid reputation damage and PR crises from public outages</div>
-              <div class="savings-amount">Priceless</div>
+              <div class="savings-description">Prevent compliance retrofitting costs for SOC 2, GDPR, and enterprise
+                sales
+              </div>
+              <div class="savings-amount">$75K - $200K</div>
             </li>
           </ul>
           <div class="savings-total">
             <span>Total Potential Savings:</span>
-            <span class="savings-total-amount">$95K - $420K</span>
+            <span class="savings-total-amount">$110K - $330K</span>
           </div>
         </div>
-      </span>
-    </section>
+      </section>
 
-    <!-- Guideline 4: Scale Smart -->
-    <section id="scale" class="section">
-      <span class="slide">
+      <!-- Guideline 2: Learn Fast -->
+      <section id="learn" class="section">
+        <span class="slide">
 
-        <h2>
-          <span class="section-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-            </svg>
-          </span>
-          Guideline 4: Scale Smart
-          <a href="#scale" class="heading-link" title="Copy link to this section">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-            </svg>
-          </a>
-        </h2>
+          <h2>
+            <span class="section-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </span>
+            Guideline 2: Learn Fast
+            <a href="#learn" class="heading-link" title="Copy link to this section">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </a>
+          </h2>
 
-        <div class="key-insight">
-          <strong>Core Principle:</strong> Choose tools and practices that grow with your business without creating
-          massive cost increases or technical complexity.
-        </div>
-      </span>
-      <span class="slide">
-
-        <h3>Choose Serverless Architecture</h3>
-        <p>Switch to serverless infrastructure this month. Frameworks like AWS Amplify make your full-stack application
-          serverless by design—everything from authentication and APIs to storage and analytics scales automatically
-          with
-          usage. You pay nothing when no one is using your app, benefit from a generous free tier, and never worry about
-          idle servers. These frameworks let you focus on building your product instead of managing infrastructure,
-          helping companies spend far less on operations while accelerating development.</p>
-        <div class="diagram">
-          <span class="diagram-title">Cost Scaling Model Comparison</span>
-          <div
-            style="display: flex; justify-content: center; gap: 2rem; padding: 2rem; flex-wrap: wrap; align-items: stretch;">
-            <div style="min-width: 280px; max-width: 350px; flex: 0 1 350px; order: 1;">
-              <div
-                style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%); border: 2px solid var(--danger); border-radius: 15px; padding: 2rem; text-align: center; position: relative; height: 100%;">
-                <div
-                  style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: white; padding: 0 1rem; color: var(--danger); font-weight: bold;">
-                  Traditional Model</div>
-                <div style="font-size: 3rem; color: var(--danger); margin-bottom: 1rem;">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                  </svg>
-                </div>
-                <div style="color: var(--dark); margin-bottom: 1rem;">
-                  <p style="margin: 0.5rem 0;"><strong style="color: var(--danger);">❌ High upfront costs</strong></p>
-                  <p style="margin: 0.5rem 0;"><strong style="color: var(--danger);">❌ Idle capacity waste</strong></p>
-                  <p style="margin: 0.5rem 0;"><strong style="color: var(--danger);">❌ Fixed monthly bills</strong></p>
-                  <p style="margin: 0.5rem 0;"><strong style="color: var(--danger);">❌ Complex scaling</strong></p>
-                </div>
-                <div
-                  style="background: var(--danger); color: white; padding: 0.5rem; border-radius: 8px; margin-top: 1rem; font-weight: bold;">
-                  $1000s before first customer
-                </div>
-              </div>
-            </div>
-
-            <div
-              style="display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--primary); font-weight: bold; padding: 1rem; flex: 0 0 auto; order: 2;">
-              <strong>VS</strong>
-            </div>
-
-            <div style="min-width: 280px; max-width: 350px; flex: 0 1 350px; order: 3;">
-              <div
-                style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%); border: 2px solid var(--success); border-radius: 15px; padding: 2rem; text-align: center; position: relative; height: 100%;">
-                <div
-                  style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: white; padding: 0 1rem; color: var(--success); font-weight: bold;">
-                  Serverless Model</div>
-                <div style="font-size: 3rem; color: var(--success); margin-bottom: 1rem;">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="22 12 16 6 12 17 8 8 2 12"></polyline>
-                  </svg>
-                </div>
-                <div style="color: var(--dark); margin-bottom: 1rem;">
-                  <p style="margin: 0.5rem 0;"><strong style="color: var(--success);">✓ Near-zero start costs</strong>
-                  </p>
-                  <p style="margin: 0.5rem 0;"><strong style="color: var(--success);">✓ Pay only for usage</strong></p>
-                  <p style="margin: 0.5rem 0;"><strong style="color: var(--success);">✓ Scales automatically</strong>
-                  </p>
-                  <p style="margin: 0.5rem 0;"><strong style="color: var(--success);">✓ No wasted resources</strong></p>
-                </div>
-                <div
-                  style="background: var(--success); color: white; padding: 0.5rem; border-radius: 8px; margin-top: 1rem; font-weight: bold;">
-                  Start for ~$0/month
-                </div>
-              </div>
-            </div>
+          <div class="key-insight">
+            <strong>Core Principle:</strong> Build systems that help you understand your customers quickly and make
+            data-driven decisions about what to build next.
           </div>
-          <style>
-            @media (max-width: 768px) {
-              .diagram>div>div:nth-child(2) {
-                flex: 0 0 100% !important;
-                order: 2 !important;
+
+          <div class="success-box">
+            <strong>Success Pattern:</strong> Startups with founders who personally conduct customer interviews AND
+            actively
+            participate in backlog refinement achieve product-market fit 2.5x faster.
+          </div>
+        </span>
+        <span class="slide">
+
+          <h3>Map Every Feature to Customer Value</h3>
+          <p>Create a visual story map this week that connects every piece of work to real customer problems. Before
+            anyone
+            writes a line of code, they should be able to answer: "Which customer asked for this?" and "How will we
+            measure
+            if it works?" Post this map where everyone can see it. Update it after every customer conversation. This
+            single
+            practice will eliminate 80% of wasted development effort.</p>
+          <div class="diagram">
+            <span class="diagram-title">From Customer Insight to Code</span>
+            <div class="process-flow" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+              <div class="process-step with-arrow" style="order: 1; flex: 1 1 150px;">
+                <strong>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                  Business Model
+                </strong>
+              </div>
+              <div class="process-step with-arrow" style="order: 2; flex: 1 1 150px;">
+                <strong>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  Customer Journey
+                </strong>
+              </div>
+              <div class="process-step with-arrow" style="order: 3; flex: 1 1 150px;">
+                <strong>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  Story Map
+                </strong>
+              </div>
+              <div class="process-step with-arrow" style="order: 4; flex: 1 1 150px;">
+                <strong>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  Development
+                </strong>
+              </div>
+              <div class="process-step" style="order: 5; flex: 1 1 150px;">
+                <strong>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                  Outcomes
+                </strong>
+              </div>
+            </div>
+            <style>
+              @media (max-width: 768px) {
+                .diagram .process-flow {
+                  flex-direction: column !important;
+                  align-items: stretch !important;
+                }
+
+                .diagram .process-flow .process-step {
+                  flex: 1 1 auto !important;
+                  width: 100% !important;
+                }
+
+                .diagram .process-flow .process-step.with-arrow::after {
+                  display: none;
+                }
               }
-            }
-          </style>
-        </div>
-      </span>
-
-      <span class="slide">
-
-        <h3>Web-Only Until Customers Demand Mobile</h3>
-        <p>Delete your mobile app plans right now. Build a responsive web app that works great on phones—you’ll iterate
-          10x faster, ship updates instantly without app store approval, and save $100K+ in development costs. Platforms
-          like AWS Amplify are built for both web and native mobile development using a single cloud backend, providing
-          a
-          unified security solution for web and mobile experiences. When you do add a native app, keep it minimal and
-          focused—handling only device-specific features like push notifications or camera access—so it requires few
-          changes over time. Only build native apps when customers are literally begging for them and willing to pay.
-        </p>
-
-        <ul>
-          <li>Single codebase to maintain and update</li>
-          <li>Instant deployment without app store approval</li>
-          <li>Works across all devices through responsive design</li>
-          <li>Lower development and maintenance costs</li>
-          <li>No chasing OS updates or security patches</li>
-        </ul>
-
-        <div class="success-box">
-          Many successful companies—including Slack, Linear, and Notion all succeeded for years as web-only products.
-          Your
-          startup can too.
-        </div>
-      </span>
-      <span class="slide">
-
-        <h3>Secure Your Product Now, Not Later</h3>
-        <p>
-          Security is the foundation of trust with your users, and platforms such as AWS Amplify make it easier to
-          address
-          from day one. Amplify centralizes account management with built-in authentication, 2FA, and social logins,
-          enforces access control, integrates encryption, and supports automated updates and vulnerability scanning. Its
-          pre-built components let you create a robust login flow—including sign-up, sign-in, password recovery,
-          multi-factor authentication, and social logins like Google, Facebook, and Apple—in just a few minutes with
-          minimal code. Amplify also connects to monitoring tools, giving visibility into unusual activity and helping
-          you
-          build a secure foundation for safe growth.
-        </p>
-        <ul>
-          <li><strong>Secure Accounts:</strong> Ensure all cloud, domain, analytics, and admin accounts are under your
-            ownership. Use a password manager and enable 2FA.</li>
-          <li><strong>Data Protection:</strong> Encrypt sensitive data at rest and in transit. Regularly back up
-            critical
-            data and test restore procedures.</li>
-          <li><strong>Access Control:</strong> Limit permissions to only those who need them. Regularly review access
-            logs
-            and remove inactive users.</li>
-          <li><strong>Application Security:</strong> Keep software and dependencies up to date. Use automated
-            vulnerability scanning tools and apply patches promptly.</li>
-          <li><strong>Monitoring & Alerts:</strong> Set up basic monitoring and alerts for unusual activity in your app,
-            servers, and databases.</li>
-        </ul>
-
-        <p style="font-size: 1.1rem; margin-top: 1rem;">
-          By addressing these areas now, you reduce risk and lay a strong foundation for safe growth. Security done
-          early
-          saves headaches later.
-        </p>
-
-
-        <div class="warning-box">
-          <strong>Cost Impact:</strong> Security retrofitting typically costs 5-10x more than building security into the
-          foundation.
-        </div>
-      </span>
-      <span class="slide">
-
-        <h3>Leverage AI to Double Your Output</h3>
-        <p>Start using AI development tools tomorrow morning. Install GitHub Copilot to accelerate coding with
-          intelligent
-          suggestions, and push your code to let it perform automated reviews that catch bugs, security issues, and
-          style
-          inconsistencies before they reach production. Then, leverage AI agents to handle well-defined, repetitive
-          tasks—like writing tests or implementing parallel stories alongside your human developers. Even if an AI agent
-          only succeeds half the time, your team’s effective throughput just shot up by 50% for the cost of a coffee
-          subscription. This isn’t the future—it's how winning startups are scaling development today.</p>
-
-        <ul>
-          <li><strong>AI Code Reviews:</strong> Catch bugs and security issues automatically</li>
-          <li><strong>AI Coding Assistance:</strong> Speed up development with intelligent suggestions</li>
-          <li><strong>AI Development Agents:</strong> Handle well-defined tasks in parallel</li>
-        </ul>
-
-        <div class="success-box">
-          <strong>Parallel Sprint Strategy:</strong> Implement AI agents that take on a story for every story a human
-          developer tackles. Even with a 50% success rate, you're effectively doubling your development throughput.
-        </div>
-      </span>
-      <div class="guideline-savings-box slide">
-        <div class="savings-header">
-          Scale Smart - Cost Savings
-        </div>
-        <ul class="savings-list">
-          <li class="savings-item">
-            <div class="savings-description">Save 70% on infrastructure costs with serverless architecture</div>
-            <div class="savings-amount">$6K - $60K/year</div>
-          </li>
-          <li class="savings-item">
-            <div class="savings-description">Avoid mobile app development costs with responsive web-first approach</div>
-            <div class="savings-amount">$100K - $300K</div>
-          </li>
-          <li class="savings-item">
-            <div class="savings-description">Prevent security breaches and compliance violations</div>
-            <div class="savings-amount">$50K - $500K</div>
-          </li>
-          <li class="savings-item">
-            <div class="savings-description">Double development speed with AI tools for $10/month per developer</div>
-            <div class="savings-amount">$25K - $150K/year</div>
-          </li>
-        </ul>
-        <div class="savings-total">
-          <span>Total Potential Savings:</span>
-          <span class="savings-total-amount">$181K - $1M+</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tools Section -->
-    <section id="tools" class="section">
-      <span class="slide">
-
-        <h2>
-          <span class="section-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-              </path>
-            </svg>
-          </span>
-          Recommended Stack
-          <a href="#tools" class="heading-link" title="Copy link to this section">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-            </svg>
-          </a>
-        </h2>
-
-        <p style="font-size: 1.2rem; margin-bottom: 2rem;"><strong>Start with these 4 technologies.</strong> By limiting
-          your stack to just these platforms and tools, you'll reduce hiring complexity, minimize maintenance overhead,
-          and eliminate integration headaches. Each technology directly supports multiple guidelines, maximizing your
-          ROI
-          while keeping your team focused on building products, not managing infrastructure.</p>
-
-        <div class="key-insight">
-          <strong>Strategic Simplicity:</strong> Four core technologies deliver solutions across 13 critical
-          implementation areas. Following these recommended startup guidelines reduces technical debt, accelerates
-          hiring,
-          and helps you ship faster with fewer moving parts.
-        </div>
-      </span>
-
-      <!-- Mobile Tool Tabs -->
-      <div class="mobile-tool-tabs">
-        <div class="mobile-tabs-hint">Tap to switch tools</div>
-        <div class="mobile-tabs-arrow">▼</div>
-        <button class="tool-tab active" data-tool="aws-amplify">
-          <div class="tool-tab-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
+            </style>
           </div>
-          <div class="tool-tab-name">Amplify</div>
-        </button>
-        <button class="tool-tab" data-tool="statsig">
-          <div class="tool-tab-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="20" x2="18" y2="10"></line>
-              <line x1="12" y1="20" x2="12" y2="4"></line>
-              <line x1="6" y1="20" x2="6" y2="14"></line>
-            </svg>
-          </div>
-          <div class="tool-tab-name">Statsig</div>
-        </button>
-        <button class="tool-tab" data-tool="github">
-          <div class="tool-tab-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-          </div>
-          <div class="tool-tab-name">GitHub</div>
-        </button>
-        <button class="tool-tab" data-tool="github-copilot">
-          <div class="tool-tab-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-              <circle cx="16.5" cy="6.5" r="2" fill="white" stroke="none"></circle>
-            </svg>
-          </div>
-          <div class="tool-tab-name">Copilot</div>
-        </button>
-      </div>
+        </span>
+        <span class="slide">
+          <h3>Track Metrics That Drive Decisions</h3>
+          <p>Stop flying blind. Set up a simple dashboard this week to track the metrics that actually inform your
+            decisions. The goal isn't to track everything; it's to track the right actions that show whether your
+            product
+            is
+            delivering value and your business is working. Log critical customer steps and product events directly into
+            tools like Statsig so you can measure engagement, adoption, and impact. Check these numbers every Monday
+            morning
+            to decide what to build next, what to stop building, and where to focus your limited resources. This is how
+            you
+            implement the Build-Measure-Learn cycle—build features, measure their impact through data, learn what works,
+            then build the next iteration based on evidence, not assumptions.</p>
 
-      <!-- Matrix View -->
-      <div class="traceability-view slide" id="matrix-view">
-        <div class="matrix-container">
-          <table class="traceability-matrix">
-            <thead>
-              <tr>
-                <th class="matrix-corner">
-                  <div class="implementation-header-content">
-                    <div class="implementation-icon-header">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"></path>
-                        <path d="M21 11h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"></path>
-                        <path d="M9 7V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3"></path>
-                        <line x1="9" y1="7" x2="15" y2="7"></line>
-                      </svg>
-                    </div>
-                    <div class="implementation-name">Guidance</div>
-                    <div class="implementation-description">Core recommendations within each guideline</div>
-                  </div>
-                </th>
-                <th class="tool-column aws-amplify">
-                  <div class="tool-header-content">
-                    <div class="tool-icon-header">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                      </svg>
-                    </div>
-                    <div class="tool-name">Amplify</div>
-                    <div class="tool-description">Build, design, and host serverless, AWS applications</div>
-                  </div>
-                </th>
-                <th class="tool-column statsig">
-                  <div class="tool-header-content">
-                    <div class="tool-icon-header">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="20" x2="18" y2="10"></line>
-                        <line x1="12" y1="20" x2="12" y2="4"></line>
-                        <line x1="6" y1="20" x2="6" y2="14"></line>
-                      </svg>
-                    </div>
-                    <div class="tool-name">Statsig</div>
-                    <div class="tool-description">Flag features, run A/B tests, and track customer conversions</div>
-                  </div>
-                </th>
-                <th class="tool-column github">
-                  <div class="tool-header-content">
-                    <div class="tool-icon-header">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="none">
-                        <path
-                          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                      </svg>
-                    </div>
-                    <div class="tool-name">GitHub</div>
-                    <div class="tool-description">Track code versions, review, collaborate, and ship code</div>
-                  </div>
-                </th>
-                <th class="tool-column github-copilot">
-                  <div class="tool-header-content">
-                    <div class="tool-icon-header">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <defs>
-                          <linearGradient id="copilot-header-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:white;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:white;stop-opacity:0.8" />
-                          </linearGradient>
-                        </defs>
-                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
-                          stroke="url(#copilot-header-gradient)"></path>
-                        <circle cx="16.5" cy="6.5" r="2" fill="white" stroke="none"></circle>
-                      </svg>
-                    </div>
-                    <div class="tool-name">GitHub Copilot</div>
-                    <div class="tool-description">AI-powered coding, code reviews, and virtual teammates</div>
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="guideline-row control">
-                <td colspan="5" class="guideline-separator">
-                  <a href="#control" class="guideline-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <circle cx="12" cy="12" r="6"></circle>
-                      <circle cx="12" cy="12" r="2"></circle>
-                    </svg>
-                    <strong>Stay in Control</strong>
-                  </a>
-                </td>
-              </tr>
-              <tr data-heading="own-infrastructure" data-guideline="control">
-                <td class="heading-cell">
-                  Own Your Digital Infrastructure
-                </td>
-                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="own-infrastructure">✓</td>
-                <td class="matrix-cell supported" data-tool="statsig" data-heading="own-infrastructure">✓</td>
-                <td class="matrix-cell supported" data-tool="github" data-heading="own-infrastructure">✓</td>
-                <td class="matrix-cell supported" data-tool="github-copilot" data-heading="own-infrastructure">✓</td>
-              </tr>
-              <tr data-heading="automate-setup" data-guideline="control">
-                <td class="heading-cell">
-                  Automate Your Infrastructure Setup
-                </td>
-                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="automate-setup">✓</td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr data-heading="build-compliance" data-guideline="control">
-                <td class="heading-cell">
-                  Build Compliance Into Your Foundation
-                </td>
-                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="build-compliance">✓</td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr class="guideline-row learn">
-                <td colspan="5" class="guideline-separator">
-                  <a href="#learn" class="guideline-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                    <strong>Learn Fast</strong>
-                  </a>
-                </td>
-              </tr>
-              <tr data-heading="map-customer-value" data-guideline="learn">
-                <td class="heading-cell">
-                  Map Every Feature to Customer Value
-                </td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell supported" data-tool="statsig" data-heading="map-customer-value">✓</td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr data-heading="track-metrics" data-guideline="learn">
-                <td class="heading-cell">
-                  Track Metrics That Drive Decisions
-                </td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell supported" data-tool="statsig" data-heading="track-metrics">✓</td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr data-heading="demo-features" data-guideline="learn">
-                <td class="heading-cell">
-                  Demo Real Features Every Friday
-                </td>
-                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="demo-features">✓</td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell supported" data-tool="github" data-heading="demo-features">✓</td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr class="guideline-row ship">
-                <td colspan="5" class="guideline-separator">
-                  <a href="#ship" class="guideline-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path
-                        d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1">
-                      </path>
-                      <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path>
-                      <path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path>
-                      <path d="M12 10v4"></path>
-                      <path d="M12 2v3"></path>
-                    </svg>
-                    <strong>Ship Safe</strong>
-                  </a>
-                </td>
-              </tr>
-              <tr data-heading="safe-workflows" data-guideline="ship">
-                <td class="heading-cell">
-                  Implement Safe Development Workflows
-                </td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell supported" data-tool="github" data-heading="safe-workflows">✓</td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr data-heading="feature-flags" data-guideline="ship">
-                <td class="heading-cell">
-                  Deploy Features Behind Feature Flags
-                </td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell supported" data-tool="statsig" data-heading="feature-flags">✓</td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr data-heading="measure-matters" data-guideline="ship">
-                <td class="heading-cell">
-                  Measure What Actually Matters
-                </td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell supported" data-tool="statsig" data-heading="measure-matters">✓</td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr class="guideline-row scale">
-                <td colspan="5" class="guideline-separator">
-                  <a href="#scale" class="guideline-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          <strong style="color: var(--primary); display: block; margin: 1.5rem 0 1rem;">Why Data-Driven Decisions
+            Matter:</strong>
+          <ul>
+            <li><strong>Spot Problems Early:</strong> Identify issues weeks before they become crises—like declining
+              activation rates signaling product confusion</li>
+            <li><strong>Kill Bad Ideas Fast:</strong> Stop wasting months on features nobody uses by tracking actual
+              engagement within days of launch</li>
+            <li><strong>Prove Traction to Investors:</strong> Show concrete growth metrics, not just promises—investors
+              fund
+              data, not dreams</li>
+            <li><strong>Focus Your Team:</strong> End debates about what to build next by letting customer behavior data
+              make the decision</li>
+            <li><strong>Optimize Your Spending:</strong> Know exactly which marketing channels bring profitable
+              customers,
+              not just traffic</li>
+            <li><strong>Accelerate Learning Cycles:</strong> Complete Build-Measure-Learn loops in days instead of
+              months
+              by
+              tracking the right metrics immediately</li>
+          </ul>
+
+          <div class="success-box">
+            <strong>Implementation Tip:</strong> Start measuring today, even if the data isn't perfect. Rough metrics
+            you
+            check at least weekly beat perfect metrics you never look at. Set up automated weekly reports that force you
+            to
+            confront
+            reality, whether you like what you see or not.
+          </div>
+        </span>
+        <span class="slide">
+          <h3>Demo Real Features Every Friday</h3>
+          <p>Schedule a standing 30-minute demo every Friday at 3 PM. No exceptions. Show only features that are live in
+            production—not mockups, not "almost done" work. Invite customers when possible. This simple ritual creates
+            urgency, prevents scope creep, and ensures your team ships something meaningful every single week. Teams
+            that
+            demo weekly ship 10x more features that customers actually use.</p>
+          <ul>
+            <li><strong>Customer-Facing Demos:</strong> Show real deployed features</li>
+            <li><strong>Experiment Results Review:</strong> Present data from build-measure-learn cycles</li>
+            <li><strong>Customer Feedback Integration:</strong> Share recent insights</li>
+            <li><strong>Traceability Demonstration:</strong> Connect work to customer value</li>
+          </ul>
+
+          <div class="warning-box" style="margin-bottom: 2rem;">
+            <strong>Critical Warning:</strong> Delegating product ownership or reviewing work asynchronously is a recipe
+            for
+            disaster. Teams will optimize for what feels like progress rather than what delivers customer value.
+          </div>
+        </span>
+        <div class="guideline-savings-box slide">
+          <div class="savings-header">
+            Learn Fast - Cost Savings
+          </div>
+          <ul class="savings-list">
+            <li class="savings-item">
+              <div class="savings-description">Eliminate wasted development on features customers don't want</div>
+              <div class="savings-amount">$50K - $200K</div>
+            </li>
+            <li class="savings-item">
+              <div class="savings-description">Stop ineffective marketing spend by tracking actual customer acquisition
+                costs</div>
+              <div class="savings-amount">$20K - $100K</div>
+            </li>
+            <li class="savings-item">
+              <div class="savings-description">Reduce time to product-market fit by 2.5x through customer feedback loops
+              </div>
+              <div class="savings-amount">$30K - $150K</div>
+            </li>
+          </ul>
+          <div class="savings-total">
+            <span>Total Potential Savings:</span>
+            <span class="savings-total-amount">$100K - $450K</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Guideline 3: Ship Safe -->
+      <section id="ship" class="section">
+        <span class="slide">
+
+          <h2>
+            <span class="section-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1">
+                </path>
+                <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path>
+                <path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path>
+                <path d="M12 10v4"></path>
+                <path d="M12 2v3"></path>
+              </svg>
+            </span>
+            Guideline 3: Ship Safe
+            <a href="#ship" class="heading-link" title="Copy link to this section">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </a>
+          </h2>
+
+          <div class="key-insight">
+            <strong>Core Principle:</strong> Deploy new features frequently while minimizing the risk of breaking things
+            for
+            your existing customers.
+          </div>
+        </span>
+        <span class="slide">
+
+          <h3>Implement Safe Development Workflows</h3>
+          <p>Set up these five practices by next Monday: create feature branches for all new work, commit code every
+            hour
+            (not every week), require pull request code reviews before merging, and run automated tests on every commit.
+            These
+            aren't bureaucratic overhead—they're your safety net that lets you move
+            fast without breaking things. Teams using these practices ship 200% more often with 70% fewer bugs.</p>
+          <div class="diagram">
+            <span class="diagram-title">Safe Development Workflow</span>
+            <div class="process-flow">
+              <div class="process-step">
+                <strong>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    <line x1="6" y1="3" x2="6" y2="15"></line>
+                    <circle cx="18" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M18 9a9 9 0 0 1-9 9"></path>
+                  </svg>
+                  Feature Branch
+                </strong>
+                <p>Isolated Development</p>
+              </div>
+              <div class="process-step">
+                <strong>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                    <polyline points="7 3 7 8 15 8"></polyline>
+                  </svg>
+                  Frequent Commits
+                </strong>
+                <p>Save Progress</p>
+              </div>
+              <div class="process-step">
+                <strong>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Pull Request
+                </strong>
+                <p>Code Review</p>
+              </div>
+              <div class="process-step">
+                <strong>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Automated Tests
+                </strong>
+                <p>Quality Check</p>
+              </div>
+
+              <div class="process-step">
+                <strong>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    style="display: inline-block; vertical-align: middle; color: var(--primary);">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                  Deploy
+                </strong>
+                <p>Ship to Users</p>
+              </div>
+            </div>
+          </div>
+        </span>
+        <span class="slide">
+
+          <h3>Deploy Features Behind Feature Flags</h3>
+          <p>Never deploy another feature directly to all users. Start using feature flags this sprint—tools like
+            Statsig take 30 minutes to set up. Release every new feature to 5% of users first, watch the
+            metrics for 24 hours, then gradually expand. When something breaks (and it will), you'll disable it with one
+            click instead of rushing a hotfix at midnight. This alone will cut your stress levels by 90%.</p>
+
+          <div class="success-box">
+            <strong>Risk Mitigation:</strong> Feature flags reduce deployment risk by 90% and enable instant rollback
+            without emergency code deployments.
+          </div>
+
+          <ul>
+            <li>Test with real users gradually (5% → 25% → 100%)</li>
+            <li>Instantly disable problematic features</li>
+            <li>A/B test different features with customer segments</li>
+            <li>Separate code deployment from feature releases</li>
+          </ul>
+        </span>
+        <span class="slide">
+
+          <h3>Measure What Actually Matters</h3>
+          <p>Most startups drown in vanity metrics—numbers that look good in a pitch deck but don’t predict success.
+            Focus
+            on metrics that show whether your product works, delivers real value to customers, and whether your team can
+            deliver reliably. By combining product usage from tools like Statsig, development and deployment data from
+            tools
+            like GitHub, and financial or survey data from other systems, you can create one unified founder dashboard
+            that
+            gives a real-time view of business health, customer engagement, and engineering performance.</p>
+        </span>
+        <div class="metrics-grid">
+          <div class="metrics-card slide">
+            <div class="metrics-card-header">
+              <div class="metrics-icon business-health">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Business Health Metrics</h4>
+                <p>Show if you're building the right thing. These three metrics tell you if your startup model is
+                  viable.
+                </p>
+              </div>
+            </div>
+            <div class="metrics-list">
+              <div class="metric-item">
+                <strong>Customer Acquisition Cost (CAC)</strong>
+                <p>How much you spend to get each new customer—if it exceeds 6-month payback, rethink your model</p>
+              </div>
+              <div class="metric-item">
+                <strong>Lifetime Value (LTV)</strong>
+                <p>How much revenue each customer generates over time—must be 3x CAC minimum for sustainability</p>
+              </div>
+              <div class="metric-item">
+                <strong>Monthly Recurring Revenue (MRR)</strong>
+                <p>Predictable revenue stream indicator—track week-over-week growth rate</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="metrics-card slide">
+            <div class="metrics-card-header">
+              <div class="metrics-icon customer-engagement">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Essential Startup Metrics</h4>
+                <p>Customer metrics show if people care. These three metrics tell you if people are adopting and
+                  sticking
+                  with your product.</p>
+              </div>
+            </div>
+            <div class="metrics-list">
+              <div class="metric-item">
+                <strong>Activation Rate</strong>
+                <p>What percentage of new users actually start using your core features—below 40% means fix your
+                  onboarding</p>
+              </div>
+              <div class="metric-item">
+                <strong>Churn Rate</strong>
+                <p>How many customers stop using your product monthly—above 10% monthly is a red flag</p>
+              </div>
+              <div class="metric-item">
+                <strong>Net Promoter Score (NPS)</strong>
+                <p>How likely customers are to recommend you. A falling NPS often predicts churn before it shows up in
+                  revenue.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="metrics-card slide">
+            <div class="metrics-card-header">
+              <div class="metrics-icon engineering-velocity">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>DORA Engineering Metrics</h4>
+                <p>Engineering metrics show if you're building it the right way. These four metrics predict your
+                  engineering team's ability to deliver value consistently.</p>
+              </div>
+            </div>
+            <div class="metrics-list">
+              <div class="metric-item">
+                <strong>Deployment Frequency</strong>
+                <p>How often you ship code to users—aim for multiple times per week minimum</p>
+              </div>
+              <div class="metric-item">
+                <strong>Lead Time</strong>
+                <p>How quickly you go from idea to live feature—target under 48 hours for small changes</p>
+              </div>
+              <div class="metric-item">
+                <strong>Change Failure Rate</strong>
+                <p>What percentage of releases cause problems—keep below 15%</p>
+              </div>
+              <div class="metric-item">
+                <strong>Recovery Time</strong>
+                <p>How fast you fix things when they break—should be under 2 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="slide">
+
+          <div class="success-box">
+            <strong>Tip:</strong> Set up alerts so when any metric drifts out of range, you catch it early—weeks matter,
+            months kill.
+          </div>
+          <div class="guideline-savings-box">
+            <div class="savings-header">
+              Ship Safe - Cost Savings
+            </div>
+            <ul class="savings-list">
+              <li class="savings-item">
+                <div class="savings-description">Prevent emergency hotfixes and midnight deployments through safe
+                  workflows
+                </div>
+                <div class="savings-amount">$25K - $100K</div>
+              </li>
+              <li class="savings-item">
+                <div class="savings-description">Reduce customer churn from buggy releases by 70% with feature flags
+                </div>
+                <div class="savings-amount">$40K - $200K</div>
+              </li>
+              <li class="savings-item">
+                <div class="savings-description">Eliminate wasted engineering time on rollbacks and bug fixes</div>
+                <div class="savings-amount">$30K - $120K</div>
+              </li>
+              <li class="savings-item">
+                <div class="savings-description">Avoid reputation damage and PR crises from public outages</div>
+                <div class="savings-amount">Priceless</div>
+              </li>
+            </ul>
+            <div class="savings-total">
+              <span>Total Potential Savings:</span>
+              <span class="savings-total-amount">$95K - $420K</span>
+            </div>
+          </div>
+        </span>
+      </section>
+
+      <!-- Guideline 4: Scale Smart -->
+      <section id="scale" class="section">
+        <span class="slide">
+
+          <h2>
+            <span class="section-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </span>
+            Guideline 4: Scale Smart
+            <a href="#scale" class="heading-link" title="Copy link to this section">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </a>
+          </h2>
+
+          <div class="key-insight">
+            <strong>Core Principle:</strong> Choose tools and practices that grow with your business without creating
+            massive cost increases or technical complexity.
+          </div>
+        </span>
+        <span class="slide">
+
+          <h3>Choose Serverless Architecture</h3>
+          <p>Switch to serverless infrastructure this month. Frameworks like AWS Amplify make your full-stack
+            application
+            serverless by design—everything from authentication and APIs to storage and analytics scales automatically
+            with
+            usage. You pay nothing when no one is using your app, benefit from a generous free tier, and never worry
+            about
+            idle servers. These frameworks let you focus on building your product instead of managing infrastructure,
+            helping companies spend far less on operations while accelerating development.</p>
+          <div class="diagram">
+            <span class="diagram-title">Cost Scaling Model Comparison</span>
+            <div
+              style="display: flex; justify-content: center; gap: 2rem; padding: 2rem; flex-wrap: wrap; align-items: stretch;">
+              <div style="min-width: 280px; max-width: 350px; flex: 0 1 350px; order: 1;">
+                <div
+                  style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%); border: 2px solid var(--danger); border-radius: 15px; padding: 2rem; text-align: center; position: relative; height: 100%;">
+                  <div
+                    style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: white; padding: 0 1rem; color: var(--danger); font-weight: bold;">
+                    Traditional Model</div>
+                  <div style="font-size: 3rem; color: var(--danger); margin-bottom: 1rem;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round">
                       <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                     </svg>
-                    <strong>Scale Smart</strong>
-                  </a>
-                </td>
-              </tr>
-              <tr data-heading="serverless-architecture" data-guideline="scale">
-                <td class="heading-cell">
-                  Choose Serverless Architecture
-                </td>
-                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="serverless-architecture">✓</td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr data-heading="web-only" data-guideline="scale">
-                <td class="heading-cell">
-                  Web-Only Until Customers Demand Mobile
-                </td>
-                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="web-only">✓</td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr data-heading="secure-product" data-guideline="scale">
-                <td class="heading-cell">
-                  Secure Your Product Now, Not Later
-                </td>
-                <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="secure-product">✓</td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-              </tr>
-              <tr data-heading="leverage-ai" data-guideline="scale">
-                <td class="heading-cell">
-                  Leverage AI to Double Your Output
-                </td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell"></td>
-                <td class="matrix-cell supported" data-tool="github-copilot" data-heading="leverage-ai">✓</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- CTA Section -->
-    <div id="contact" class="cta-section slide">
-      <h2 style="color: white; margin-bottom: 1rem;">Ready to Build Your Startup the Right Way?</h2>
-      <p style="font-size: 1.2rem;">Don't choose between speed and quality. Build systems that enable both.</p>
-      <a href="mailto:pairing4good@gmail.com?subject=Ready%20to%20Build%20Your%20Startup%20the%20Right%20Way"
-        class="cta-button">Get Started Today</a>
-    </div>
-  </div>
-
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials-section testimonial-visibility">
-    <div class="testimonials-container">
-      <h2 class="testimonials-title">Trusted by Forward-Thinking Founders</h2>
-      <p class="testimonials-subtitle">See how these proven strategies have accelerated startup success</p>
-      
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <div class="testimonial-header">
-              <div class="testimonial-company-header">
-                <div class="company-logo logo-bg-dark">
-                  <img src="https://images.squarespace-cdn.com/content/v1/61ddf7cb7f28032633f8dcef/31ffb96f-a19c-409a-90a0-ac5834cced96/KM_STACKED_LOGO_WHITE-02.png?format=300w" alt="Knight Moves Logo" />
+                  </div>
+                  <div style="color: var(--dark); margin-bottom: 1rem;">
+                    <p style="margin: 0.5rem 0;"><strong style="color: var(--danger);">❌ High upfront costs</strong></p>
+                    <p style="margin: 0.5rem 0;"><strong style="color: var(--danger);">❌ Idle capacity waste</strong>
+                    </p>
+                    <p style="margin: 0.5rem 0;"><strong style="color: var(--danger);">❌ Fixed monthly bills</strong>
+                    </p>
+                    <p style="margin: 0.5rem 0;"><strong style="color: var(--danger);">❌ Complex scaling</strong></p>
+                  </div>
+                  <div
+                    style="background: var(--danger); color: white; padding: 0.5rem; border-radius: 8px; margin-top: 1rem; font-weight: bold;">
+                    $1000s before first customer
+                  </div>
                 </div>
-                <div class="testimonial-company-info">
-                  <div class="testimonial-company">Knight Moves</div>
-                  <a href="https://knightmoves.org" class="testimonial-company-link" target="_blank">knightmoves.org</a>
+              </div>
+
+              <div
+                style="display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--primary); font-weight: bold; padding: 1rem; flex: 0 0 auto; order: 2;">
+                <strong>VS</strong>
+              </div>
+
+              <div style="min-width: 280px; max-width: 350px; flex: 0 1 350px; order: 3;">
+                <div
+                  style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%); border: 2px solid var(--success); border-radius: 15px; padding: 2rem; text-align: center; position: relative; height: 100%;">
+                  <div
+                    style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: white; padding: 0 1rem; color: var(--success); font-weight: bold;">
+                    Serverless Model</div>
+                  <div style="font-size: 3rem; color: var(--success); margin-bottom: 1rem;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="22 12 16 6 12 17 8 8 2 12"></polyline>
+                    </svg>
+                  </div>
+                  <div style="color: var(--dark); margin-bottom: 1rem;">
+                    <p style="margin: 0.5rem 0;"><strong style="color: var(--success);">✓ Near-zero start costs</strong>
+                    </p>
+                    <p style="margin: 0.5rem 0;"><strong style="color: var(--success);">✓ Pay only for usage</strong>
+                    </p>
+                    <p style="margin: 0.5rem 0;"><strong style="color: var(--success);">✓ Scales automatically</strong>
+                    </p>
+                    <p style="margin: 0.5rem 0;"><strong style="color: var(--success);">✓ No wasted resources</strong>
+                    </p>
+                  </div>
+                  <div
+                    style="background: var(--success); color: white; padding: 0.5rem; border-radius: 8px; margin-top: 1rem; font-weight: bold;">
+                    Start for ~$0/month
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="testimonial-quote">
-              "David transformed our entire approach to product development. His guidance helped us launch 6 months ahead of schedule while implementing enterprise-grade solutions that typically cost startups hundreds of thousands. He has an incredible talent for finding cost-effective alternatives that don't compromise on quality or scalability. The systems he recommended not only accelerated our launch but positioned us for sustainable growth from day one."
-            </div>
-            <div class="testimonial-footer">
-              <div class="testimonial-founder-info">
-                <div class="testimonial-name">Linc Kroeger</div>
-                <div class="testimonial-title">Founder & CEO</div>
+            <style>
+              @media (max-width: 768px) {
+                .diagram>div>div:nth-child(2) {
+                  flex: 0 0 100% !important;
+                  order: 2 !important;
+                }
+              }
+            </style>
+          </div>
+        </span>
+
+        <span class="slide">
+
+          <h3>Web-Only Until Customers Demand Mobile</h3>
+          <p>Delete your mobile app plans right now. Build a responsive web app that works great on phones—you’ll
+            iterate
+            10x faster, ship updates instantly without app store approval, and save $100K+ in development costs.
+            Platforms
+            like AWS Amplify are built for both web and native mobile development using a single cloud backend,
+            providing
+            a
+            unified security solution for web and mobile experiences. When you do add a native app, keep it minimal and
+            focused—handling only device-specific features like push notifications or camera access—so it requires few
+            changes over time. Only build native apps when customers are literally begging for them and willing to pay.
+          </p>
+
+          <ul>
+            <li>Single codebase to maintain and update</li>
+            <li>Instant deployment without app store approval</li>
+            <li>Works across all devices through responsive design</li>
+            <li>Lower development and maintenance costs</li>
+            <li>No chasing OS updates or security patches</li>
+          </ul>
+
+          <div class="success-box">
+            Many successful companies—including Slack, Linear, and Notion all succeeded for years as web-only products.
+            Your
+            startup can too.
+          </div>
+        </span>
+        <span class="slide">
+
+          <h3>Secure Your Product Now, Not Later</h3>
+          <p>
+            Security is the foundation of trust with your users, and platforms such as AWS Amplify make it easier to
+            address
+            from day one. Amplify centralizes account management with built-in authentication, 2FA, and social logins,
+            enforces access control, integrates encryption, and supports automated updates and vulnerability scanning.
+            Its
+            pre-built components let you create a robust login flow—including sign-up, sign-in, password recovery,
+            multi-factor authentication, and social logins like Google, Facebook, and Apple—in just a few minutes with
+            minimal code. Amplify also connects to monitoring tools, giving visibility into unusual activity and helping
+            you
+            build a secure foundation for safe growth.
+          </p>
+          <ul>
+            <li><strong>Secure Accounts:</strong> Ensure all cloud, domain, analytics, and admin accounts are under your
+              ownership. Use a password manager and enable 2FA.</li>
+            <li><strong>Data Protection:</strong> Encrypt sensitive data at rest and in transit. Regularly back up
+              critical
+              data and test restore procedures.</li>
+            <li><strong>Access Control:</strong> Limit permissions to only those who need them. Regularly review access
+              logs
+              and remove inactive users.</li>
+            <li><strong>Application Security:</strong> Keep software and dependencies up to date. Use automated
+              vulnerability scanning tools and apply patches promptly.</li>
+            <li><strong>Monitoring & Alerts:</strong> Set up basic monitoring and alerts for unusual activity in your
+              app,
+              servers, and databases.</li>
+          </ul>
+
+          <p style="font-size: 1.1rem; margin-top: 1rem;">
+            By addressing these areas now, you reduce risk and lay a strong foundation for safe growth. Security done
+            early
+            saves headaches later.
+          </p>
+
+
+          <div class="warning-box">
+            <strong>Cost Impact:</strong> Security retrofitting typically costs 5-10x more than building security into
+            the
+            foundation.
+          </div>
+        </span>
+        <span class="slide">
+
+          <h3>Leverage AI to Double Your Output</h3>
+          <p>Start using AI development tools tomorrow morning. Install GitHub Copilot to accelerate coding with
+            intelligent
+            suggestions, and push your code to let it perform automated reviews that catch bugs, security issues, and
+            style
+            inconsistencies before they reach production. Then, leverage AI agents to handle well-defined, repetitive
+            tasks—like writing tests or implementing parallel stories alongside your human developers. Even if an AI
+            agent
+            only succeeds half the time, your team’s effective throughput just shot up by 50% for the cost of a coffee
+            subscription. This isn’t the future—it's how winning startups are scaling development today.</p>
+
+          <ul>
+            <li><strong>AI Code Reviews:</strong> Catch bugs and security issues automatically</li>
+            <li><strong>AI Coding Assistance:</strong> Speed up development with intelligent suggestions</li>
+            <li><strong>AI Development Agents:</strong> Handle well-defined tasks in parallel</li>
+          </ul>
+
+          <div class="success-box">
+            <strong>Parallel Sprint Strategy:</strong> Implement AI agents that take on a story for every story a human
+            developer tackles. Even with a 50% success rate, you're effectively doubling your development throughput.
+          </div>
+        </span>
+        <div class="guideline-savings-box slide">
+          <div class="savings-header">
+            Scale Smart - Cost Savings
+          </div>
+          <ul class="savings-list">
+            <li class="savings-item">
+              <div class="savings-description">Save 70% on infrastructure costs with serverless architecture</div>
+              <div class="savings-amount">$6K - $60K/year</div>
+            </li>
+            <li class="savings-item">
+              <div class="savings-description">Avoid mobile app development costs with responsive web-first approach
               </div>
-              <div class="testimonial-avatar">
-                <img src="https://media.licdn.com/dms/image/v2/C5603AQHqImm8RP5rIQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1656018258239?e=1759363200&v=beta&t=na08hzSyYCsQEjQ3_2DS1R7BYeLpb4Vu6pzM6H6-knQ" alt="Linc Kroeer" />
-              </div>
-            </div>
+              <div class="savings-amount">$100K - $300K</div>
+            </li>
+            <li class="savings-item">
+              <div class="savings-description">Prevent security breaches and compliance violations</div>
+              <div class="savings-amount">$50K - $500K</div>
+            </li>
+            <li class="savings-item">
+              <div class="savings-description">Double development speed with AI tools for $10/month per developer</div>
+              <div class="savings-amount">$25K - $150K/year</div>
+            </li>
+          </ul>
+          <div class="savings-total">
+            <span>Total Potential Savings:</span>
+            <span class="savings-total-amount">$181K - $1M+</span>
           </div>
         </div>
-        
-        <!-- Additional testimonials to showcase the expandable system 
+      </section>
+
+      <!-- Tools Section -->
+      <section id="tools" class="section">
+        <span class="slide">
+
+          <h2>
+            <span class="section-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                </path>
+              </svg>
+            </span>
+            Recommended Stack
+            <a href="#tools" class="heading-link" title="Copy link to this section">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </a>
+          </h2>
+
+          <p style="font-size: 1.2rem; margin-bottom: 2rem;"><strong>Start with these 4 technologies.</strong> By
+            limiting
+            your stack to just these platforms and tools, you'll reduce hiring complexity, minimize maintenance
+            overhead,
+            and eliminate integration headaches. Each technology directly supports multiple guidelines, maximizing your
+            ROI
+            while keeping your team focused on building products, not managing infrastructure.</p>
+
+          <div class="key-insight">
+            <strong>Strategic Simplicity:</strong> Four core technologies deliver solutions across 13 critical
+            implementation areas. Following these recommended startup guidelines reduces technical debt, accelerates
+            hiring,
+            and helps you ship faster with fewer moving parts.
+          </div>
+        </span>
+
+        <!-- Mobile Tool Tabs -->
+        <div class="mobile-tool-tabs">
+          <div class="mobile-tabs-hint">Tap to switch tools</div>
+          <div class="mobile-tabs-arrow">▼</div>
+          <button class="tool-tab active" data-tool="aws-amplify">
+            <div class="tool-tab-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div class="tool-tab-name">Amplify</div>
+          </button>
+          <button class="tool-tab" data-tool="statsig">
+            <div class="tool-tab-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <div class="tool-tab-name">Statsig</div>
+          </button>
+          <button class="tool-tab" data-tool="github">
+            <div class="tool-tab-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </div>
+            <div class="tool-tab-name">GitHub</div>
+          </button>
+          <button class="tool-tab" data-tool="github-copilot">
+            <div class="tool-tab-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                <circle cx="16.5" cy="6.5" r="2" fill="white" stroke="none"></circle>
+              </svg>
+            </div>
+            <div class="tool-tab-name">Copilot</div>
+          </button>
+        </div>
+
+        <!-- Matrix View -->
+        <div class="traceability-view slide" id="matrix-view">
+          <div class="matrix-container">
+            <table class="traceability-matrix">
+              <thead>
+                <tr>
+                  <th class="matrix-corner">
+                    <div class="implementation-header-content">
+                      <div class="implementation-icon-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"></path>
+                          <path d="M21 11h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"></path>
+                          <path d="M9 7V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3"></path>
+                          <line x1="9" y1="7" x2="15" y2="7"></line>
+                        </svg>
+                      </div>
+                      <div class="implementation-name">Guidance</div>
+                      <div class="implementation-description">Core recommendations within each guideline</div>
+                    </div>
+                  </th>
+                  <th class="tool-column aws-amplify">
+                    <div class="tool-header-content">
+                      <div class="tool-icon-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                      </div>
+                      <div class="tool-name">Amplify</div>
+                      <div class="tool-description">Build, design, and host serverless, AWS applications</div>
+                    </div>
+                  </th>
+                  <th class="tool-column statsig">
+                    <div class="tool-header-content">
+                      <div class="tool-icon-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="18" y1="20" x2="18" y2="10"></line>
+                          <line x1="12" y1="20" x2="12" y2="4"></line>
+                          <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                      </div>
+                      <div class="tool-name">Statsig</div>
+                      <div class="tool-description">Flag features, run A/B tests, and track customer conversions</div>
+                    </div>
+                  </th>
+                  <th class="tool-column github">
+                    <div class="tool-header-content">
+                      <div class="tool-icon-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="none">
+                          <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                      </div>
+                      <div class="tool-name">GitHub</div>
+                      <div class="tool-description">Track code versions, review, collaborate, and ship code</div>
+                    </div>
+                  </th>
+                  <th class="tool-column github-copilot">
+                    <div class="tool-header-content">
+                      <div class="tool-icon-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <defs>
+                            <linearGradient id="copilot-header-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" style="stop-color:white;stop-opacity:1" />
+                              <stop offset="100%" style="stop-color:white;stop-opacity:0.8" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
+                            stroke="url(#copilot-header-gradient)"></path>
+                          <circle cx="16.5" cy="6.5" r="2" fill="white" stroke="none"></circle>
+                        </svg>
+                      </div>
+                      <div class="tool-name">GitHub Copilot</div>
+                      <div class="tool-description">AI-powered coding, code reviews, and virtual teammates</div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="guideline-row control">
+                  <td colspan="5" class="guideline-separator">
+                    <a href="#control" class="guideline-link">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                      </svg>
+                      <strong>Stay in Control</strong>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-heading="own-infrastructure" data-guideline="control">
+                  <td class="heading-cell">
+                    Own Your Digital Infrastructure
+                  </td>
+                  <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="own-infrastructure">✓</td>
+                  <td class="matrix-cell supported" data-tool="statsig" data-heading="own-infrastructure">✓</td>
+                  <td class="matrix-cell supported" data-tool="github" data-heading="own-infrastructure">✓</td>
+                  <td class="matrix-cell supported" data-tool="github-copilot" data-heading="own-infrastructure">✓</td>
+                </tr>
+                <tr data-heading="automate-setup" data-guideline="control">
+                  <td class="heading-cell">
+                    Automate Your Infrastructure Setup
+                  </td>
+                  <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="automate-setup">✓</td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr data-heading="build-compliance" data-guideline="control">
+                  <td class="heading-cell">
+                    Build Compliance Into Your Foundation
+                  </td>
+                  <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="build-compliance">✓</td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr class="guideline-row learn">
+                  <td colspan="5" class="guideline-separator">
+                    <a href="#learn" class="guideline-link">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                      </svg>
+                      <strong>Learn Fast</strong>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-heading="map-customer-value" data-guideline="learn">
+                  <td class="heading-cell">
+                    Map Every Feature to Customer Value
+                  </td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell supported" data-tool="statsig" data-heading="map-customer-value">✓</td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr data-heading="track-metrics" data-guideline="learn">
+                  <td class="heading-cell">
+                    Track Metrics That Drive Decisions
+                  </td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell supported" data-tool="statsig" data-heading="track-metrics">✓</td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr data-heading="demo-features" data-guideline="learn">
+                  <td class="heading-cell">
+                    Demo Real Features Every Friday
+                  </td>
+                  <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="demo-features">✓</td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell supported" data-tool="github" data-heading="demo-features">✓</td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr class="guideline-row ship">
+                  <td colspan="5" class="guideline-separator">
+                    <a href="#ship" class="guideline-link">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                          d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1">
+                        </path>
+                        <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path>
+                        <path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path>
+                        <path d="M12 10v4"></path>
+                        <path d="M12 2v3"></path>
+                      </svg>
+                      <strong>Ship Safe</strong>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-heading="safe-workflows" data-guideline="ship">
+                  <td class="heading-cell">
+                    Implement Safe Development Workflows
+                  </td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell supported" data-tool="github" data-heading="safe-workflows">✓</td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr data-heading="feature-flags" data-guideline="ship">
+                  <td class="heading-cell">
+                    Deploy Features Behind Feature Flags
+                  </td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell supported" data-tool="statsig" data-heading="feature-flags">✓</td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr data-heading="measure-matters" data-guideline="ship">
+                  <td class="heading-cell">
+                    Measure What Actually Matters
+                  </td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell supported" data-tool="statsig" data-heading="measure-matters">✓</td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr class="guideline-row scale">
+                  <td colspan="5" class="guideline-separator">
+                    <a href="#scale" class="guideline-link">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                      </svg>
+                      <strong>Scale Smart</strong>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-heading="serverless-architecture" data-guideline="scale">
+                  <td class="heading-cell">
+                    Choose Serverless Architecture
+                  </td>
+                  <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="serverless-architecture">✓
+                  </td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr data-heading="web-only" data-guideline="scale">
+                  <td class="heading-cell">
+                    Web-Only Until Customers Demand Mobile
+                  </td>
+                  <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="web-only">✓</td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr data-heading="secure-product" data-guideline="scale">
+                  <td class="heading-cell">
+                    Secure Your Product Now, Not Later
+                  </td>
+                  <td class="matrix-cell supported" data-tool="aws-amplify" data-heading="secure-product">✓</td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                </tr>
+                <tr data-heading="leverage-ai" data-guideline="scale">
+                  <td class="heading-cell">
+                    Leverage AI to Double Your Output
+                  </td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell"></td>
+                  <td class="matrix-cell supported" data-tool="github-copilot" data-heading="leverage-ai">✓</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- CTA Section -->
+      <div id="contact" class="cta-section slide">
+        <h2 style="color: white; margin-bottom: 1rem;">Ready to Build Your Startup the Right Way?</h2>
+        <p style="font-size: 1.2rem;">Don't choose between speed and quality. Build systems that enable both.</p>
+        <a href="mailto:pairing4good@gmail.com?subject=Ready%20to%20Build%20Your%20Startup%20the%20Right%20Way"
+          class="cta-button">Get Started Today</a>
+      </div>
+      </div>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials-section testimonial-visibility">
+        <div class="testimonials-container">
+          <h2 class="testimonials-title">Trusted by Forward-Thinking Founders</h2>
+          <p class="testimonials-subtitle">See how these proven strategies have accelerated startup success</p>
+
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-header">
+                  <div class="testimonial-company-header">
+                    <div class="company-logo logo-bg-dark">
+                      <img
+                        src="https://images.squarespace-cdn.com/content/v1/61ddf7cb7f28032633f8dcef/31ffb96f-a19c-409a-90a0-ac5834cced96/KM_STACKED_LOGO_WHITE-02.png?format=300w"
+                        alt="Knight Moves Logo" />
+                    </div>
+                    <div class="testimonial-company-info">
+                      <div class="testimonial-company">Knight Moves</div>
+                      <a href="https://knightmoves.org" class="testimonial-company-link"
+                        target="_blank">knightmoves.org</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  "David transformed our entire approach to product development. His guidance helped us launch 6 months
+                  ahead of schedule while implementing enterprise-grade solutions that typically cost startups hundreds
+                  of thousands. He has an incredible talent for finding cost-effective alternatives that don't
+                  compromise on quality or scalability. The systems he recommended not only accelerated our launch but
+                  positioned us for sustainable growth from day one."
+                </div>
+                <div class="testimonial-footer">
+                  <div class="testimonial-founder-info">
+                    <div class="testimonial-name">Linc Kroeger</div>
+                    <div class="testimonial-title">Founder & CEO</div>
+                  </div>
+                  <div class="testimonial-avatar">
+                    <img
+                      src="https://media.licdn.com/dms/image/v2/C5603AQHqImm8RP5rIQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1656018258239?e=1759363200&v=beta&t=na08hzSyYCsQEjQ3_2DS1R7BYeLpb4Vu6pzM6H6-knQ"
+                      alt="Linc Kroeer" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional testimonials to showcase the expandable system 
              
              LOGO BACKGROUND CONFIGURATION GUIDE:
              Just add one of these classes to the "company-logo" div:
@@ -4933,120 +5035,149 @@
              <div class="company-logo logo-bg-gradient-secondary">
              <div class="company-logo logo-bg-custom" style="--custom-color: #ff6b6b;">
         -->
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <div class="testimonial-header">
-              <div class="testimonial-company-header">
-                <div class="company-logo logo-bg-primary">
-                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='50' cy='30' r='8'/%3E%3Cpath d='M50 45c-8 0-15 7-15 15v25h30V60c0-8-7-15-15-15z'/%3E%3C/g%3E%3C/svg%3E" alt="VelocityPay Logo" />
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-header">
+                  <div class="testimonial-company-header">
+                    <div class="company-logo logo-bg-primary">
+                      <img
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='50' cy='30' r='8'/%3E%3Cpath d='M50 45c-8 0-15 7-15 15v25h30V60c0-8-7-15-15-15z'/%3E%3C/g%3E%3C/svg%3E"
+                        alt="VelocityPay Logo" />
+                    </div>
+                    <div class="testimonial-company-info">
+                      <div class="testimonial-company">VelocityPay</div>
+                      <a href="https://velocitypay.io" class="testimonial-company-link"
+                        target="_blank">velocitypay.io</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="testimonial-company-info">
-                  <div class="testimonial-company">VelocityPay</div>
-                  <a href="https://velocitypay.io" class="testimonial-company-link" target="_blank">velocitypay.io</a>
+                <div class="testimonial-quote">
+                  "Working with David was a game-changer for our fintech startup. He helped us navigate complex
+                  compliance requirements while building a scalable architecture that reduced our infrastructure costs
+                  by 40%. His deep understanding of both technical excellence and business constraints meant we could
+                  move fast without breaking things. The monitoring systems he recommended caught critical issues before
+                  they impacted customers."
+                </div>
+                <div class="testimonial-footer">
+                  <div class="testimonial-founder-info">
+                    <div class="testimonial-name">Sarah Chen</div>
+                    <div class="testimonial-title">Co-founder & CTO</div>
+                  </div>
+                  <div class="testimonial-avatar-placeholder">
+                    SC
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="testimonial-quote">
-              "Working with David was a game-changer for our fintech startup. He helped us navigate complex compliance requirements while building a scalable architecture that reduced our infrastructure costs by 40%. His deep understanding of both technical excellence and business constraints meant we could move fast without breaking things. The monitoring systems he recommended caught critical issues before they impacted customers."
-            </div>
-            <div class="testimonial-footer">
-              <div class="testimonial-founder-info">
-                <div class="testimonial-name">Sarah Chen</div>
-                <div class="testimonial-title">Co-founder & CTO</div>
-              </div>
-              <div class="testimonial-avatar-placeholder">
-                SC
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <div class="testimonial-header">
-              <div class="testimonial-company-header">
-                <div class="company-logo logo-bg-gradient-secondary">
-                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Cpath d='M20 40h60v30H20z'/%3E%3Cpath d='M30 25h40v10H30z'/%3E%3Ccircle cx='35' cy='50' r='3'/%3E%3Ccircle cx='50' cy='50' r='3'/%3E%3Ccircle cx='65' cy='50' r='3'/%3E%3C/g%3E%3C/svg%3E" alt="StreamlineAI Logo" />
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-header">
+                  <div class="testimonial-company-header">
+                    <div class="company-logo logo-bg-gradient-secondary">
+                      <img
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Cpath d='M20 40h60v30H20z'/%3E%3Cpath d='M30 25h40v10H30z'/%3E%3Ccircle cx='35' cy='50' r='3'/%3E%3Ccircle cx='50' cy='50' r='3'/%3E%3Ccircle cx='65' cy='50' r='3'/%3E%3C/g%3E%3C/svg%3E"
+                        alt="StreamlineAI Logo" />
+                    </div>
+                    <div class="testimonial-company-info">
+                      <div class="testimonial-company">StreamlineAI</div>
+                      <a href="https://streamlineai.com" class="testimonial-company-link"
+                        target="_blank">streamlineai.com</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="testimonial-company-info">
-                  <div class="testimonial-company">StreamlineAI</div>
-                  <a href="https://streamlineai.com" class="testimonial-company-link" target="_blank">streamlineai.com</a>
+                <div class="testimonial-quote">
+                  "David's guidance transformed our development process from chaos to precision. He introduced us to
+                  feature flagging and A/B testing frameworks that allowed us to deploy confidently and iterate rapidly.
+                  The cost savings from his AWS optimization recommendations alone paid for his consulting fee three
+                  times over. Our team velocity increased 60% within the first quarter."
+                </div>
+                <div class="testimonial-footer">
+                  <div class="testimonial-founder-info">
+                    <div class="testimonial-name">Michael Rodriguez</div>
+                    <div class="testimonial-title">Founder & CEO</div>
+                  </div>
+                  <div class="testimonial-avatar-placeholder">
+                    MR
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="testimonial-quote">
-              "David's guidance transformed our development process from chaos to precision. He introduced us to feature flagging and A/B testing frameworks that allowed us to deploy confidently and iterate rapidly. The cost savings from his AWS optimization recommendations alone paid for his consulting fee three times over. Our team velocity increased 60% within the first quarter."
-            </div>
-            <div class="testimonial-footer">
-              <div class="testimonial-founder-info">
-                <div class="testimonial-name">Michael Rodriguez</div>
-                <div class="testimonial-title">Founder & CEO</div>
-              </div>
-              <div class="testimonial-avatar-placeholder">
-                MR
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <div class="testimonial-header">
-              <div class="testimonial-company-header">
-                <div class="company-logo logo-bg-success">
-                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Crect x='25' y='35' width='50' height='30' rx='5'/%3E%3Cpath d='M30 50h40M35 45h30M35 55h25'/%3E%3C/g%3E%3C/svg%3E" alt="MarketForge Logo" />
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-header">
+                  <div class="testimonial-company-header">
+                    <div class="company-logo logo-bg-success">
+                      <img
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Crect x='25' y='35' width='50' height='30' rx='5'/%3E%3Cpath d='M30 50h40M35 45h30M35 55h25'/%3E%3C/g%3E%3C/svg%3E"
+                        alt="MarketForge Logo" />
+                    </div>
+                    <div class="testimonial-company-info">
+                      <div class="testimonial-company">MarketForge</div>
+                      <a href="https://marketforge.co" class="testimonial-company-link"
+                        target="_blank">marketforge.co</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="testimonial-company-info">
-                  <div class="testimonial-company">MarketForge</div>
-                  <a href="https://marketforge.co" class="testimonial-company-link" target="_blank">marketforge.co</a>
+                <div class="testimonial-quote">
+                  "As a non-technical founder, I was overwhelmed by the technology decisions facing our e-commerce
+                  platform. David didn't just solve our immediate scaling problems—he educated our entire team on best
+                  practices and helped us build internal capabilities. His recommendation to implement proper
+                  observability saved us from a major outage that could have cost us our biggest client. Invaluable
+                  partnership."
+                </div>
+                <div class="testimonial-footer">
+                  <div class="testimonial-founder-info">
+                    <div class="testimonial-name">Jennifer Walsh</div>
+                    <div class="testimonial-title">Founder</div>
+                  </div>
+                  <div class="testimonial-avatar-placeholder">
+                    JW
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="testimonial-quote">
-              "As a non-technical founder, I was overwhelmed by the technology decisions facing our e-commerce platform. David didn't just solve our immediate scaling problems—he educated our entire team on best practices and helped us build internal capabilities. His recommendation to implement proper observability saved us from a major outage that could have cost us our biggest client. Invaluable partnership."
-            </div>
-            <div class="testimonial-footer">
-              <div class="testimonial-founder-info">
-                <div class="testimonial-name">Jennifer Walsh</div>
-                <div class="testimonial-title">Founder</div>
-              </div>
-              <div class="testimonial-avatar-placeholder">
-                JW
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <div class="testimonial-header">
-              <div class="testimonial-company-header">
-                <div class="company-logo logo-bg-warning">
-                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Cpath d='M50 15c-12 0-22 10-22 22s10 22 22 22 22-10 22-22-10-22-22-22zm-8 22c0-4.5 3.5-8 8-8s8 3.5 8 8-3.5 8-8 8-8-3.5-8-8z'/%3E%3Cpath d='M35 65c0-8 7-15 15-15s15 7 15 15v20H35V65z'/%3E%3C/g%3E%3C/svg%3E" alt="PulseHealth Logo" />
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-header">
+                  <div class="testimonial-company-header">
+                    <div class="company-logo logo-bg-warning">
+                      <img
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff'%3E%3Cpath d='M50 15c-12 0-22 10-22 22s10 22 22 22 22-10 22-22-10-22-22-22zm-8 22c0-4.5 3.5-8 8-8s8 3.5 8 8-3.5 8-8 8-8-3.5-8-8z'/%3E%3Cpath d='M35 65c0-8 7-15 15-15s15 7 15 15v20H35V65z'/%3E%3C/g%3E%3C/svg%3E"
+                        alt="PulseHealth Logo" />
+                    </div>
+                    <div class="testimonial-company-info">
+                      <div class="testimonial-company">PulseHealth</div>
+                      <a href="https://pulsehealth.app" class="testimonial-company-link"
+                        target="_blank">pulsehealth.app</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="testimonial-company-info">
-                  <div class="testimonial-company">PulseHealth</div>
-                  <a href="https://pulsehealth.app" class="testimonial-company-link" target="_blank">pulsehealth.app</a>
+                <div class="testimonial-quote">
+                  "David's expertise in DevOps and infrastructure automation was exactly what our healthtech startup
+                  needed. He helped us achieve SOC 2 compliance months ahead of schedule while implementing security
+                  practices that actually enhanced our development speed rather than slowing it down. The CI/CD pipeline
+                  he designed eliminated deployment anxiety and reduced our time-to-market by 35%. A true technical
+                  leader."
                 </div>
-              </div>
-            </div>
-            <div class="testimonial-quote">
-              "David's expertise in DevOps and infrastructure automation was exactly what our healthtech startup needed. He helped us achieve SOC 2 compliance months ahead of schedule while implementing security practices that actually enhanced our development speed rather than slowing it down. The CI/CD pipeline he designed eliminated deployment anxiety and reduced our time-to-market by 35%. A true technical leader."
-            </div>
-            <div class="testimonial-footer">
-              <div class="testimonial-founder-info">
-                <div class="testimonial-name">Dr. Alex Thompson</div>
-                <div class="testimonial-title">Co-founder & Chief Medical Officer</div>
-              </div>
-              <div class="testimonial-avatar-placeholder">
-                AT
+                <div class="testimonial-footer">
+                  <div class="testimonial-founder-info">
+                    <div class="testimonial-name">Dr. Alex Thompson</div>
+                    <div class="testimonial-title">Co-founder & Chief Medical Officer</div>
+                  </div>
+                  <div class="testimonial-avatar-placeholder">
+                    AT
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    </article>
+  </main>
 
   <!-- Footer -->
   <footer>
@@ -5288,7 +5419,7 @@
                 // Show hint and arrow when section comes into view (every time until clicked)
                 const hint = entry.target.querySelector('.mobile-tabs-hint');
                 const arrow = entry.target.querySelector('.mobile-tabs-arrow');
-                
+
                 if (hint) {
                   hint.style.animation = 'hintFadeIn 0.5s ease, hintFadeOut 1s ease 3s forwards';
                   hint.style.opacity = '1';
@@ -5302,7 +5433,7 @@
                 if (!entry.target.classList.contains('interacted')) {
                   const hint = entry.target.querySelector('.mobile-tabs-hint');
                   const arrow = entry.target.querySelector('.mobile-tabs-arrow');
-                  
+
                   if (hint) {
                     hint.style.opacity = '0';
                     hint.style.animation = '';
@@ -5318,7 +5449,7 @@
             threshold: 0.3,
             rootMargin: '0px 0px -20% 0px'
           });
-          
+
           observer.observe(mobileToolTabs);
         }
 
@@ -5497,7 +5628,7 @@
     function buildSlideshowNavigation() {
       const navList = document.getElementById('slideshow-nav-list');
       navList.innerHTML = '';
-      
+
       slides.forEach((slide, index) => {
         // Extract slide title from h1, h2, h3, or other identifying elements
         let title = '';
@@ -5507,26 +5638,26 @@
         } else {
           title = `Slide ${index + 1}`;
         }
-        
+
         // Limit title length
         if (title.length > 60) {
           title = title.substring(0, 60) + '...';
         }
-        
+
         const navItem = document.createElement('div');
         navItem.className = 'slideshow-nav-item';
         navItem.innerHTML = `
           <div class="slideshow-nav-item-number">${index + 1}</div>
           <div class="slideshow-nav-item-title">${title}</div>
         `;
-        
+
         navItem.addEventListener('click', () => {
           currentSlideIndex = index;
           showCurrentSlide();
           updateSlideshowNavigation();
           toggleSlideshowNav(); // Close nav after selection
         });
-        
+
         navList.appendChild(navItem);
       });
     }
@@ -5545,7 +5676,7 @@
     function toggleSlideshowNav() {
       const nav = document.getElementById('slideshow-nav');
       const overlay = document.getElementById('slideshow-nav-overlay');
-      
+
       nav.classList.toggle('active');
       overlay.classList.toggle('active');
     }
@@ -5649,38 +5780,38 @@
       slideContent.innerHTML = '';
       const clonedSlide = slide.cloneNode(true);
       slideContent.appendChild(clonedSlide);
-      
+
       // Hide slide during scaling calculation
       clonedSlide.style.visibility = 'hidden';
-      
+
       // Scale each slide individually to fit
       setTimeout(() => {
         const containerRect = slideContent.getBoundingClientRect();
         const availableHeight = containerRect.height - 64; // Account for padding + bottom margin
         const availableWidth = containerRect.width - 32;
-        
+
         // Reset any existing transforms
         clonedSlide.style.transform = 'none';
         clonedSlide.style.width = 'auto';
-        
+
         // Get content dimensions
         const slideRect = clonedSlide.getBoundingClientRect();
-        
+
         // Calculate scale needed for both dimensions
         const scaleHeight = availableHeight / slideRect.height;
         const scaleWidth = availableWidth / slideRect.width;
         const scale = Math.min(scaleHeight, scaleWidth, 1) * 0.95; // 5% buffer
-        
+
         // Apply scaling
         if (scale < 1) {
           clonedSlide.style.transform = `scale(${scale})`;
           clonedSlide.style.width = `${100 / scale}%`;
         }
-        
+
         // Show slide at correct size
         clonedSlide.style.visibility = 'visible';
       }, 100);
-      
+
       // Update navigation
       updateSlideshowNavigation();
     }
