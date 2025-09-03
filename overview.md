@@ -22,8 +22,7 @@
 
 - **Use modern development practices**: Feature branches, hourly commits, pull request reviews, automated tests
 - **Implement feature flags**: Release to 5% of users first, expand gradually (tools like Statsig)
-- **Focus on key metrics**: Track what matters—business health, customer engagement, engineering performance
-
+- **Focus on key metrics**: Track what matters—business health, customer engagement, engineering performance (Lean Startup, DORA, financial)
 ### **4. Choose Tools That Grow With Your Business**
 
 *Core message: Build for scale from day one*
