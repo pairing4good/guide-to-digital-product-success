@@ -1,4 +1,4 @@
-## **The 4 Guidelines for Digital Product Success**
+## **Startup Guidelines**
 
 ### **1. Maintain Ownership & Understanding**
 
