@@ -35,6 +35,4 @@
 
 ## **Outcome:**
 
-“These guidelines position startups to be able to scale development quickly. The goal is eliminating the choice between speed and quality by building systems that enable both.”
-
-This gives you a clear structure to gauge their current practices and introduce solutions that address common startup tech challenges.​​​​​​​​​​​​​​​​
+These guidelines position startups to be able to scale development quickly. The goal is eliminating the choice between speed and quality by building systems that enable both.
